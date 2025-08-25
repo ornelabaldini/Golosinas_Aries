@@ -5,183 +5,6 @@
   <title>Golosinas Aries - Inicio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css">
-  <style>
-    :root {
-      --primary: #6a1b9a;  /* Violeta */
-      --accent: #00b894;   /* Verde pastel */
-      --bg: #f3f9f7;       /* Fondo muy suave */
-      --text: #333;
-      --border-radius: 12px;
-    }
-
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background: var(--primary);
-      color: #fff;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    nav a {
-      display: inline-block;
-      margin: 0 1rem;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: var(--accent);
-    }
-
-    .hero {
-      text-align: center;
-      padding: 4rem 1rem;
-      background-image: url('img/hero-golosinas.jpg');
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-      position: relative;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.25);
-      z-index: 0;
-    }
-
-    .hero h2, .hero p, .hero button {
-      position: relative;
-      z-index: 1;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
-    }
-
-    .hero h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-
-    .hero button {
-      padding: 0.75rem 1.5rem;
-      background: var(--accent);
-      color: #fff;
-      border: none;
-      border-radius: var(--border-radius);
-      cursor: pointer;
-      font-size: 1rem;
-      margin: 0 0.5rem;
-      transition: background 0.3s, transform 0.3s;
-    }
-
-    .hero button:hover {
-      background: var(--primary);
-      transform: scale(1.05);
-    }
-
-    .destacados {
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-
-    .destacados h2 {
-      color: var(--primary);
-      margin-bottom: 2rem;
-    }
-
-    .portfolio {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-
-    .card {
-      background: #fff;
-      border: 2px solid var(--accent);
-      border-radius: var(--border-radius);
-      padding: 0.5rem;
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 0.5rem;
-      height: 140px;
-      object-fit: cover;
-    }
-
-    .card h3 {
-      color: var(--primary);
-      margin-bottom: 0.25rem;
-      font-size: 1rem;
-    }
-
-    .card p {
-      margin-bottom: 0.5rem;
-      font-size: 0.85rem;
-    }
-
-    .card button {
-      padding: 0.5rem 1rem;
-      background: var(--accent);
-      color: #fff;
-      border: none;
-      border-radius: var(--border-radius);
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .card button:hover {
-      background: var(--primary);
-    }
-
-    .sobre-nosotros {
-      text-align: center;
-      padding: 2rem 1rem;
-      max-width: 800px;
-      margin: 0 auto 4rem auto;
-    }
-
-    .sobre-nosotros h3 {
-      color: var(--primary);
-      margin-bottom: 1rem;
-    }
-
-    .sobre-nosotros p {
-      font-size: 1.1rem;
-      line-height: 1.5;
-    }
-
-    @media (max-width: 480px) {
-      .hero h2 { font-size: 2rem; }
-      .hero p { font-size: 1rem; }
-    }
-  </style>
 </head>
 <body>
 
@@ -194,10 +17,10 @@
     </nav>
   </header>
 
-  <section class="hero">
+  <section class="hero" style="background-image: url('img/hero-golosinas.jpg');">
     <div class="hero-overlay"></div>
     <h2>Bienvenidos a Golosinas Aries</h2>
-    <p>Dulces, juguetes y regalos personalizados para sorprender a todos.</p>
+    <p>Dulces, juguetes y regalos personalizados.</p>
     <button onclick="window.location.href='catalogo.html'">Ver Catálogo</button>
     <button onclick="window.location.href='contacto.html'">Contáctanos</button>
   </section>
@@ -207,20 +30,20 @@
     <div class="portfolio">
       <div class="card">
         <img src="img/alcancias.jpg" alt="Alcancía divertida">
-        <h3>Alcancía divertida</h3>
-        <p>Perfecta para guardar tus monedas.</p>
+        <h3>Alcancía rellena</h3>
+        <p>Perfecta para guardar tus monedas y comer ricas gomitas.</p>
         <button onclick="window.location.href='catalogo.html'">Ver más</button>
       </div>
       <div class="card">
         <img src="img/burbujero.jpg" alt="Burbujero mágico">
         <h3>Burbujero mágico</h3>
-        <p>Divertido juego de burbujas para todas las edades.</p>
+        <p>Divertido juego de burbujas.</p>
         <button onclick="window.location.href='catalogo.html'">Ver más</button>
       </div>
       <div class="card">
         <img src="img/nutello.jpg" alt="Nutello">
         <h3>Nutello</h3>
-        <p>Dulce irresistible para grandes y chicos.</p>
+        <p>Snack dulce irresistible para grandes y chicos.</p>
         <button onclick="window.location.href='catalogo.html'">Ver más</button>
       </div>
     </div>
@@ -228,7 +51,7 @@
 
   <section class="sobre-nosotros">
     <h3>¿Quiénes somos?</h3>
-    <p>En Golosinas Aries nos dedicamos a crear experiencias dulces y divertidas, desde alcancías llenas de caramelos hasta juguetes personalizados para cada ocasión. Cada regalo es único y memorable.</p>
+    <p>En Golosinas Aries nos dedicamos a crear experiencias dulces y divertidas. Somos una familia emprendedora de Miramar, ¡contactanos!</p>
   </section>
 
 </body>
