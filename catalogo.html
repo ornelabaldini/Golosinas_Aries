@@ -2,14 +2,15 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Catálogo - Golosinas Aries</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golosinas Aries♈🔥 - Catálogo</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
   <header>
-    <h1>Golosinas Aries</h1>
+    <h1>Golosinas Aries<span class="emoji">♈🔥</span></h1>
     <nav>
       <a href="index.html">Inicio</a>
       <a href="catalogo.html">Catálogo</a>
@@ -18,80 +19,158 @@
   </header>
 
   <main>
-    <h2>Catálogo de Productos</h2>
-    <section class="portfolio">
-
-      <!-- Aquí van tus 46 tarjetas de productos -->
-      <div class="card">
-        <img src="img/2.jpg" alt="Producto 2" data-title="Producto 2" data-desc="Descripción del producto 2" data-imgs='["img/2.jpg","img/2ss.jpg"]'>
-        <h3>Producto 2</h3>
-        <p>Descripción del producto 2</p>
-        <button data-title="Producto 2" data-desc="Descripción del producto 2" data-imgs='["img/2.jpg","img/2ss.jpg"]'>Ver detalles</button>
+    <section class="catalogo">
+      <h2>Golosinas</h2>
+      <div class="portfolio">
+        <div class="card">
+          <img src="img/ojos.jpg" alt="Ojos chicos" onclick="abrirModal(this)">
+          <h3>Ojos chicos</h3>
+          <p>$18.000,00 (x200)</p>
+        </div>
+        <div class="card">
+          <img src="img/brochetas.jpg" alt="Brochetas ojos" onclick="abrirModal(this)">
+          <h3>Brochetas ojos</h3>
+          <p>$12.000,00 (x30)</p>
+        </div>
+        <div class="card">
+          <img src="img/mecha.jpg" alt="Mechas mágicas" onclick="abrirModal(this)">
+          <h3>Mechas mágicas</h3>
+          <p>$13.000,00 (x30)</p>
+        </div>
+        <div class="card">
+          <img src="img/ss.jpg" alt="Foot Lollipop" onclick="abrirModal(this)">
+          <h3>Foot Lollipop</h3>
+          <p>$13.000,00 (x30)</p>
+        </div>
+        <div class="card">
+          <img src="img/ponyy.jpg" alt="Pony spray candy" onclick="abrirModal(this)">
+          <h3>Pony spray candy</h3>
+          <p>$16.000,00 (x30)</p>
+        </div>
+        <div class="card">
+          <img src="img/psncho.jpg" alt="Gomitas pizza/pancho/coca" onclick="abrirModal(this)">
+          <h3>Gomitas con forma</h3>
+          <p>$12.000,00 (x30)</p>
+        </div>
+        <div class="card">
+          <img src="img/latas.jpg" alt="Latitas con chicles" onclick="abrirModal(this)">
+          <h3>Latitas con chicles</h3>
+          <p>$17.000,00 (x30)</p>
+        </div>
+        <div class="card">
+          <img src="img/botellas.jpg" alt="Botellitas con chicles" onclick="abrirModal(this)">
+          <h3>Botellitas con chicles</h3>
+          <p>$13.000,00 (x30)</p>
+        </div>
+        <div class="card">
+          <img src="img/chupetines.jpg" alt="Chupetines con formas" onclick="abrirModal(this)">
+          <h3>Chupetines con formas</h3>
+          <p>$12.000,00 (x30)</p>
+        </div>
+        <div class="card">
+          <img src="img/metroc.jpg" alt="Chicle por metro" onclick="abrirModal(this)">
+          <h3>Chicle x metro</h3>
+          <p>$12.000,00 (x30)</p>
+        </div>
+        <div class="card">
+          <img src="img/corona.jpg" alt="Coronas LED" onclick="abrirModal(this)">
+          <h3>Coronas LED</h3>
+          <p>$12.000,00 (x30)</p>
+        </div>
+        <div class="card">
+          <img src="img/ddd.jpg" alt="Auto/camiseta/celular/spiderman + chicles" onclick="abrirModal(this)">
+          <h3>Auto/Camiseta/Celular/Spiderman + chicles</h3>
+          <p>$14.000,00 (x30)</p>
+        </div>
+        <div class="card">
+          <img src="img/trompet.jpg" alt="Trompetas con chupetines" onclick="abrirModal(this)">
+          <h3>Trompetas con chupetines</h3>
+          <p>$17.000,00 (x60)</p>
+        </div>
+        <div class="card">
+          <img src="img/nutello.jpg" alt="Nutello" onclick="abrirModal(this)">
+          <h3>Nutello</h3>
+          <p>$13.000,00 (x30)</p>
+        </div>
+        <div class="card">
+          <img src="img/popping.jpg" alt="Polvo ácido Popping candy" onclick="abrirModal(this)">
+          <h3>Polvo ácido Popping Candy</h3>
+          <p>$12.000,00 (x30)</p>
+        </div>
+        <div class="card">
+          <img src="img/coolmint.jpg" alt="Cool Mint" onclick="abrirModal(this)">
+          <h3>Cool Mint (mentitas)</h3>
+          <p>$12.000,00 (x30)</p>
+        </div>
+        <div class="card">
+          <img src="img/merliina.jpg" alt="Eyeball caramelo duro Merlina" onclick="abrirModal(this)">
+          <h3>Eyeball caramelo duro Merlina</h3>
+          <p>$12.000,00 (x30)</p>
+        </div>
+        <div class="card">
+          <img src="img/watch.jpg" alt="Watch chocolate" onclick="abrirModal(this)">
+          <h3>Watch chocolate</h3>
+          <p>$12.000,00 (x30)</p>
+        </div>
+        <div class="card">
+          <img src="img/monedas.jpg" alt="Monedas de chocolate" onclick="abrirModal(this)">
+          <h3>Monedas de chocolate</h3>
+          <p>$17.000,00 (x200)</p>
+        </div>
+        <div class="card">
+          <img src="img/animalitos.jpg" alt="Gelatinas con forma de animales" onclick="abrirModal(this)">
+          <h3>Gelatinas con forma de animales</h3>
+          <p>$4.000,00 (x12)</p>
+        </div>
       </div>
-
-      <div class="card">
-        <img src="img/3.jpg" alt="Producto 3" data-title="Producto 3" data-desc="Descripción del producto 3" data-imgs='["img/3.jpg"]'>
-        <h3>Producto 3</h3>
-        <p>Descripción del producto 3</p>
-        <button data-title="Producto 3" data-desc="Descripción del producto 3" data-imgs='["img/3.jpg"]'>Ver detalles</button>
-      </div>
-
-      <!-- Repetir para todos los productos -->
-
     </section>
-  </main>
 
-  <!-- Modal -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h3 id="modal-title"></h3>
-      <img id="modal-img" src="" alt="">
-      <p id="modal-desc"></p>
-      <div>
-        <button id="prev" class="carousel-btn">&#8592; Anterior</button>
-        <button id="next" class="carousel-btn">Siguiente &#8594;</button>
+    <section class="catalogo">
+      <h2>Juguetes</h2>
+      <div class="portfolio">
+        <div class="card">
+          <img src="img/alcancias.jpg" alt="Alcancías con gelatinas" onclick="abrirModal(this)">
+          <h3>Alcancías con gelatinas</h3>
+          <p>$48.000,00 (x12) / $90.000,00 (x24)</p>
+        </div>
+        <div class="card">
+          <img src="img/burbujero.jpg" alt="Burbujero" onclick="abrirModal(this)">
+          <h3>Burbujero</h3>
+          <p>$19.000,00 (x30)</p>
+        </div>
+        <div class="card">
+          <img src="img/transformer.jpg" alt="Transformers" onclick="abrirModal(this)">
+          <h3>Transformers</h3>
+          <p>$32.000,00 (x9)</p>
+        </div>
+        <div class="card">
+          <img src="img/dispenser.jpg" alt="Dispenser con chicles" onclick="abrirModal(this)">
+          <h3>Dispenser con chicles</h3>
+          <p>$45.000,00 (x8)</p>
+        </div>
+        <div class="card">
+          <img src="img/huevos.jpg" alt="Huevos sorpresa" onclick="abrirModal(this)">
+          <h3>Huevos sorpresa</h3>
+          <p>$14.000,00 (x30)</p>
+        </div>
+        <div class="card">
+          <img src="img/poke.jpg" alt="Bolas Pokémon con sorpresa y caramelo" onclick="abrirModal(this)">
+          <h3>Bolas Pokémon con sorpresa y caramelo</h3>
+          <p>$14.000,00 (x30)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img id="modal-img" src="" alt="Producto">
+        <p id="modal-title"></p>
       </div>
     </div>
-  </div>
+  </main>
 
-  <script>
-    const modal = document.getElementById('modal');
-    const modalTitle = document.getElementById('modal-title');
-    const modalImg = document.getElementById('modal-img');
-    const modalDesc = document.getElementById('modal-desc');
-    const closeBtn = document.querySelector('.close');
-    const prevBtn = document.getElementById('prev');
-    const nextBtn = document.getElementById('next');
-
-    let currentImgs = [];
-    let currentIndex = 0;
-
-    document.querySelectorAll('.card button').forEach(button => {
-      button.addEventListener('click', () => {
-        currentImgs = JSON.parse(button.dataset.imgs);
-        currentIndex = 0;
-        modal.style.display = 'block';
-        modalTitle.textContent = button.dataset.title;
-        modalDesc.textContent = button.dataset.desc;
-        modalImg.src = currentImgs[currentIndex];
-        modalImg.alt = button.dataset.title;
-      });
-    });
-
-    closeBtn.addEventListener('click', () => { modal.style.display = 'none'; });
-    window.addEventListener('click', e => { if(e.target == modal) modal.style.display = 'none'; });
-
-    prevBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + currentImgs.length) % currentImgs.length;
-      modalImg.src = currentImgs[currentIndex];
-    });
-
-    nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % currentImgs.length;
-      modalImg.src = currentImgs[currentIndex];
-    });
-  </script>
-
+  <script src="js/catalogo.js"></script>
 </body>
 </html>
