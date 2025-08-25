@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Golosinas Aries</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <style>
+    /* Variables de paleta */
+    :root {
+      --primary: #4a90e2;
+      --accent: #f39c12;
+      --bg: #f0f4f8;
+      --text: #333;
+      --border-radius: 8px;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      display: inline-block;
+      margin: 0 1rem;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem;
+      background: #e6f0fc;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "🚀";
+      display: inline-block;
+      font-size: 3rem;
+      margin-top: 1rem;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero button {
+      padding: 0.75rem 1.5rem;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .hero button:hover {
+      background: var(--accent);
+      transform: scale(1.05);
+    }
+
+    .hero button:focus {
+      outline: 2px dashed var(--accent);
+      outline-offset: 4px;
+    }
+
+    /* Servicios destacados */
+    .servicios {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .servicio {
+      display: inline-block;
+      width: 30%;
+      margin: 1%;
+      background: #fff;
+      border-radius: var(--border-radius);
+      border: 1px solid #ccc;
+      padding: 1rem;
+      vertical-align: top;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .servicio:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+
+    .servicio::before {
+      content: "★";
+      display: block;
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .servicio h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .servicio p {
+      margin-bottom: 1rem;
+    }
+
+    .servicio button {
+      padding: 0.5rem 1rem;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .servicio button:hover {
+      background: var(--accent);
+    }
+
+    .servicio button:focus {
+      outline: 2px dashed var(--accent);
+      outline-offset: 2px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Golosinas Aries</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="blog.html">Blog</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Golosinas de calidad</h2>
+    <p>Desarrollamos soluciones a medida para tu negocio</p>
+    <button>Contáctanos</button>
+  </section>
+
+  <!-- Servicios destacados -->
+  <section class="servicios">
+    <div class="servicio">
+      <h3>A</h3>
+      <p>B</p>
+      <button>Ver más</button>
+    </div>
+    <div class="servicio">
+      <h3>C</h3>
+      <p>D</p>
+      <button>Ver más</button>
+    </div>
+    <div class="servicio">
+      <h3>C</h3>
+      <p>A</p>
+      <button>Ver más</button>
+    </div>
+  </section>
+
+</body>
+</html>

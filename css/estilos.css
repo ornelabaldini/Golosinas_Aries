@@ -1,0 +1,42 @@
+/* Reset y box-sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Variables CSS para colores y tipografía */
+:root {
+  --primary: #3498db;
+  --accent: #e74c3c;
+  --bg: #f9f9f9;
+  --text: #333;
+  --border-radius: 0.25rem;
+}
+
+/* Tipografía base */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text);
+  background: #fff;
+  line-height: 1.5;
+  font-size: 1rem;
+  padding: 2rem;
+}
+
+/* Estilos de navegación */
+nav a {
+  display: inline-block;
+  margin-right: 1em;
+  text-decoration: none;
+  color: var(--primary);
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+nav a:focus {
+  outline: 2px dashed var(--accent);
+  outline-offset: 2px;
+}
