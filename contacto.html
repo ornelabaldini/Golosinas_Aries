@@ -6,109 +6,148 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css">
   <style>
-    form {
-      max-width: 500px;
-      margin: 2rem auto;
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f0f4f8;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #4a90e2;
+      color: #fff;
       padding: 1rem;
-      border: 1px solid var(--primary);
-      border-radius: var(--border-radius);
-      background: #f9f9f9;
+      text-align: center;
+    }
+
+    nav a {
+      display: inline-block;
+      margin: 0 1rem;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff6f61;
+    }
+
+    main {
+      padding: 2rem 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #4a90e2;
+    }
+
+    p.info {
+      text-align: center;
+      color: #ff6f61;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+
+    form {
+      border: 1px solid #4a90e2;
+      border-radius: 8px;
+      background: #fff;
+      padding: 1rem;
+      margin-bottom: 2rem;
     }
 
     label {
       display: block;
-      margin-bottom: 0.5em;
+      margin-bottom: 0.5rem;
       font-weight: bold;
     }
 
-    input, textarea {
+    input, textarea, button {
       display: block;
       width: 100%;
-      margin-bottom: 1em;
+      margin-bottom: 1rem;
       padding: 0.5rem;
       font-size: 1rem;
+      border-radius: 8px;
+    }
+
+    input, textarea {
       border: 1px solid #ccc;
-      border-radius: var(--border-radius);
     }
 
-    input:focus, textarea:focus {
-      border-color: var(--primary);
-      outline: none;
-    }
-
-    input:valid, textarea:valid {
-      border-color: var(--accent);
-    }
-
-    input:invalid, textarea:invalid {
-      border-color: red;
+    input:disabled, textarea:disabled, button:disabled {
+      background: #e0e0e0;
+      cursor: not-allowed;
     }
 
     button {
-      padding: 0.5rem 1rem;
-      background: var(--primary);
+      background: #4a90e2;
       color: #fff;
       border: none;
-      border-radius: var(--border-radius);
       cursor: pointer;
-      font-size: 1rem;
       transition: background 0.3s;
     }
 
-    button:hover {
-      background: var(--accent);
-    }
-
-    button:focus {
-      outline: 2px dashed var(--accent);
-      outline-offset: 2px;
-    }
-
-    .datos-contacto {
-      max-width: 500px;
-      margin: 2rem auto;
-      font-size: 1rem;
+    button:hover:enabled {
+      background: #ff6f61;
     }
 
     .datos-contacto p {
-      margin-bottom: 0.5em;
+      margin-bottom: 0.5rem;
     }
+
+    .datos-contacto a {
+      color: #4a90e2;
+      text-decoration: none;
+    }
+
+    .datos-contacto a:hover {
+      text-decoration: underline;
+      color: #ff6f61;
+    }
+
   </style>
 </head>
 <body>
 
-  <!-- Header y navegación -->
+  <!-- Header -->
   <header>
     <h1>Golosinas Aries</h1>
     <nav>
       <a href="index.html">Inicio</a>
-      <a href="servicios.html">Servicios</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="blog.html">Blog</a>
+      <a href="catalogo.html">Catálogo</a>
       <a href="contacto.html">Contacto</a>
     </nav>
   </header>
 
   <main>
     <h2>Formulario de Contacto</h2>
+    <p class="info">El formulario aún no está disponible. Podés contactarnos directamente por WhatsApp o redes sociales.</p>
 
     <form>
       <label for="nombre">Nombre</label>
-      <input type="text" id="nombre" name="nombre" required minlength="3">
+      <input type="text" id="nombre" name="nombre" required minlength="3" disabled>
 
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email" required disabled>
 
       <label for="mensaje">Mensaje</label>
-      <textarea id="mensaje" name="mensaje" required minlength="10"></textarea>
+      <textarea id="mensaje" name="mensaje" required minlength="10" disabled></textarea>
 
-      <button type="submit">Enviar</button>
+      <button type="submit" disabled>Enviar</button>
     </form>
 
     <div class="datos-contacto">
-      <p><strong>Email:</strong> golosinasaries@gmail.com</p>
-      <p><strong>Teléfono:</strong> +54 9 2236010443</p>
-      <p><strong>Dirección:</strong>Miramar, Buenos Aires, Argentina</p>
+      <p><strong>Email:</strong> <a href="mailto:golosinasaries@gmail.com">golosinasaries@gmail.com</a></p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/542236010443" target="_blank">+54 9 2236010443</a></p>
+      <p><strong>Dirección:</strong> <a href="https://goo.gl/maps/tu-direccion" target="_blank">Miramar, Buenos Aires, Argentina</a></p>
+      <p><strong>Instagram:</strong> <a href="https://instagram.com/golosinasaries" target="_blank">@golosinasaries</a></p>
+      <p><strong>Facebook:</strong> <a href="https://facebook.com/golosinasaries" target="_blank">Golosinas Aries</a></p>
     </div>
   </main>
 
