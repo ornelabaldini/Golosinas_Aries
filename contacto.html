@@ -6,6 +6,8 @@
   <title>Contacto - Golosinas Aries</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css">
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
@@ -21,30 +23,40 @@
 
   <!-- Contacto -->
   <main class="contacto">
-    <h2>Formulario de Contacto</h2>
-    <p class="info">El formulario aún no está disponible. Podés contactarnos directamente por WhatsApp o redes sociales.</p>
 
-    <form>
-      <label for="nombre">Nombre</label>
-      <input type="text" id="nombre" name="nombre" required minlength="3" disabled>
-
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required disabled>
-
-      <label for="mensaje">Mensaje</label>
-      <textarea id="mensaje" name="mensaje" required minlength="10" disabled></textarea>
-
-      <button type="submit" disabled>Enviar</button>
-    </form>
-
-    <div class="datos-contacto">
-      <p><strong>Email:</strong> <a href="mailto:golosinasaries@gmail.com">golosinasaries@gmail.com</a></p>
-      <p><strong>WhatsApp:</strong> <a href="https://wa.me/542236010443" target="_blank">+54 9 2236010443</a></p>
-      <p><strong>Dirección:</strong> <a href="https://goo.gl/maps/tu-direccion" target="_blank">Miramar, Buenos Aires, Argentina</a></p>
-      <p><strong>Instagram:</strong> <a href="https://instagram.com/golosinasaries" target="_blank">@golosinasaries</a></p>
-      <p><strong>Facebook:</strong> <a href="https://facebook.com/golosinasaries" target="_blank">Golosinas Aries</a></p>
+    <!-- Botón destacado WhatsApp -->
+    <div class="whatsapp-button-wrapper">
+      <a href="https://wa.me/542236010443" target="_blank" class="social-btn whatsapp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
     </div>
+
+    <!-- Botones sociales -->
+    <div class="social-buttons-wrapper">
+      <div class="social-buttons">
+        <a href="https://mail.google.com/mail/?view=cm&to=golosinasaries@gmail.com" class="social-btn email">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+        <a href="https://instagram.com/golosinasaries" target="_blank" class="social-btn instagram">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61577104861271&locale=es_LA" target="_blank" class="social-btn facebook">
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+      </div>
+    </div>
+
   </main>
+
+  <!-- Footer con ubicación y volver arriba -->
+  <footer>
+    <div class="ubicacion">
+      <a href="https://www.google.com/search?gs_ssp=eJzj4tLP1TcwMrO0TK8yYPQSyc0sSsxNLFJIKk3Nyy9WSMwsSi0GALAcCyM&q=miramar+buenos+aires&oq=miramar%2C+bueno&gs_lcrp=EgZjaHJvbWUqBwgBEC4YgAQyBggAEEUYOTIHCAEQLhiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIICAUQABgWGB4yCAgGEAAYFhgeMggIBxAAGBYYHjIICAgQABgWGB7SAQg3NTY2ajBqNKgCALACAA&sourceid=chrome&ie=UTF-8" target="_blank" class="social-btn location">
+        <i class="fas fa-map-marker-alt"></i> Miramar, Buenos Aires
+      </a>
+    </div>
+    <a href="index.html" class="back-to-top">Golosinas Aries♈🔥</a>
+  </footer>
 
 </body>
 </html>

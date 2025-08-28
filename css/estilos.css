@@ -358,3 +358,85 @@ main {
 
 .modal-content .prev:hover,
 .modal-content .next:hover { background: rgba(0,0,0,0.8); }
+
+/* Footer */
+footer {
+  background: var(--primary);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Redes sociales */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.social-buttons-wrapper {
+  margin-top: 2rem; /* separación de los datos de contacto */
+  padding-top: 1rem;
+  border-top: 1px solid #ccc; /* línea fina separadora */
+}
+
+/* Botones sociales */
+.social-btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--border-radius);
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s, background 0.3s;
+}
+.social-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Colores por red social */
+.social-btn.instagram { background: #E4405F; }
+.social-btn.instagram:hover { background: #C13584; }
+
+.social-btn.facebook { background: #1877F2; }
+.social-btn.facebook:hover { background: #0F62CE; }
+
+.social-btn.whatsapp { background: #25D366; color: #fff; }
+.social-btn.whatsapp:hover { background: #1DA851; }
+
+.social-btn.email { background: #6a1b9a; }
+.social-btn.email:hover { background: #9c4dcc; }
+
+.social-btn.location { 
+  background: #00b894;
+}
+.social-btn.location:hover { 
+  background: #00a07f;
+}
+
+/* Botón volver arriba */
+.back-to-top {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: #fff;
+  color: var(--primary);
+  font-weight: bold;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s, color 0.3s;
+}
+.back-to-top:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
