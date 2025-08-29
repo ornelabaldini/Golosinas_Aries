@@ -49,7 +49,7 @@ const imagenesProducto = {
     "img/2ss.jpg",
     "img/ddd.jpg"
   ],
-  "Bull dog": [
+  "Gomitas Bull dog": [
     "img/bull_dog_frutillaa.jpg",
     "img/bull_dog_sandia.jpg"
   ],
