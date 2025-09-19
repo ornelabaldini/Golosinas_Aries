@@ -27,8 +27,9 @@
       <input type="text" id="search" placeholder="🔍 Buscar producto..." onkeyup="filtrarProductos()">
     </section>
 
-    <section class="catalogo">
-      <h2>Golosinas</h2>
+    <section class="contenedor-secciones">
+      <section class="seccion">
+      <h2 class="hero-buttons">Golosinas</h2>
       <div class="portfolio">
 
         <div class="card">
@@ -179,8 +180,9 @@
       </div>
     </section>
 
-    <section class="catalogo">
-      <h2>Juguetes</h2>
+    <section class="contenedor-secciones">
+      <section class="seccion">
+      <h2 class="hero-buttons">Juguetes</h2>
       <div class="portfolio">
         <div class="card">
           <img src="img/alcancias.jpg" alt="Alcancías con gelatinas" onclick="abrirModal(this)">
@@ -231,11 +233,26 @@
   </main>
 
 <footer>
-  <a href="https://instagram.com/golosinasaries" target="_blank" class="social-btn instagram">Instagram</a>
-  <a href="https://facebook.com/golosinasaries" target="_blank" class="social-btn facebook">Facebook</a>
-  <a href="https://wa.me/542236010443" target="_blank" class="social-btn whatsapp">WhatsApp</a>
-    <!-- Botón volver arriba -->
-  <a href="#" class="back-to-top">⬆ Volver arriba</a>
+ <p> Si tienes alguna pregunta, no dudes en contactarnos. ¡Estamos acá para ayudarte!</p>
+    <!-- Botones sociales -->
+    <div class="social-buttons-wrapper">
+      <div class="social-buttons">
+        <a href="https://mail.google.com/mail/?view=cm&to=golosinasaries@gmail.com" class="social-btn email">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+        <a href="https://instagram.com/golosinasaries" target="_blank" class="social-btn instagram">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61577104861271&locale=es_LA" target="_blank" class="social-btn facebook">
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://wa.me/542236010443" target="_blank" class="social-btn whatsapp">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="#" class="back-to-top">⬆ Volver arriba</a>
+      </div>
+    </div>
+  
 </footer>
 
   <script src="js/catalogo.js"></script>
