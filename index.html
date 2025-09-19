@@ -1,55 +1,61 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Golosinas Aries♈🔥 - Inicio</title>
+  <title>Golosinas Aries  ♈ 🔥 - Inicio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <!-- Header -->
   <header>
-    <h1>Golosinas Aries <span class="emoji">♈🔥</span></h1>
+    <div class="titulo-contenedor"></div>
+    <h1 class="titulo-animado">Golosinas Aries <span class="emoji">♈🔥</span></h1>
     <nav>
       <a href="index.html">Inicio</a>
       <a href="catalogo.html">Catálogo</a>
       <a href="contacto.html">Contacto</a>
     </nav>
+    <aside class="hero" style="background-image: url('img/hero-golosinas.jpg');">
+      <div class="hero-overlay"></div>
+      <h2>Bienvenidos a Golosinas Aries <span class="emoji">♈🔥</span></h2>
+      <p>Golosinas, juguetes y combos personalizados.</p>
+    </aside>
   </header>
 
   <!-- Hero -->
   <main>
-    <section class="hero" style="background-image: url('img/hero-golosinas.jpg');">
-      <div class="hero-overlay"></div>
-      <h2>Bienvenidos a Golosinas Aries <span class="emoji">♈🔥</span></h2>
-      <p>Golosinas, juguetes y combos personalizados.</p>
-      <div class="hero-buttons">
-        <button class="btn" onclick="window.location.href='catalogo.html'">Ver Catálogo</button>
-        <button class="btn" onclick="window.location.href='contacto.html'">Contáctanos</button>
-      </div>
-    </section>
-
-    <!-- Productos Destacados -->
+   <!-- Productos Destacados -->
     <section class="destacados">
-      <h2>Productos Destacados</h2>
+      <h2>Productos en Promoción</h2>
       <div class="portfolio">
         <div class="card">
           <img src="img/alcancias.jpg" alt="Alcancía divertida">
           <h3>Alcancía rellena</h3>
           <p>Perfecta para guardar tus monedas y comer ricas gomitas.</p>
+          <a href="https://wa.me/542236010443?text=Hola,%20quiero%20reservar%20la%20Alcancía%20rellena" target="_blank" class="btn-card whatsapp-btn">
+          Reservar por WhatsApp
+          </a>
           <button onclick="window.location.href='catalogo.html'">Ver más</button>
         </div>
         <div class="card">
           <img src="img/burbujero.jpg" alt="Burbujero mágico">
           <h3>Burbujero mágico</h3>
           <p>Divertido juego de burbujas.</p>
+          <a href="https://wa.me/542236010443?text=Hola,%20quiero%20reservar%20la%20Alcancía%20rellena" target="_blank" class="btn-card whatsapp-btn">
+          Reservar por WhatsApp
+          </a>
           <button onclick="window.location.href='catalogo.html'">Ver más</button>
         </div>
         <div class="card">
           <img src="img/nutello.jpg" alt="Nutello">
           <h3>Nutello</h3>
           <p>Snack dulce irresistible para grandes y chicos.</p>
+          <a href="https://wa.me/542236010443?text=Hola,%20quiero%20reservar%20la%20Alcancía%20rellena" target="_blank" class="btn-card whatsapp-btn">
+          Reservar por WhatsApp
+          </a>
           <button onclick="window.location.href='catalogo.html'">Ver más</button>
         </div>
       </div>
@@ -59,17 +65,27 @@
     <section class="sobre-nosotros">
       <h3>¿Quiénes somos?</h3>
       <p>En Golosinas Aries <span class="emoji">♈🔥</span> nos dedicamos a crear experiencias dulces y divertidas. Somos una familia emprendedora de Miramar, ¡contactanos!</p>
+      <a href="https://wa.me/542236010443" target="_blank" class="social-btn whatsapp">WhatsApp</a>
     </section>
+
   </main>
 
   <!-- Footer con botones de redes sociales -->
 <footer>
   <a href="https://instagram.com/golosinasaries" target="_blank" class="social-btn instagram">Instagram</a>
   <a href="https://facebook.com/golosinasaries" target="_blank" class="social-btn facebook">Facebook</a>
-  <a href="https://wa.me/542236010443" target="_blank" class="social-btn whatsapp">WhatsApp</a>
-    <!-- Botón volver arriba -->
+  <!-- Botón volver arriba -->
   <a href="#" class="back-to-top">⬆ Volver arriba</a>
 </footer>
+
+<script src="js/script.js"></script>
+
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/542236010443" target="_blank" class="whatsapp-flotante">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+
 
 </body>
 </html>

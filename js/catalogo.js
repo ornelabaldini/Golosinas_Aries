@@ -135,4 +135,16 @@ function filtrarProductos() {
     }
   });
 }
-document.getElementById("search").addEventListener("input", filtrarProductos);      
+document.getElementById("search").addEventListener("input", filtrarProductos);
+// Título animado con emojis
+let h1 = "Golosinas Aries ♈🔥 - Inicio";
+let chars = Array.from(title); // Esto maneja correctamente los emojis
+let i = 0;
+
+function rotateTitle() {
+  document.title = chars.slice(i).join("") + " " + chars.slice(0, i).join("");
+  i = (i + 1) % chars.length;
+}
+
+setInterval(rotateTitle, 300);
+rotateTitle(); // Inicializar al cargar
