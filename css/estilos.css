@@ -112,7 +112,7 @@ nav a:hover {
   .titulo-contenedor h1 {
     font-size: 1.1rem;
   }
-  
+
   .logo-contenedor img {
     max-width: 60px;
   }
@@ -754,3 +754,67 @@ html {
   font-size: 1.5rem;
   text-align: center;
 }
+
+/* --- Correcciones finales --- */
+
+/* 1️⃣ Ajuste del espacio entre header y contenido */
+main {
+  margin-top: 0; 
+  padding-top: 1rem; 
+  overflow: visible; /* permite que buscador y otros elementos se vean */
+}
+
+/* 2️⃣ Título animado: que no se corte en móviles */
+.titulo-animado {
+  white-space: normal;
+  z-index: 1;
+  overflow-x: visible;
+}
+
+@media (max-width: 480px) {
+  .titulo-animado {
+    font-size: 1.2rem; /* tamaño más pequeño para móviles */
+  }
+}
+
+/* 3️⃣ Contenedores que usan 100vw + padding (evita scroll horizontal) */
+.destacados,
+.portfolio,
+.contenedor-secciones,
+.titulo-contenedor,
+footer {
+  width: 100%;          
+  box-sizing: border-box;
+}
+
+.hero,
+.buscador {
+  padding-top: 120px; /* altura del header */
+}
+/* =========================
+   Ajustes móviles: buscador arriba y opciones debajo
+   ========================= */
+@media (max-width: 480px) {
+  /* Contenedor de opciones de productos */
+  .contenedor-secciones,
+  .portfolio {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 columna por fila */
+    gap: 1rem;                  /* espacio entre filas */
+    padding: 0 1rem;            /* espacio interno */
+  }
+
+  /* Cards ocupan todo el ancho */
+  .card {
+    width: 100%;
+    min-height: auto; /* se adapta al contenido */
+  }
+
+  /* Hero o buscador ya visible, opcional pequeño padding */
+  .buscador,
+  .hero {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
