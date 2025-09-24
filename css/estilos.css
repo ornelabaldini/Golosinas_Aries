@@ -419,7 +419,7 @@ html {
 
 #search {
   width: 90%;
-  max-width: 1200px;
+  max-width: 2400px;
   padding: 0.75rem;
   border: 2px solid var(--accent);
   border-radius: var(--border-radius);
