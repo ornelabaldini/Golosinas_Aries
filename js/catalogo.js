@@ -11,7 +11,7 @@ const nextBtn = document.createElement('div');
 nextBtn.textContent = '>';
 nextBtn.classList.add('next');
 
-const contador = document.createElement('span');
+const contador = document.createElement('span'); 
 contador.classList.add('contador');
 
 const modalContent = modal.querySelector('.modal-content');
@@ -35,7 +35,6 @@ const imagenesProducto = {
     "img/boca.jpg",
     "img/sds.jpg",
     "img/ss.jpg"
-
   ],
   "Eyeball caramelo duro Merlina": [
     "img/merlina.jpg",
@@ -134,6 +133,11 @@ function filtrarProductos() {
       card.style.display = "none";
     }
   });
+
+  // Mostrar mensaje si no hay productos visibles
+  let anyVisible = Array.from(cards).some(card => card.style.display === "block");
+  document.getElementById("no-results").style.display = anyVisible ? "none" : "block";
+
 }
 document.getElementById("search").addEventListener("input", filtrarProductos);
 // Título animado con emojis
