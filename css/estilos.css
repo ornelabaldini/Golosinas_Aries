@@ -391,7 +391,7 @@ html {
 form {
   border: 1px solid var(--primary);
   border-radius: var(--border-radius);
-  background: #fafa;
+  background: #fff;
   padding: 1rem;
   margin: 0 auto 2rem auto;
   max-width: 500px;
@@ -721,14 +721,6 @@ html {
 }
 
 
-/* Emoji con rebote */
-.titulo-animado .emoji {
-  display: inline-block;
-  font-size: 1.2rem;
-  vertical-align: middle;
-  animation: bounce-emoji 1s ease-in-out infinite;
-}
-
 /* Ajustes para la visualización de las secciones de productos */
 .contenedor-secciones {
   display: flex;
@@ -764,12 +756,6 @@ main {
   margin-top: 0; 
   padding-top: 1rem; 
   overflow: visible; /* permite que buscador y otros elementos se vean */
-}
-/* 2️⃣ Ajuste del tamaño del título animado en móviles */
-@media (max-width: 480px) {
-  .titulo-animado {
-    font-size: 1.2rem; /* tamaño más pequeño para móviles */
-  }
 }
 
 /* 3️⃣ Contenedores que usan 100vw + padding (evita scroll horizontal) */
