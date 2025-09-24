@@ -86,6 +86,9 @@ nav a:hover {
     flex-direction: column;
     gap: 0.5rem;
   }
+  body {
+    padding-top: 160px; /* header más alto en tablet/móvil */
+  }
 
   .titulo-contenedor h1 {
     font-size: 1.4rem;
@@ -102,6 +105,10 @@ nav a:hover {
 @media (max-width: 480px) {
   .titulo-contenedor h1 {
     font-size: 1.1rem;
+  }
+  
+   body {
+    padding-top: 200px; /* header aún más alto en celulares */
   }
 
   .logo-contenedor img {
