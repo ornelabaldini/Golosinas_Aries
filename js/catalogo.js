@@ -120,7 +120,7 @@ window.onclick = e => {
   }
 };
 
-// Filtro de productos (como ya tenías)
+// Filtro de productos 
 function filtrarProductos() {
   let input = document.getElementById("search").value.toLowerCase();
   let cards = document.querySelectorAll(".card");
@@ -137,8 +137,8 @@ function filtrarProductos() {
 }
 document.getElementById("search").addEventListener("input", filtrarProductos);
 // Título animado con emojis
-let h1 = "Golosinas, juguetes y combos ♈🔥 - Inicio"; // el título completo
-let chars = Array.from(h1); // usar h1 y no title
+let h1 = "Golosinas Aries ♈🔥 - Inicio";
+let chars = Array.from(title); // Esto maneja correctamente los emojis
 let i = 0;
 
 function rotateTitle() {
@@ -147,4 +147,4 @@ function rotateTitle() {
 }
 
 setInterval(rotateTitle, 300);
-rotateTitle();
+rotateTitle(); // Inicializar al cargar

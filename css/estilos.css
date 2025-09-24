@@ -47,7 +47,7 @@ header {
 }
 
 .logo-contenedor img {
-  max-width: 80px;
+  max-width: 110px;
   height: auto;
   border-radius: 12px;
   filter: drop-shadow(0 2px 8px rgba(106,27,154,0.3));
@@ -162,7 +162,9 @@ html {
   z-index: 1;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
   font-size: 2rem;
-  margin: 0.5rem 0;
+  margin: 1.7rem 0;
+  padding: 0 1rem;
+
 }
 
 .hero-buttons {
@@ -210,7 +212,7 @@ html {
   color: var(--primary);
   margin-bottom: 2rem;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
-  font-size: 1.5rem;
+  font-size: 3rem;
   padding-top: 0%;
   text-align: center;
 
@@ -389,7 +391,7 @@ html {
 form {
   border: 1px solid var(--primary);
   border-radius: var(--border-radius);
-  background: #fff;
+  background: #fafa;
   padding: 1rem;
   margin: 0 auto 2rem auto;
   max-width: 500px;
@@ -729,12 +731,12 @@ html {
 
 /* Ajustes para la visualización de las secciones de productos */
 .contenedor-secciones {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(2, 1fr); /* Dos columnas */
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 0.2rem;
+  padding: 0 0.2rem;  
 }
 
 /* Ajustes en la distribución para pantallas más pequeñas */
@@ -751,7 +753,7 @@ html {
   color: var(--primary);
   margin-bottom: 1rem;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: center;
 }
 
@@ -763,14 +765,7 @@ main {
   padding-top: 1rem; 
   overflow: visible; /* permite que buscador y otros elementos se vean */
 }
-
-/* 2️⃣ Título animado: que no se corte en móviles */
-.titulo-animado {
-  white-space: normal;
-  z-index: 1;
-  overflow-x: visible;
-}
-
+/* 2️⃣ Ajuste del tamaño del título animado en móviles */
 @media (max-width: 480px) {
   .titulo-animado {
     font-size: 1.2rem; /* tamaño más pequeño para móviles */
