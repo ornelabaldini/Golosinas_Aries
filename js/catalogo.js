@@ -148,3 +148,4 @@ function rotateTitle() {
 
 setInterval(rotateTitle, 300);
 rotateTitle(); // Inicializar al cargar
+// Fin del título animado
