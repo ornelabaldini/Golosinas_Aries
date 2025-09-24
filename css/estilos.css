@@ -112,11 +112,7 @@ nav a:hover {
   .titulo-contenedor h1 {
     font-size: 1.1rem;
   }
-
-   body {
-    padding-top: 200px; /* header aún más alto en celulares */
-  }
-
+  
   .logo-contenedor img {
     max-width: 60px;
   }
