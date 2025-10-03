@@ -679,7 +679,6 @@ html {
 /* Ajustes para la visualización de las secciones de productos */
 .contenedor-secciones {
   display: flex;
-  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -735,7 +734,7 @@ footer {
   .contenedor-secciones,
   .portfolio {
     display: grid;
-    grid-template-columns: 1fr; /* 1 columna por fila */
+    grid-template-columns: 2fr;
     gap: 1rem;                  /* espacio entre filas */
     padding: 0 1rem;            /* espacio interno */
   }
