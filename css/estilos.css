@@ -241,7 +241,7 @@ html {
 
 .portfolio {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 productos por fila */
+  grid-template-columns: repeat(4, 2fr); /* 2 productos por fila */
   gap: 1rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -699,9 +699,10 @@ html {
 }
 .seccion h2 {
   color: var(--primary);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.3rem;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
 }
 
@@ -736,7 +737,7 @@ footer {
   .contenedor-secciones,
   .portfolio {
     display: grid;
-    grid-template-columns: 1fr; /* 1 columna por fila */
+    grid-template-columns: auto;
     gap: 1rem;                  /* espacio entre filas */
     padding: 0 1rem;            /* espacio interno */
   }
