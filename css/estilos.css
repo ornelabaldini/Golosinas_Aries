@@ -8,11 +8,15 @@
   --border-radius: 12px;
 }
 
+/* al inicio de estilos.css */
+* { box-sizing: border-box; }
 html, body {
+  margin: 0;
+  padding: 0;
   min-width: 100vw;
   overflow-x: hidden;
-
 }
+
 
 
 body {
@@ -25,6 +29,7 @@ body {
 
 header {
   background: linear-gradient(135deg, #6a1b9a, #ab47bc);
+
   padding: 1rem;
   text-align: center;
   position: fixed; /* hace que el header sea fijo */
@@ -96,52 +101,11 @@ nav a:hover {
   color: var(--accent);
 }
 
-/* Responsivo para pantallas medianas */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  body {
-    padding-top: 160px; /* header más alto en tablet/móvil */
-  }
-
-  .titulo-contenedor h1 {
-    font-size: 1.4rem;
-    line-height: 1.2;
-    padding: 0 1rem;
-  }
-
-  nav a {
-    font-size: 1.2rem;
-  }
+/* Empuja el contenido principal exactamente la altura del header */
+.main, .hero, .contenido-principal {
+  padding-top: calc(var(--header-h));
+  margin-top: 0; /* importante: quitar margin colapsado */
 }
-
-/* Responsivo para pantallas pequeñas */
-@media (max-width: 480px) {
-  .titulo-contenedor h1 {
-    font-size: 1.1rem;
-  }
-
-  .logo-contenedor img {
-    max-width: 60px;
-  }
-
-  nav a {
-    font-size: 1rem;
-  }
-}
-/* Catálogo a dos columnas */
-  .catalogo {
-    display: grid;
-    grid-template-columns: 2fr 2fr; 
-    gap: 10px; /* espacio entre productos */
-  }
-
-  .catalogo .producto {
-    width: 100%;
-  }
-
 
 /* Asegurarnos de que el contenido se ajuste bien en el zoom */
 html {
@@ -240,7 +204,7 @@ html {
 
 .portfolio {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 2 productos por fila */
+  grid-template-columns: repeat(3, 2fr);  
   gap: 1rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -253,7 +217,7 @@ html {
   background: #fff;
   border: 2px solid var(--accent);
   border-radius: var(--border-radius);
-  padding: 0.5rem;
+  padding: rem;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
@@ -266,7 +230,7 @@ html {
   height: 100%;
   box-sizing: border-box;
   min-height: 300px; /* altura mínima para tarjetas */
-  
+
 }
 
 .card:hover {
@@ -286,7 +250,7 @@ html {
 .card h3 {
   color: var(--primary);
   margin-bottom: 0.25rem;
-  font-size: 2.9rem;
+  font-size: 3rem;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
   flex-grow: 1;
   display: flex;
@@ -298,7 +262,7 @@ html {
 
 .card p {
   margin-bottom: 0.5rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #555;
   font-weight: bold;
   min-height: 1.2rem; /* altura mínima para evitar saltos */
@@ -341,18 +305,19 @@ html {
   padding: 1rem;
   box-sizing: border-box;
   overflow: auto;
+
 }
 
 .modal-content {
   max-width: 90%;
   max-height: 90%;
-  background: #fff;
+  background: #000000;
   padding: 1rem;
   border-radius: 12px;
   text-align: center;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(235, 230, 230, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -369,6 +334,8 @@ html {
   cursor: zoom-in;
   transition: transform 0.3s ease;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 1;
+  
 }
 
 .modal-content img.zoomed {
@@ -377,15 +344,20 @@ html {
   z-index: 10;
 }
 
+/* Cruz de cerrar */
 .close {
   position: absolute;
   top: 10px;
   right: 20px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
-  color: #333;
   cursor: pointer;
-  transition: color 0.3s;
+  z-index: 200; /* por encima de flechas e imagen */
+  user-select: none;
+}
+
+.close:hover {
+  color: #ff5555; /* cambia de color al pasar el mouse */
 }
 
 .carousel-btn {
@@ -432,7 +404,7 @@ html {
   padding: 0.75rem;
   border: 2px solid var(--accent);
   border-radius: var(--border-radius);
-  font-size: 1rem;
+  font-size: 3rem;
   outline: none;
   transition: border 0.3s;
   box-sizing: border-box;
@@ -443,6 +415,18 @@ html {
   border-color: var(--primary);
   box-shadow: 0 0 8px rgba(106,27,154,0.2);
 }
+
+/* Mensaje "producto no encontrado" */
+#no-results a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#no-results a:hover {
+  text-decoration: underline;
+}
+
 
 /* Main */
 main {
@@ -469,37 +453,24 @@ main {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.918);
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   border: none;
   border-radius: 50%;
   cursor: pointer;
+  padding: 0;
+  margin: 0;
   outline: none;
   user-select: none;
   z-index: 101;
   transition: background 0.3s;
-}
-
-/* Flecha izquierda */
-.modal-content .prev {
-  left: -60px; /* queda fuera del contenedor */
-}
-
-/* Flecha derecha */
-.modal-content .next {
-  right: -60px; /* queda fuera del contenedor */
-}
-
-.modal-content .prev:hover,
-.modal-content .next:hover {
-  background: rgba(0, 0, 0, 0.9);
 }
 
 
@@ -510,6 +481,7 @@ main {
 .modal-content .prev:hover,
 .modal-content .next:hover { background: rgba(0,0,0,0.8); }
 
+/* Animación fadeIn */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -679,6 +651,7 @@ html {
 /* Ajustes para la visualización de las secciones de productos */
 .contenedor-secciones {
   display: flex;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -726,32 +699,7 @@ footer {
 .buscador {
   padding-top: 120px; /* altura del header */
 }
-/* =========================
-   Ajustes móviles: buscador arriba y opciones debajo
-   ========================= */
-@media (max-width: 480px) {
-  /* Contenedor de opciones de productos */
-  .contenedor-secciones,
-  .portfolio {
-    display: grid;
-    grid-template-columns: 2fr;
-    gap: 1rem;                  /* espacio entre filas */
-    padding: 0 1rem;            /* espacio interno */
-  }
 
-  /* Cards ocupan todo el ancho */
-  .card {
-    width: 100%;
-    min-height: auto; /* se adapta al contenido */
-  }
-
-  /* Hero o buscador ya visible, opcional pequeño padding */
-  .buscador,
-  .hero {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-}
 
 .contacto-main {
   text-align: center;
@@ -768,3 +716,149 @@ footer {
   gap: 1rem;
   padding-top: 1rem;
 }
+
+/* Responsivo para pantallas medianas */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0.5rem;
+
+  }
+  body {
+    font-size: 1rem; /* tamaño de fuente base más grande para mejor legibilidad */
+    padding-top: 160px; /* header más alto en tablet/móvil */
+
+  }
+
+  .titulo-contenedor h1 {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    padding: 0 1rem;
+
+  }
+
+  nav a {
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+
+  }
+}
+
+/* ======= MÓVIL: 2 COLUMNAS COMPACTAS (reemplazar media queries anteriores) ======= */
+@media (max-width: 480px) {
+
+  :root { --header-h: 56px; } 
+
+  /* HEADER - compactar título / logo / nav */
+  .titulo-contenedor h1,
+  .titulo-animado {
+    font-size: 1.0rem !important;
+    line-height: 1.1 !important;
+    padding: 0 0.4rem !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 auto;
+    z-index: 1001;
+  }
+
+  .logo-contenedor img {
+    max-width: 48px !important;
+    height: auto !important;
+    margin-left: 0.4rem !important;
+  }
+
+  nav a {
+    font-size: 1.2rem !important;
+    padding: 0 0.30rem !important;
+    margin: 0 0.20rem !important;
+  }
+
+  /* BUSCADOR - reducir tamaño para no empujar layout */
+  .buscador { padding-top: 0.4rem; padding-bottom: 0.4rem; }
+  #search {
+    width: 92% !important;
+    max-width: 92% !important;
+    font-size: 0.95rem !important;
+    padding: 0.45rem !important;
+  }
+
+  /* GRID PRINCIPAL - 2 columnas compactas */
+  .catalogo,
+  .portfolio,
+  .contenedor-secciones {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 6px !important;
+    width: 100% !important;
+    padding: 0.25rem !important;
+    box-sizing: border-box !important;
+  }
+
+  /* CARDS - compactas, sin forzar altura grande */
+  .catalogo .producto,
+  .card {
+    width: 100% !important;
+    padding: 0.35rem !important;
+    margin: 0 !important;
+    min-height: auto !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    gap: 0.25rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* TITULO DENTRO DE CARD */
+  .card h3 {
+    font-size: 1.05rem !important;
+    line-height: 1.1 !important;
+    margin: 0.2rem 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  .card p {
+    font-size: 0.85rem !important;
+    margin: 0 !important;
+    color: #444 !important;
+  }
+
+  /* IMAGEN: contenida y pequeña para que no empuje la card */
+  .catalogo .producto img,
+  .card img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    max-height: 100px !important; /* <- reduce para que entre 2 columnas cómodas */
+    border-radius: 8px !important;
+    display: block !important;
+    margin: 0 auto 0.35rem auto !important;
+  }
+
+  /* Botón flotante WA: asegurarse que no tape el contenido */
+  a[href*="wa.me"] img {
+    width: 56px !important;
+    height: 56px !important;
+    bottom: 14px !important;
+    right: 10px !important;
+    z-index: 1200 !important;
+  }
+
+  /* Modal / flechas (solo para evitar que se superpongan) */
+  .modal, .modal-content { z-index: 1300 !important; }
+
+}
+
+/* Para pantallas todavía más pequeñas, sólo reduzco la altura de la imagen */
+@media (max-width: 360px) {
+  .catalogo .producto img,
+  .card img {
+    max-height: 84px !important;
+  }
+
+  #search { font-size: 1.3rem !important; padding: 0.15rem !important; }
+}
+/* ======= FIN MÓVIL ======= */
