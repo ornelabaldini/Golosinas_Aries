@@ -149,5 +149,32 @@ function rotateTitle() {
   i = (i + 1) % chars.length;
 }
 
+const searchInput = document.getElementById("search");
+const cards = document.querySelectorAll(".card");
+const noResults = document.getElementById("no-results");
+
+searchInput.addEventListener("input", function () {
+  let filter = searchInput.value.toLowerCase();
+  let matches = 0;
+
+  cards.forEach(card => {
+    const title = card.querySelector("h3").textContent.toLowerCase();
+    if (title.includes(filter)) {
+      card.style.display = "block";
+      matches++;
+    } else {
+      card.style.display = "none";
+    }
+  });
+
+  // Mostrar/ocultar mensaje de "no resultados"
+  if (matches === 0 && filter.length > 0) {
+    noResults.style.display = "block";
+  } else {
+    noResults.style.display = "none";
+  }
+});
+
+
 setInterval(rotateTitle, 300);
 rotateTitle(); // Inicializar al cargar
