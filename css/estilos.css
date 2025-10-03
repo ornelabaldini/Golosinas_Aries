@@ -97,41 +97,7 @@ nav a:hover {
   color: var(--accent);
 }
 
-/* Responsivo para pantallas medianas */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  body {
-    padding-top: 160px; /* header más alto en tablet/móvil */
-  }
 
-  .titulo-contenedor h1 {
-    font-size: 1.4rem;
-    line-height: 1.2;
-    padding: 0 1rem;
-  }
-
-  nav a {
-    font-size: 1.2rem;
-  }
-}
-
-/* Responsivo para pantallas pequeñas */
-@media (max-width: 480px) {
-  .titulo-contenedor h1 {
-    font-size: 1.1rem;
-  }
-
-  .logo-contenedor img {
-    max-width: 60px;
-  }
-
-  nav a {
-    font-size: 1rem;
-  }
-}
 /* Catálogo a dos columnas */
   .catalogo {
     display: grid;
@@ -241,11 +207,11 @@ html {
 
 .portfolio {
   display: grid;
-  grid-template-columns: repeat(4, 2fr); /* 2 productos por fila */
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas en PC */
   gap: 1rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 0.2rem;
+  padding: 0 0.1rem;
   width: 100%;
   box-sizing: border-box;
 }
@@ -254,7 +220,7 @@ html {
   background: #fff;
   border: 2px solid var(--accent);
   border-radius: var(--border-radius);
-  padding: 0.5rem;
+  padding: 0.1rem;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
@@ -267,6 +233,7 @@ html {
   height: 100%;
   box-sizing: border-box;
   min-height: 300px; /* altura mínima para tarjetas */
+  
 
 }
 
@@ -732,21 +699,7 @@ footer {
 /* =========================
    Ajustes móviles: buscador arriba y opciones debajo
    ========================= */
-@media (max-width: 480px) {
-  /* Contenedor de opciones de productos */
-  .contenedor-secciones,
-  .portfolio {
-    display: grid;
-    grid-template-columns: auto;
-    gap: 1rem;                  /* espacio entre filas */
-    padding: 0 1rem;            /* espacio interno */
-  }
 
-  /* Cards ocupan todo el ancho */
-  .card {
-    width: 100%;
-    min-height: auto; /* se adapta al contenido */
-  }
 
   /* Hero o buscador ya visible, opcional pequeño padding */
   .buscador,
@@ -754,7 +707,7 @@ footer {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
-}
+
 
 .contacto-main {
   text-align: center;
@@ -770,4 +723,131 @@ footer {
   flex-direction: column;
   gap: 1rem;
   padding-top: 1rem;
+}
+/* ===== Responsivo para pantallas medianas (tablets) ===== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0.5rem;
+  }
+
+  body {
+    padding-top: 160px; /* espacio para header más alto */
+  }
+
+  .titulo-contenedor h1 {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    padding: 0 1rem;
+  }
+
+  nav a {
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+  }
+
+  /* Ajuste de portfolio y secciones */
+  .portfolio,
+  .contenedor-secciones {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .card {
+    width: 100%;
+    min-height: auto;
+  }
+}
+
+/* ===== Responsivo para pantallas pequeñas (teléfonos) ===== */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 0.5rem;
+  }
+
+  body {
+    padding-top: 120px; /* header más alto en móvil */
+  }
+
+  .titulo-contenedor h1 {
+    font-size: 1rem;
+    line-height: 1.1;
+    padding: 0 0.4rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 auto;
+  }
+
+  .logo-contenedor img {
+    max-width: 48px;
+    height: auto;
+    margin-left: 0.4rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+    padding: 0 0.3rem;
+    margin: 0 0.2rem;
+  }
+
+  /* Contenedor de productos: 2 columnas compactas */
+  .portfolio,
+  .contenedor-secciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    padding: 0.25rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Cards ocupan todo el ancho de la columna */
+  .card {
+    width: 100%;
+    min-height: auto;
+    padding: 0.35rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.25rem;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+  }
+
+  .card h3 {
+    font-size: 1.05rem;
+    line-height: 1.1;
+    margin: 0.2rem 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+    margin: 0;
+    color: #444;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    max-height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 0.35rem auto;
+  }
+}
+
+/* ===== Opcional: para pantallas muy pequeñas (360px o menos) ===== */
+@media (max-width: 360px) {
+  .card img {
+    max-height: 84px;
+  }
 }
