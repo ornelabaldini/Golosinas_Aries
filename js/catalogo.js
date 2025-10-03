@@ -31,7 +31,6 @@ const imagenesProducto = {
   "Ojos(variedad de diseños)": [
     "img/ojos.jpg",
     "img/riveeeer.jpg",
-    "img/s.jpg",
     "img/boca.jpg",
     "img/sds.jpg",
     "img/ss.jpg"

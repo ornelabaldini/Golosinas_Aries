@@ -132,6 +132,16 @@ nav a:hover {
     font-size: 1rem;
   }
 }
+/* Catálogo a dos columnas */
+  .catalogo {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* dos columnas iguales */
+    gap: 10px; /* espacio entre productos */
+  }
+
+  .catalogo .producto {
+    width: 100%;
+  }
 
 
 /* Asegurarnos de que el contenido se ajuste bien en el zoom */
@@ -185,7 +195,7 @@ html {
   margin-top: 2rem;
   position: relative;
   z-index: 1;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .hero-buttons .btn {
@@ -277,7 +287,7 @@ html {
 .card h3 {
   color: var(--primary);
   margin-bottom: 0.25rem;
-  font-size: 1rem;
+  font-size: 3rem;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
   flex-grow: 1;
   display: flex;
@@ -460,25 +470,39 @@ main {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.6);
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  padding: 0;
-  margin: 0;
   outline: none;
   user-select: none;
   z-index: 101;
   transition: background 0.3s;
 }
+
+/* Flecha izquierda */
+.modal-content .prev {
+  left: -60px; /* queda fuera del contenedor */
+}
+
+/* Flecha derecha */
+.modal-content .next {
+  right: -60px; /* queda fuera del contenedor */
+}
+
+.modal-content .prev:hover,
+.modal-content .next:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
 
 .modal-content .prev { left: 10px; }
 .modal-content .next { right: 10px; }
@@ -486,6 +510,7 @@ main {
 
 .modal-content .prev:hover,
 .modal-content .next:hover { background: rgba(0,0,0,0.8); }
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
