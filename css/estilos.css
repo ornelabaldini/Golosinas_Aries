@@ -286,9 +286,11 @@ nav a:hover { color: var(--accent); }
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* sólo 2 líneas visibles */
-  -webkit-box-orient: vertical;
-  flex-grow: 1;
+ line-clamp: 3;          /* estándar, sugerido */
+ -webkit-line-clamp: 3;  /* para navegadores WebKit */
+ -webkit-box-orient: vertical;
+ overflow: hidden;
+
 }
 
 /* Botón compacto */
@@ -325,7 +327,7 @@ nav a:hover { color: var(--accent); }
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.8);
+  background-color: #6a1b9a(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
   padding: 1rem;
@@ -336,19 +338,20 @@ nav a:hover { color: var(--accent); }
 .modal-content {
   max-width: 90%;
   max-height: 90%;
-  background: #000000;
+  background: #6a1b9a;
   padding: 1rem;
   border-radius: 12px;
   text-align: center;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 4px 12px rgba(235, 230, 230, 0.1);
+  box-shadow: 0 4px 12px #000000(36, 9, 9, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   animation: fadeIn 0.3s ease;
+  text-decoration-color: #000;
 }
 
 .modal-content img {
@@ -358,7 +361,7 @@ nav a:hover { color: var(--accent); }
   border-radius: 8px;
   cursor: zoom-in;
   transition: transform 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px #000000(0,0,0,0.1);
   z-index: 1;
 }
 
@@ -379,7 +382,7 @@ nav a:hover { color: var(--accent); }
   z-index: 200;
   user-select: none;
 }
-.close:hover { color: #ff5555; }
+.close:hover { color: #000000; }
 
 /* Flechitas/carousel buttons dentro del modal */
 .modal-content .prev,
@@ -406,9 +409,9 @@ nav a:hover { color: var(--accent); }
   z-index: 101;
   transition: background 0.3s;
 }
-.modal-content .prev { left: 10px; }
-.modal-content .next { right: 10px; }
-.modal-content .prev:hover, .modal-content .next:hover { background: rgba(0,0,0,0.8); }
+.modal-content .prev { left: 10px; background: #0000(0,0,0,0.8);}
+.modal-content .next { right: 10px; background: #0000(0,0,0,0.8);}
+.modal-content .prev:hover, .modal-content .next:hover { background: #0000(0,0,0,0.8); }
 
 .carousel-btn {
   padding: 0.3rem 0.6rem;
@@ -723,7 +726,16 @@ html { scroll-behavior: smooth; }
 
   .card img { max-height: 140px !important; height: auto !important; object-fit: cover !important; border-radius: 8px !important; display: block !important; margin: 0 auto 0.35rem auto !important; }
   .card h3 { font-size: 1rem !important; line-height: 1.1 !important; margin: 0.2rem 0 !important; padding: 0 !important; text-align: center !important; }
-  .card p { font-size: 0.85rem !important; margin: 0 !important; color: #444 !important; -webkit-line-clamp: 2; }
+  .card p { 
+  font-size: 0.85rem !important; 
+  margin: 0 !important; 
+  color: #444 !important; 
+  display: -webkit-box;   /* necesario para -webkit-line-clamp */
+  line-clamp: 3;          /* versión estándar */
+  -webkit-line-clamp: 3;  /* para navegadores WebKit */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  }
 
   #search { width: 92% !important; max-width: 92% !important; font-size: 0.95rem !important; padding: 0.45rem !important; }
   a[href*="wa.me"] img { width: 56px !important; height: 56px !important; bottom: 14px !important; right: 10px !important; z-index: 1200 !important; }

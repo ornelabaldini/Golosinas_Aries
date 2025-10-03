@@ -28,14 +28,14 @@ const imagenesProducto = {
     "img/piguin.jpg",
     "img/rosa.jpg"
   ],
-  "Ojos(variedad de diseños)": [
+  "Ojos": [
     "img/ojos.jpg",
     "img/riveeeer.jpg",
     "img/boca.jpg",
     "img/sds.jpg",
     "img/ss.jpg"
   ],
-  "Eyeball caramelo duro Merlina": [
+  "Chupetín Merlina": [
     "img/merlina.jpg",
     "img/merliina.jpg"
   ],
@@ -52,6 +52,14 @@ const imagenesProducto = {
     "img/bull_dog_sandia.jpg"
   ],
   
+  "Chupetín Brain": [
+    "img/chupetinBrain.jpg",
+    "img/cajaBrain.jpg"
+  ],
+  "Chupetín con polvo acido": [
+    "img/chupetinConAcido.jpg",
+    "img/cajaChupetinAcido.jpg"
+  ]
   // Agregar más productos con varias imágenes cuando estén disponibles
 };
 
