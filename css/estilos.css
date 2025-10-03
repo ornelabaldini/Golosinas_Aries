@@ -262,7 +262,7 @@ html {
 
 .card p {
   margin-bottom: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 3rem;
   color: #555;
   font-weight: bold;
   min-height: 1.2rem; /* altura mínima para evitar saltos */
