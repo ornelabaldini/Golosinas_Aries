@@ -14,7 +14,7 @@
   /* radio de borde general para tarjetas y botones */
   --border-radius: 12px;
   /* altura estimada del header (se usa para empujar contenido) */
-  --header-h: 90px;
+  --header-h: 80px;
   /* ancho máximo de contenido central */
   --content-max-w: 1200px;
   /* tamaño base de fuente (puedes ajustar si quieres escalar todo) */
@@ -46,7 +46,7 @@ html, body {
    ============================== */
 header {
   background: linear-gradient(135deg, #6a1b9a, #ab47bc); /* degradado de fondo del header */
-  padding: 1rem;                                       /* espacio interno del header */
+  padding: 0.4rem;                                       /* espacio interno del header */
   text-align: center;                                  /* centra el contenido textual */
   position: fixed;                                     /* fija el header en la parte superior */
   top: 0;                                              /* posicion arriba: 0 */
@@ -699,10 +699,11 @@ html { scroll-behavior: smooth; }
   background: #fff;                                    /* fondo blanco */
   border: 1px solid var(--accent);                     /* borde con acento */
   border-radius: var(--border-radius);                 /* radio */
-  padding: 0.5rem;                                     /* padding */
+  padding: 0.3rem;                                     /* padding */
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);             /* sombra sutil */
   font-size: 1rem;                                     /* tamaño del contenido */
   box-sizing: border-box;                              /* box-sizing */
+  margin-top: 12%;
 }
 
 /* titulo de sección */
