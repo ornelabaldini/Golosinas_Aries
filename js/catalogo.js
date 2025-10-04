@@ -1,6 +1,10 @@
+// ========================
+// MODAL DE PRODUCTOS
+// ========================
 const modal = document.getElementById('modal');
 const modalImg = document.getElementById('modal-img');
 const modalTitle = document.getElementById('modal-title');
+const modalContent = modal.querySelector('.modal-content');
 
 // Crear flechas y contador dinámicamente
 const prevBtn = document.createElement('div');
@@ -14,53 +18,19 @@ nextBtn.classList.add('next');
 const contador = document.createElement('span'); 
 contador.classList.add('contador');
 
-const modalContent = modal.querySelector('.modal-content');
 modalContent.appendChild(prevBtn);
 modalContent.appendChild(nextBtn);
 modalContent.appendChild(contador);
 
-// Definir imágenes extra por producto
+// Imágenes extra por producto
 const imagenesProducto = {
-  "Alcancías con gelatinas": [
-    "img/alcancias.jpg",
-    "img/tigre.jpg",
-    "img/osito.jpg",
-    "img/piguin.jpg",
-    "img/rosa.jpg"
-  ],
-  "Ojos": [
-    "img/ojos.jpg",
-    "img/riveeeer.jpg",
-    "img/boca.jpg",
-    "img/sds.jpg",
-    "img/ss.jpg"
-  ],
-  "Chupetín Merlina": [
-    "img/merlina.jpg",
-    "img/merliina.jpg"
-  ],
-  "Transformers": [
-    "img/tr.jpg",
-    "img/transformer.jpg",
-    "img/2.jpg",
-    "img/3.jpg",
-    "img/2ss.jpg",
-    "img/ddd.jpg"
-  ],
-  "Gomitas Bull dog": [
-    "img/bull_dog_frutillaa.jpg",
-    "img/bull_dog_sandia.jpg"
-  ],
-  
-  "Chupetín Brain": [
-    "img/chupetinBrain.jpg",
-    "img/cajaBrain.jpg"
-  ],
-  "Chupetín con polvo acido": [
-    "img/chupetinConAcido.jpg",
-    "img/cajaChupetinAcido.jpg"
-  ]
-  // Agregar más productos con varias imágenes cuando estén disponibles
+  "Alcancías con gelatinas": ["img/alcancias.jpg","img/tigre.jpg","img/osito.jpg","img/piguin.jpg","img/rosa.jpg"],
+  "Ojos": ["img/ojos.jpg","img/riveeeer.jpg","img/boca.jpg","img/sds.jpg","img/ss.jpg"],
+  "Chupetín Merlina": ["img/merlina.jpg","img/merliina.jpg"],
+  "Transformers": ["img/tr.jpg","img/transformer.jpg","img/2.jpg","img/3.jpg","img/2ss.jpg","img/ddd.jpg"],
+  "Gomitas Bull dog": ["img/bull_dog_frutillaa.jpg","img/bull_dog_sandia.jpg"],
+  "Chupetín Brain": ["img/chupetinBrain.jpg","img/cajaBrain.jpg"],
+  "Chupetín con polvo acido": ["img/chupetinConAcido.jpg","img/cajaChupetinAcido.jpg"]
 };
 
 let currentImages = [];
@@ -76,11 +46,11 @@ function abrirModal(img) {
   actualizarModal();
 }
 
-// Actualizar modal (imagen, título y contador)
+// Actualizar modal
 function actualizarModal() {
   modalImg.src = currentImages[currentIndex];
   modalTitle.textContent = currentTitle;
-  
+
   if(currentImages.length > 1){
     prevBtn.style.display = 'flex';
     nextBtn.style.display = 'flex';
@@ -106,7 +76,7 @@ nextBtn.onclick = () => {
   }
 };
 
-// Zoom solo si hay una imagen
+// Zoom para imagen única
 modalImg.onclick = () => {
   if(currentImages.length === 1){
     modalImg.classList.toggle('zoomed');
@@ -126,48 +96,21 @@ window.onclick = e => {
   }
 };
 
-// Filtro de productos 
-function filtrarProductos() {
-  let input = document.getElementById("search").value.toLowerCase();
-  let cards = document.querySelectorAll(".card");
-
-  cards.forEach(card => {
-    let nombre = card.querySelector("h3").textContent.toLowerCase();
-    let descripcion = card.querySelector("p").textContent.toLowerCase();
-    if (nombre.includes(input) || descripcion.includes(input)) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
-    }
-  });
-
-  // Mostrar mensaje si no hay productos visibles
-  let anyVisible = Array.from(cards).some(card => card.style.display === "block");
-  document.getElementById("no-results").style.display = anyVisible ? "none" : "block";
-
-}
-document.getElementById("search").addEventListener("input", filtrarProductos);
-// Título animado con emojis
-let h1 = "Golosinas Aries ♈🔥 - Inicio";
-let chars = Array.from(title); // Esto maneja correctamente los emojis
-let i = 0;
-
-function rotateTitle() {
-  document.title = chars.slice(i).join("") + " " + chars.slice(0, i).join("");
-  i = (i + 1) % chars.length;
-}
-
+// ========================
+// BUSCADOR DE PRODUCTOS
+// ========================
 const searchInput = document.getElementById("search");
 const cards = document.querySelectorAll(".card");
 const noResults = document.getElementById("no-results");
 
 searchInput.addEventListener("input", function () {
-  let filter = searchInput.value.toLowerCase();
+  const filter = searchInput.value.toLowerCase();
   let matches = 0;
 
   cards.forEach(card => {
     const title = card.querySelector("h3").textContent.toLowerCase();
-    if (title.includes(filter)) {
+    const desc = card.querySelector("p") ? card.querySelector("p").textContent.toLowerCase() : "";
+    if (title.includes(filter) || desc.includes(filter)) {
       card.style.display = "block";
       matches++;
     } else {
@@ -175,14 +118,6 @@ searchInput.addEventListener("input", function () {
     }
   });
 
-  // Mostrar/ocultar mensaje de "no resultados"
-  if (matches === 0 && filter.length > 0) {
-    noResults.style.display = "block";
-  } else {
-    noResults.style.display = "none";
-  }
+  // Mostrar u ocultar el mensaje de no resultados
+  noResults.style.display = (matches === 0 && filter.length > 0) ? "block" : "none";
 });
-
-
-setInterval(rotateTitle, 300);
-rotateTitle(); // Inicializar al cargar

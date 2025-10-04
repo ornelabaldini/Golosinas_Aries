@@ -132,7 +132,7 @@ nav a:hover { color: var(--accent); }
   position: absolute;
   width: 100%;
   height: 80%;
-  margin-top: 5rem;
+  margin-top: 4rem;
   top: 0;
   left: 0;
   opacity: 1;
@@ -422,7 +422,7 @@ nav a:hover { color: var(--accent); }
   border-radius: var(--border-radius);
   cursor: pointer;
   transition: background 0.3s;
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: bold;
   user-select: none;
 }
@@ -453,7 +453,7 @@ nav a:hover { color: var(--accent); }
   padding: 0.75rem;
   border: 2px solid var(--accent);
   border-radius: var(--border-radius);
-  font-size: 1rem; /* reducido (antes muy grande) */
+  font-size: 3rem; 
   outline: none;
   transition: border 0.3s;
   box-sizing: border-box;
@@ -461,7 +461,7 @@ nav a:hover { color: var(--accent); }
 }
 #search:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 8px rgba(106,27,154,0.2);
+  box-shadow: 0 0 8px #06000ad5;
 }
 
 #no-results a { color: var(--primary); text-decoration: none; font-weight: bold; }
