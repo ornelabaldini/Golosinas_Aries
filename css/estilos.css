@@ -666,7 +666,7 @@ html { scroll-behavior: smooth; }
 
 /* Título animado (usa transformaciones horizontales) */
 @keyframes slide-infinite { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
-@keyframes color-change { 0%,100% { color: var(--primary); } 50% { color: #C13584; } }
+@keyframes color-change { 0%,100% { color: var(--primary); } 50% { color: #000000; } }
 
 /* clase para título animado */
 .titulo-animado {
