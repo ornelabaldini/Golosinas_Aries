@@ -114,7 +114,7 @@ nav a {
   color: #070000;                                      /* color de texto de los enlaces */
   text-decoration: none;                               /* sin subrayado */
   font-weight: bold;                                   /* negrita */
-  font-size: 1.05rem;                                  /* tamaño razonable para el nav */
+  font-size: 2rem;                                  /* tamaño razonable para el nav */
   transition: color 0.3s;                              /* transición suave al hover */
   margin: 0.25rem;                                     /* pequeño margen alrededor */
 }
@@ -735,7 +735,7 @@ html { scroll-behavior: smooth; }
   }
   body { font-size: 15px; }
   .titulo-contenedor h1 { font-size: 1.2rem; line-height: 1.3; padding: 0 1rem; }
-  nav a { font-size: 0.95rem; padding: 0 0.4rem; }
+  nav a { font-size: 1.5rem; padding: 0 0.4rem; }
   .logo-contenedor img { max-width: 60px; }
   .card img { height: 180px; }
 }
