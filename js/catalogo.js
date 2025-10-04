@@ -1,28 +1,34 @@
+
 // ========================
 // MODAL DE PRODUCTOS
 // ========================
-const modal = document.getElementById('modal');
-const modalImg = document.getElementById('modal-img');
-const modalTitle = document.getElementById('modal-title');
-const modalContent = modal.querySelector('.modal-content');
+
+// Referencias a elementos del modal
+const modal = document.getElementById('modal');           // Contenedor principal del modal
+const modalImg = document.getElementById('modal-img');    // Imagen dentro del modal
+const modalTitle = document.getElementById('modal-title');// Título dentro del modal
+const modalContent = modal.querySelector('.modal-content');// Contenido interno del modal
 
 // Crear flechas y contador dinámicamente
-const prevBtn = document.createElement('div');
+const prevBtn = document.createElement('div');   // Flecha anterior
 prevBtn.textContent = '<';
 prevBtn.classList.add('prev');
 
-const nextBtn = document.createElement('div');
+const nextBtn = document.createElement('div');   // Flecha siguiente
 nextBtn.textContent = '>';
 nextBtn.classList.add('next');
 
-const contador = document.createElement('span'); 
+const contador = document.createElement('span'); // Contador de imágenes (ej: 1 / 5)
 contador.classList.add('contador');
 
+// Agregar flechas y contador dentro del modal
 modalContent.appendChild(prevBtn);
 modalContent.appendChild(nextBtn);
 modalContent.appendChild(contador);
 
-// Imágenes extra por producto
+// ========================
+// IMÁGENES POR PRODUCTO
+// ========================
 const imagenesProducto = {
   "Alcancías con gelatinas": ["img/alcancias.jpg","img/tigre.jpg","img/osito.jpg","img/piguin.jpg","img/rosa.jpg"],
   "Ojos": ["img/ojos.jpg","img/riveeeer.jpg","img/boca.jpg","img/sds.jpg","img/ss.jpg"],
@@ -33,64 +39,78 @@ const imagenesProducto = {
   "Chupetín con polvo acido": ["img/chupetinConAcido.jpg","img/cajaChupetinAcido.jpg"]
 };
 
-let currentImages = [];
-let currentIndex = 0;
-let currentTitle = "";
+// Variables para controlar el modal
+let currentImages = [];  // Lista de imágenes actuales
+let currentIndex = 0;    // Posición actual dentro del array
+let currentTitle = "";   // Nombre del producto actual
 
-// Abrir modal
+// ========================
+// FUNCIÓN: Abrir el modal
+// ========================
 function abrirModal(img) {
-  currentTitle = img.nextElementSibling.textContent;
-  currentImages = imagenesProducto[currentTitle] || [img.src];
-  currentIndex = 0;
-  modal.style.display = 'flex';
-  actualizarModal();
+  currentTitle = img.nextElementSibling.textContent;         // Toma el texto del título del producto
+  currentImages = imagenesProducto[currentTitle] || [img.src];// Busca las imágenes según el título
+  currentIndex = 0;                                          // Empieza en la primera imagen
+  modal.style.display = 'flex';                              // Muestra el modal
+  actualizarModal();                                         // Actualiza contenido
 }
 
-// Actualizar modal
+// ========================
+// FUNCIÓN: Actualizar modal
+// ========================
 function actualizarModal() {
-  modalImg.src = currentImages[currentIndex];
-  modalTitle.textContent = currentTitle;
+  modalImg.src = currentImages[currentIndex];   // Muestra la imagen actual
+  modalTitle.textContent = currentTitle;        // Muestra el título del producto
 
-  if(currentImages.length > 1){
+  // Si hay más de una imagen, muestra flechas y contador
+  if (currentImages.length > 1) {
     prevBtn.style.display = 'flex';
     nextBtn.style.display = 'flex';
     contador.textContent = `${currentIndex + 1} / ${currentImages.length}`;
   } else {
+    // Si solo hay una imagen, oculta flechas y contador
     prevBtn.style.display = 'none';
     nextBtn.style.display = 'none';
     contador.textContent = '';
   }
 }
 
-// Navegación
+// ========================
+// NAVEGACIÓN ENTRE IMÁGENES
+// ========================
 prevBtn.onclick = () => {
-  if(currentImages.length > 1){
+  if (currentImages.length > 1) {
     currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
     actualizarModal();
   }
 };
 nextBtn.onclick = () => {
-  if(currentImages.length > 1){
+  if (currentImages.length > 1) {
     currentIndex = (currentIndex + 1) % currentImages.length;
     actualizarModal();
   }
 };
 
-// Zoom para imagen única
+// ========================
+// ZOOM PARA IMAGEN ÚNICA
+// ========================
 modalImg.onclick = () => {
-  if(currentImages.length === 1){
-    modalImg.classList.toggle('zoomed');
+  if (currentImages.length === 1) {
+    modalImg.classList.toggle('zoomed'); // Amplía o reduce la imagen
   }
 };
 
-// Cerrar modal
+// ========================
+// CERRAR MODAL
+// ========================
 modal.querySelector('.close').onclick = () => {
   modal.style.display = 'none';
   modalImg.classList.remove('zoomed');
 };
 
+// Cerrar al hacer clic fuera del contenido
 window.onclick = e => {
-  if(e.target === modal){
+  if (e.target === modal) {
     modal.style.display = 'none';
     modalImg.classList.remove('zoomed');
   }
@@ -99,17 +119,21 @@ window.onclick = e => {
 // ========================
 // BUSCADOR DE PRODUCTOS
 // ========================
-const searchInput = document.getElementById("search");
-const cards = document.querySelectorAll(".card");
-const noResults = document.getElementById("no-results");
+const searchInput = document.getElementById("search");     // Campo de búsqueda
+const cards = document.querySelectorAll(".card");          // Todas las tarjetas de productos
+const noResults = document.getElementById("no-results");   // Mensaje de "sin resultados"
 
+// Evento al escribir en el buscador
 searchInput.addEventListener("input", function () {
-  const filter = searchInput.value.toLowerCase();
-  let matches = 0;
+  const filter = searchInput.value.toLowerCase().trim();   // Texto buscado en minúsculas
+  let matches = 0;                                         // Contador de coincidencias
 
+  // Recorre todas las tarjetas de productos
   cards.forEach(card => {
     const title = card.querySelector("h3").textContent.toLowerCase();
     const desc = card.querySelector("p") ? card.querySelector("p").textContent.toLowerCase() : "";
+
+    // Muestra las que coincidan con el texto buscado
     if (title.includes(filter) || desc.includes(filter)) {
       card.style.display = "block";
       matches++;
@@ -118,6 +142,11 @@ searchInput.addEventListener("input", function () {
     }
   });
 
-  // Mostrar u ocultar el mensaje de no resultados
-  noResults.style.display = (matches === 0 && filter.length > 0) ? "block" : "none";
+  // Mostrar u ocultar el mensaje de "no resultados"
+  if (matches === 0 && filter.length > 0) {
+    noResults.textContent = "😔 No encontramos tu producto, escribinos 💬";
+    noResults.style.display = "block";
+  } else {
+    noResults.style.display = "none";
+  }
 });

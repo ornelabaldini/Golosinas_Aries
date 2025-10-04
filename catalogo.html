@@ -24,6 +24,8 @@
       <a href="index.html">Inicio</a>
       <a href="catalogo.html">Catálogo</a>
       <a href="contacto.html">Contacto</a>
+      <input type="text" id="search" placeholder="🔍 Buscar producto..." style="margin-left:0.1rem; padding:0.3rem; border-radius:5px; border:none;">
+      <p id="no-results" style="display:none; text-align:center; color:#fff; margin-top:1rem;"></p>
     </nav>
   </div>
 </header>
@@ -31,26 +33,24 @@
 
   <main>
 
-    <section class="buscador">
-      <input type="text" id="search" placeholder="🔍 Buscar producto...">
-    </section>
-
-
       <section class="seccion">
-        <h2>Catálogo</h2>
+        <div class="contenedor">
+         <h2>Precios MAYORISTAS (compra mínima de 12 productos).</h2>
+         <h3>Si comprás mas a 15 productos, menor precio!</h3>
+        </div>
+
         <div class="portfolio">
-
-
+        
           <div class="card">
             <img src="img/ojos.jpg" alt="Ojos" onclick="abrirModal(this)">
             <h3>Ojos</h3>
-            <p>$10.500 (x30)</p>
+            <p></p>
           </div>
 
           <div class="card">
             <img src="img/ss.jpg" alt="Brains" onclick="abrirModal(this)">
             <h3>Brains</h3>
-            <p>$10.500 (x30)</p>
+            <p></p>
           </div>
 
           <div class="card">
@@ -71,7 +71,7 @@
           <div class="card">
             <img src="img/calabaza.jpg" alt="calabaza" onclick="abrirModal(this)">
             <h3>Calabazas</h3>
-            <p>$10.500 (x30)</p>
+            <p>(x30)</p>
           </div>
 
           <div class="card">
@@ -107,195 +107,195 @@
            <div class="card">
             <img src="img/frutilla.jpg" alt="Frutillas" onclick="abrirModal(this)">
             <h3>Frutillas</h3>
-            <p>$10.500 (x30)</p>
+            <p>$ (x30)</p>
           </div>
 
           <div class="card">
             <img src="img/nutello.jpg" alt="Nutello" onclick="abrirModal(this)">
             <h3>Nutello</h3>
-            <p>$13.000 (x30)</p>
+            <p>$ (x30)</p>
           </div>
 
           <div class="card">
             <img src="img/latas.jpg" alt="Latitas con chicles" onclick="abrirModal(this)">
             <h3>Latitas con chicles</h3>
-            <p>$15.900 (x30)</p>
+            <p>$ (x30)</p>
           </div>
 
            <div class="card">
             <img src="img/LATAS.jpg" alt="Latitas con chicles" onclick="abrirModal(this)">
             <h3>Latitas con chicles</h3>
-            <p>$14.900 (x30)</p>
+            <p>$ (x30)</p>
           </div>
 
           <div class="card">
             <img src="img/botellas.jpg" alt="Botellitas con chicles" onclick="abrirModal(this)">
             <h3>Botellitas con chicles</h3>
-            <p>$12.900 (x30)</p>
+            <p>$ (x30)</p>
           </div>
 
           <div class="card">
             <img src="img/mecha.jpg" alt="Mechas mágicas" onclick="abrirModal(this)">
             <h3>Mechas mágicas</h3>
-            <p>$13.000 (x30)</p>
+            <p>$ (x30)</p>
           </div>
 
           <div class="card">
             <img src="img/trompet.jpg" alt="Trompetas con chupetines" onclick="abrirModal(this)">
             <h3>Trompetas con chupetines</h3>
-            <p>$17.000 (x60u)</p>
+            <p>$ (x60u)</p>
           </div>
 
            <div class="card">
             <img src="img/burbujero.jpg" alt="Burbujero" onclick="abrirModal(this)">
             <h3>Burbujero</h3>
-            <p>$19.000 (x30)</p>
+            <p>$ (x30)</p>
 
           </div>
             <div class="card">
             <img src="img/alcancias.jpg" alt="Alcancías con gelatinas" onclick="abrirModal(this)">
             <h3>Alcancías con gelatinas</h3>
-            <p>$48.000 (x12u) / $90.000 (x24)</p>
+            <p>$ (x12u) / (x24)</p>
           </div>
 
           <div class="card">
             <img src="img/gomutcho_acidos.jpg" alt="Gomitas Gomutcho acidos" onclick="abrirModal(this)">
             <h3>Gomitas acidas</h3>
-            <p>$5.800 (500g)</p>
+            <p>$ (500g)</p>
           </div>
 
           <div class="card">
             <img src="img/oblita.jpg" alt="Cubanitos" onclick="abrirModal(this)">
             <h3>Cubanitos</h3>
-            <p>$5.500 (48 unidades)</p>
+            <p>$ (48 unidades)</p>
           </div>
 
           <div class="card">
             <img src="img/bombones_surtidos.jpg" alt="Bombones Surtidos" onclick="abrirModal(this)">
             <h3>Bombones Surtidos</h3>
-            <p>$7.900 (50 unidades)</p>
+            <p>$ (50 unidades)</p>
           </div>
           
           <div class="card">
             <img src="img/anillos.jpg" alt="Anillos" onclick="abrirModal(this)">
             <h3>Gomitas Anillos</h3>
-            <p>$6.900 (700g)</p>
+            <p>$ (700g)</p>
           </div>
 
           <div class="card">
             <img src="img/chicle.jpg" alt="Chicle por metro" onclick="abrirModal(this)">
             <h3>Chicle por metro</h3>
-            <p>$12.000</p>
+            <p>$</p>
           </div>
 
           <div class="card">
             <img src="img/gallinitas.jpg" alt="Gallinitas" onclick="abrirModal(this)">
             <h3>Gallinitas</h3>
-            <p>$7.900 (25 unidades)</p>
+            <p>$ (25 unidades)</p>
           </div>
 
           <div class="card">
             <img src="img/yummy_frutilla_com_crema.jpg" alt="Yummy frutilla con crema" onclick="abrirModal(this)">
             <h3>Gomitas Yummy frutilla con crema</h3>
-            <p>$6.500(500g)</p>
+            <p>$(500g)</p>
           </div>
 
           <div class="card">
             <img src="img/ojoschicos.jpg" alt="Ojos CHICOS" onclick="abrirModal(this)">
-            <h3>Ojos chiquitos $17.000 (x200 unidades)</h3>
+            <h3>Ojos chiquitos (x200 unidades)</h3>
           </div>
 
           <div class="card">
             <img src="img/brochetas.jpg" alt="Brochetas ojos" onclick="abrirModal(this)">
-            <h3>Brochetas de ojos $12.000 (x30 brochetas)</h3>
+            <h3>Brochetas de ojos (x30 brochetas)</h3>
           </div>
 
           <div class="card">
             <img src="img/smack_bar.jpg" alt="Smack bar." onclick="abrirModal(this)">
-            <h3>Smack bar $6.500(12 unidades)</h3>
+            <h3>Smack bar (12 unidades)</h3>
           </div>
 
           <div class="card">
             <img src="img/lolly.jpg" alt="Foot Lollipop" onclick="abrirModal(this)">
-            <h3>Chupetín con polvo acido $13.000 (x30u)</h3>
+            <h3>Chupetín con polvo acido (x30u)</h3>
           </div>
 
           <div class="card">
             <img src="img/ponyy.jpg" alt="Pony spray candy" onclick="abrirModal(this)">
-            <h3>Pony spray candy $16.000 (x30u)</h3>
+            <h3>Pony spray candy (x30u)</h3>
           </div>
 
           <div class="card">
             <img src="img/psncho.jpg" alt="Gomitas pizza/pancho/coca" onclick="abrirModal(this)">
-            <h3>Gomitas con forma de pancho $12.000 (x30u)</h3>
+            <h3>Gomitas con forma de pancho (x30u)</h3>
           </div>
 
           <div class="card">
             <img src="img/chupetines.jpg" alt="Chupetines con formas" onclick="abrirModal(this)">
-            <h3>Chupetines con formas $10.900 (x30)</h3>
+            <h3>Chupetines con formas (x30)</h3>
           </div>
 
           <div class="card">
             <img src="img/corona.jpg" alt="Coronas LED" onclick="abrirModal(this)">
-            <h3>Coronas LED $10.900 (x30u)</h3>
+            <h3>Coronas LED (x30u)</h3>
           </div>
 
           <div class="card">
             <img src="img/tel.jpg" alt="Auto/camiseta/celular/spiderman + chicles" onclick="abrirModal(this)">
-            <h3>Celu + chicles $12.900 (x30)</h3>
+            <h3>Celu + chicles (x30)</h3>
           </div>
 
           <div class="card">
             <img src="img/popping.jpg" alt="Polvo ácido Popping candy" onclick="abrirModal(this)">
-            <h3>Polvo acido $12.000 (x30u)</h3>
+            <h3>Polvo acido (x30u)</h3>
           </div>
 
           <div class="card">
             <img src="img/coolmint.jpg" alt="Cool Mint" onclick="abrirModal(this)">
-            <h3>Cool Mint sabores frutales $12.000 (x30u)</h3>
+            <h3>Cool Mint sabores frutales (x30u)</h3>
           </div>
 
           <div class="card">
             <img src="img/merliina.jpg" alt="Eyeball caramelo duro Merlina" onclick="abrirModal(this)">
-            <h3>Chupetines Merlina $10.900 (x30u)</h3>
+            <h3>Chupetines Merlina (x30u)</h3>
           </div>
 
           <div class="card">
             <img src="img/monedas.jpg" alt="Monedas de chocolate" onclick="abrirModal(this)">
-            <h3>Monedas de chocolate $17.000 (x250u)</h3>
+            <h3>Monedas de chocolate (x250u)</h3>
           </div>
 
           <div class="card">
             <img src="img/animalitos.jpg" alt="Gelatinas con forma de animales" onclick="abrirModal(this)">
-            <h3>Gelatinas $4.000 (x12u)</h3>
+            <h3>Gelatinas (x12u)</h3>
           </div>
 
           <div class="card">
             <img src="img/transformer.jpg" alt="Transformers" onclick="abrirModal(this)">
-            <h3>Transformers $32.000 (x9)</h3>
+            <h3>Transformers (x9)</h3>
           </div>
 
           <div class="card">
             <img src="img/dispenser.jpg" alt="Dispenser con chicles" onclick="abrirModal(this)">
-            <h3>Dispenser con chicles $45.000 (x8u)</h3>
+            <h3>Dispenser con chicles (x8u)</h3>
           </div>
 
           <div class="card">
             <img src="img/sorpresa.jpg" alt="Huevos sorpresa" onclick="abrirModal(this)">
             <h3>Huevos sorpresa</h3>
-            <p>$12.900 (x30u)</p>
+            <p>(x30u)</p>
           </div>
 
           <div class="card">
             <img src="img/poke.jpg" alt="Bolas Pokémon con sorpresa y caramelo" onclick="abrirModal(this)">
             <h3>Bolas Pokémon con sorpresa y caramelo</h3>
-            <p>$12.900 (x30u)</p>
+            <p>(x30u)</p>
           </div>
 
           <div class="card">
             <img src="img/bull_dog_frutillaa.jpg" alt="Bull dog" onclick="abrirModal(this)">
             <h3>Gomitas Bull dog</h3>
-            <p>$5.900 (360g)</p>
+            <p>(360g)</p>
           </div>
 
           </div>
@@ -322,7 +322,7 @@
   </main>
 
 <footer>
- <p> Si tenés alguna pregunta, no dudes en contactarnos.</p>
+   <h3>Consultar por combos personalizados.</h3>
     <!-- Botones sociales -->
     <div class="social-buttons-wrapper">
       <div class="social-buttons">
