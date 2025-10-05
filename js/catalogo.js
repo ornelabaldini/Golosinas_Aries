@@ -31,12 +31,13 @@ modalContent.appendChild(contador);
 // ========================
 const imagenesProducto = {
   "Alcancías con gelatinas": ["img/alcancias.jpg","img/tigre.jpg","img/osito.jpg","img/piguin.jpg","img/rosa.jpg"],
-  "Ojos": ["img/ojos.jpg","img/riveeeer.jpg","img/boca.jpg","img/sds.jpg","img/ss.jpg"],
+  "Gomitas blandas Ojos (30u)": ["img/ojos.jpg","img/riveeeer.jpg","img/boca.jpg","img/sds.jpg","img/ss.jpg"],
   "Chupetín Merlina": ["img/merlina.jpg","img/merliina.jpg"],
   "Transformers": ["img/tr.jpg","img/transformer.jpg","img/2.jpg","img/3.jpg","img/2ss.jpg","img/ddd.jpg"],
   "Gomitas Bull dog": ["img/bull_dog_frutillaa.jpg","img/bull_dog_sandia.jpg"],
-  "Chupetín Brain": ["img/chupetinBrain.jpg","img/cajaBrain.jpg"],
-  "Chupetín con polvo acido": ["img/chupetinConAcido.jpg","img/cajaChupetinAcido.jpg"]
+  "Chupetín con polvo ácido Brain(30u)": ["img/chupetinBrain.jpg","img/cajaBrain.jpg"],
+  "Chupetín con polvo ácido (30u)": ["img/chupetinConAcido.jpg","img/cajaChupetinAcido.jpg"],
+  "Huevos con juego de plant vs zombies + chicles y más diseños(x30u)": ["img/sorpresa.jpg","img/plant.jpg"]
 };
 
 // Variables para controlar el modal
