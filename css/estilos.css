@@ -167,10 +167,10 @@ nav a:hover {
 /* títulos dentro del hero */
 .hero h2, .hero p {
   position: relative;                                  /* posicionamiento relativo (frente al overlay) */
-  z-index: 2;                                          /* encima del overlay */
+  z-index: 1;                                          /* encima del overlay */
   text-shadow: 2px 2px 6px rgba(0,0,0,0.4);            /* sombra para legibilidad */
   font-size: 1.25rem;                                  /* tamaño del texto en hero (ajustado) */
-  margin: 1.2rem 0;                                    /* margen vertical */
+  margin: 2rem 0;                                    /* margen vertical */
   padding: 0 1rem;                                     /* padding horizontal */
 }
 
