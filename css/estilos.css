@@ -8,9 +8,9 @@
   /* color acento turquesa/verde */
   --accent: #00b894;
   /* color de fondo general de la página */
-  --bg: #f3f9f7;
+ --bg: #1c2a33;
   /* color de texto por defecto */
-  --text: #333;
+  --text: #0b0c00;
   /* radio de borde general para tarjetas y botones */
   --border-radius: 12px;
   /* altura estimada del header (se usa para empujar contenido) */
@@ -158,7 +158,7 @@ nav a:hover {
   position: relative;                                  /* posicionamiento relativo (frente al overlay) */
   z-index: 1;                                          /* encima del overlay */
   text-shadow: 2px 2px 6px rgba(0,0,0,0.4);            /* sombra para legibilidad */
-  font-size: 1.25rem;                                  /* tamaño del texto en hero (ajustado) */
+  font-size: 2rem;                                  /* tamaño del texto en hero (ajustado) */
   margin: 2rem 0;                                    /* margen vertical */
   padding: 0 1rem;                                     /* padding horizontal */
 }
@@ -528,11 +528,11 @@ main {
   box-sizing: border-box;                              /* box-sizing */
   min-height: 60vh;                                    /* altura mínima para buena presencia */
   font-size: 1rem;                                     /* tamaño base de fuente */
-  background: #fefefe;                                 /* fondo blanco para la zona principal */
+  background: #fcfbfb;                                 /* fondo blanco para la zona principal */
   border-radius: var(--border-radius);                 /* bordes redondeados */
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);             /* sombra sutil */
   overflow: visible;                                   /* overflow visible por defecto */
-  padding-bottom: 12rem;                                /* espacio inferior */
+  padding-bottom: 0.1rem;                                /* espacio inferior */
   padding-top: 0.1rem;                                 /* espacio superior mínimo (el push principal lo hace .main arriba) */
 }
 
@@ -546,8 +546,8 @@ footer {
   padding: 1rem;
   font-size: 0.9rem;
   box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
-  border-top-left-radius: var(--border-radius);
-  border-top-right-radius: var(--border-radius);
+  margin-top: 1rem;
+
 }
 
 footer p {
