@@ -11,8 +11,6 @@
  --bg: #1c2a33;
   /* color de texto por defecto */
   --text: #0b0c00;
-  /* radio de borde general para tarjetas y botones */
-  --border-radius: 12px;
   /* altura estimada del header (se usa para empujar contenido) */
   --header-h: 80px;
   /* ancho máximo de contenido central */
@@ -143,7 +141,7 @@ nav a:hover {
   position: absolute;                                  /* posición absoluta dentro del hero */
   width: 100%;                                         /* ocupa ancho completo */
   height: 80%;                                         /* altura del overlay */
-  margin-top: 4rem;                                    /* separación superior visual */
+  margin-top: 3rem;                                    /* separación superior visual */
   top: 0;                                              /* arriba del hero */
   left: 0;                                             /* a la izquierda */
   opacity: 1;                                          /* opacidad completa (puedes bajar para más transparencia) */
@@ -733,6 +731,9 @@ html { scroll-behavior: smooth; }
   nav a {
     font-size: 1.8rem; /* enlaces más pequeños */
   }
+  .hero{
+    margin-top: 1rem;
+  }
 }
 
 /* Tablets pequeñas / pantallas horizontales */
@@ -795,8 +796,8 @@ html { scroll-behavior: smooth; }
   }
 
   nav a {
-    font-size: 1.2rem;
-    padding: 0.2rem;
+    font-size: 1rem;
+    padding: 0.1rem;
   }
 
   .hero {
