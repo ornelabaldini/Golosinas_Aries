@@ -796,7 +796,8 @@ html { scroll-behavior: smooth; }
     padding: 0.1rem !important;
     box-sizing: border-box !important;
     font-size: 0.95rem !important;
-
+  }
+  
   /* Cards más compactas */
   .card {
     padding: 0.5rem !important;
@@ -840,18 +841,29 @@ html { scroll-behavior: smooth; }
   #search {
     width: 92% !important;
     max-width: 92% !important;
-    font-size: 0.95rem !important;
+    font-size: 13rem !important;
     padding: 0.45rem !important;
   }
 
   .modal,
   .modal-content { z-index: 1400 !important; }
+  .seccion {
+  background: #fff;                                    /* fondo blanco */
+  border: 1px solid var(--accent);                     /* borde con acento */
+  border-radius: var(--border-radius);                 /* radio */
+  padding: 0.3rem;                                     /* padding */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);             /* sombra sutil */
+  font-size: 1rem;                                     /* tamaño del contenido */
+  box-sizing: border-box;                              /* box-sizing */
+  margin-top: 150%;
 }
+}
+
+
 
 /* <= 360px (pantallas muy pequeñas) */
 @media (max-width: 360px) {
   .card img { max-height: 100px !important; }
   #search { font-size: 0.9rem !important; padding: 0.35rem !important; }
   .card h3 { font-size: 0.95rem !important; line-height: 1.15 !important; }
-}
 }
