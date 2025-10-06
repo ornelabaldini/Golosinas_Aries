@@ -18,7 +18,7 @@
   /* ancho máximo de contenido central */
   --content-max-w: 1200px;
   /* tamaño base de fuente (puedes ajustar si quieres escalar todo) */
-  --base-font: 16px;
+  --base-font: 13px;
 }
 
 /* ==============================
@@ -46,7 +46,7 @@ html, body {
    ============================== */
 header {
   background: linear-gradient(135deg, #6a1b9a, #ab47bc); /* degradado de fondo del header */
-  padding: 0.4rem;                                       /* espacio interno del header */
+  padding: 0.2rem;                                       /* espacio interno del header */
   text-align: center;                                  /* centra el contenido textual */
   position: fixed;                                     /* fija el header en la parte superior */
   top: 0;                                              /* posicion arriba: 0 */
@@ -705,233 +705,130 @@ html { scroll-behavior: smooth; }
   text-align: center;                                  /* centrado */
 }
 
-/* ============================
-   📱 RESPONSIVE: CONTACTO Y FOOTER
-   ============================ */
+/* ==============================
+   MEDIA QUERIES / RESPONSIVE
+   ============================== */
 
-/* 🔹 Base general (ya debe estar antes, pero aseguramos estilo centrado) */
-.contacto-container,
-.contacto,
-.contacto-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 2rem;
-  margin: 0 auto;
-  max-width: 900px;
-  background-color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-}
-
-/* 🔹 Ajuste de botones de redes */
-.redes {
-  display: flex;
-  flex-wrap: wrap; /* permite que bajen si no hay espacio */
-  justify-content: center;
-  gap: 1rem;
-}
-
-.redes a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.75rem 1.2rem;
-  border-radius: 999px;
-  font-weight: 600;
-  color: #fff;
-  transition: transform 0.2s ease;
-}
-
-.redes a:hover {
-  transform: scale(1.05);
-}
-
-/* ============================
-   🖥️ DESKTOP (pantallas grandes)
-   ============================ */
-@media (min-width: 1025px) {
-  /* Header fijo máximo 15% del viewport */
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 15vh;
-    padding: 0.5rem 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-    background-color: var(--bg, #000);
-  }
-
-  header h1 {
-    font-size: 1.2rem;
-    margin: 0;
-  }
-
-  nav ul {
-    display: flex;
-    flex-direction: row;
-    gap: 0.8rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  nav ul li a {
-    font-size: 0.95rem;
-    text-decoration: none;
-    color: white;
-    padding: 0.3rem 0.5rem;
-  }
-
-  .buscador input[type="text"] {
-    width: 300px;
-    font-size: 1rem;
-    padding: 0.4rem 0.8rem;
-  }
-
-  /* Ajuste de margen para que contenido no quede tapado */
-  main, section, .contacto-container, .catalogo-container {
-    margin-top: 16vh; /* 15% header + margen */
-  }
-
-  /* Grid cards */
-  .portfolio {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    width: 100%;
-    padding: 0.5rem;
-    box-sizing: border-box;
-  }
-
-  .card {
-    aspect-ratio: 1 / 1.2;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0.5rem;
+/* Tablets medianas y grandes */
+@media (max-width: 1024px) {
+  .portfolio,
+  .catalogo {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 0.75rem;
   }
 
   .card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 0.5rem;
+    height: 200px; /* ajustar altura de imagen */
   }
 
-  .card h3, .card p {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    margin: 0.3rem 0;
-  }
-}
-
-/* ============================
-   💻 TABLETS / LAPTOPS PEQUEÑAS
-   ============================ */
-@media (max-width: 1024px) {
-  main, section, .contacto-container, .catalogo-container {
-    margin-top: 15vh;
+  .card h3 {
+    font-size: 1.1rem; /* título más pequeño */
   }
 
-  .portfolio {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-
-  .card h3, .card p {
-    font-size: 0.9rem;
-  }
-
-  .buscador input[type="text"] {
-    width: 250px;
+  .card p {
     font-size: 0.95rem;
+    line-clamp: 3; /* mantener 3 líneas máximo */
+  }
+
+  nav a {
+    font-size: 1.8rem; /* enlaces más pequeños */
   }
 }
 
-/* ============================
-   📱 MÓVILES
-   ============================ */
+/* Tablets pequeñas / pantallas horizontales */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    height: auto;
-    padding: 0.3rem 0.5rem;
+  .portfolio,
+  .catalogo {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 0.5rem;
   }
 
-  header h1 {
-    font-size: 1rem;
-    margin-bottom: 0.2rem;
+  .card img {
+    height: 180px; /* reducir altura de imagen */
   }
 
-  nav ul {
-    flex-direction: row;
-    justify-content: center;
-    gap: 0.4rem;
+  .card h3 {
+    font-size: 1rem; 
   }
 
-  nav ul li a {
-    font-size: 0.85rem;
-    padding: 0.25rem 0.4rem;
+  .card p {
+    font-size: 0.9rem;
+    line-clamp: 3;
   }
 
-  .buscador input[type="text"] {
-    width: 85%;
-    max-width: 320px;
-    font-size: 0.95rem;
-    padding: 0.35rem 0.7rem;
+  .titulo-contenedor h1 {
+    font-size: 1rem; /* título del header más pequeño */
   }
 
-  main, section, .contacto-container, .catalogo-container {
-    margin-top: calc(15vh + 10px);
+  nav a {
+    font-size: 1.5rem;
   }
 
-  .portfolio {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-  }
-
-  .card h3, .card p {
-    font-size: 0.85rem;
-  }
-
-  .whatsapp-float {
-    bottom: 70px;
+  #search {
+    width: 95%; /* input más ancho para pantallas pequeñas */
   }
 }
 
-/* ============================
-   📲 MÓVILES PEQUEÑOS
-   ============================ */
+/* Móviles / pantallas pequeñas */
 @media (max-width: 480px) {
-  .portfolio {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
+  .portfolio,
+  .catalogo {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 0.5rem;
   }
 
-  .card h3, .card p {
-    font-size: 0.8rem;
+  .card img {
+    height: 160px; /* ajustar imagen para móvil */
   }
 
-  .buscador input[type="text"] {
-    width: 100%;
-    max-width: none;
+  .card h3 {
+    font-size: 0.95rem;
   }
 
-  main, section, .contacto-container, .catalogo-container {
-    margin-top: calc(15vh + 5px);
+  .card p {
+    font-size: 0.85rem;
+    line-clamp: 3;
   }
 
-  .whatsapp-float {
-    bottom: 80px;
+  .titulo-contenedor h1 {
+    font-size: 0.95rem; /* título header más pequeño */
+  }
+
+  nav a {
+    font-size: 1.2rem;
+    padding: 0.2rem;
+  }
+
+  .hero {
+    padding-top: 8rem; /* menos espacio arriba en móvil */
+  }
+
+  .hero h2,
+  .hero p {
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+
+  #search {
+    width: 95%; /* input ocupa casi todo el ancho */
+  }
+
+  .contenedor-secciones {
+    flex-direction: column; /* secciones apiladas */
+    gap: 1rem;
+  }
+
+  .seccion {
+    margin-top: 2rem; /* ajustar margen */
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .card button {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.6rem;
   }
 }
