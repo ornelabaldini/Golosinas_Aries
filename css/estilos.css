@@ -705,4 +705,132 @@ html { scroll-behavior: smooth; }
   text-align: center;                                  /* centrado */
 }
 
+/* ============================
+   📱 RESPONSIVE: CONTACTO Y FOOTER
+   ============================ */
+
+/* 🔹 Base general (ya debe estar antes, pero aseguramos estilo centrado) */
+.contacto-container,
+.contacto,
+.contacto-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 900px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+/* 🔹 Ajuste de botones de redes */
+.redes {
+  display: flex;
+  flex-wrap: wrap; /* permite que bajen si no hay espacio */
+  justify-content: center;
+  gap: 1rem;
+}
+
+.redes a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.redes a:hover {
+  transform: scale(1.05);
+}
+
+/* ============================
+   🖥️ DESKTOP (pantallas grandes)
+   ============================ */
+@media (min-width: 1025px) {
+  .contacto-container {
+    padding: 3rem;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ============================
+   💻 TABLETS / LAPTOPS PEQUEÑAS
+   ============================ */
+@media (max-width: 1024px) {
+  .contacto-container {
+    max-width: 90%;
+    padding: 2rem 1.5rem;
+  }
+
+  .redes a {
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+/* ============================
+   📱 MÓVILES
+   ============================ */
+@media (max-width: 768px) {
+  /* Centrado y márgenes más suaves */
+  .contacto-container {
+    max-width: 95%;
+    padding: 1.2rem;
+    box-shadow: none; /* más limpio en móvil */
+  }
+
+  .contacto-container h2,
+  .contacto-container p {
+    text-align: center;
+  }
+
+  /* Botones de redes más grandes y cómodos */
+  .redes {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .redes a {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  footer {
+    padding: 1rem 0.5rem;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+}
+
+/* ============================
+   📲 MÓVILES PEQUEÑOS (320px)
+   ============================ */
+@media (max-width: 480px) {
+  .redes a {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .contacto-container {
+    padding: 1rem 0.5rem;
+  }
+
+  footer p {
+    font-size: 0.75rem;
+  }
+}
 
