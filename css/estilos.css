@@ -855,7 +855,7 @@ html { scroll-behavior: smooth; }
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);             /* sombra sutil */
   font-size: 1rem;                                     /* tamaño del contenido */
   box-sizing: border-box;                              /* box-sizing */
-  margin-top: 150%;
+  margin-top: 50%;
 }
 }
 
