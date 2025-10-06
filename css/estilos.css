@@ -61,7 +61,7 @@ header {
   justify-content: space-between;                      /* espacio entre logo y nav */
   align-items: center;                                 /* centra verticalmente los elementos */
   flex-wrap: wrap;                                     /* permite que el contenido salte a la siguiente línea */
-  gap: 1rem;                                           /* separación entre elementos flex */
+  gap: 0.5rem;                                           /* separación entre elementos flex */
   min-height: var(--header-h);                         /* altura mínima definida por la variable */
 }
 
@@ -133,6 +133,8 @@ nav a:hover {
   padding-top: var(--header-h);                        /* espaciado superior igual a la altura del header */
   margin-top: 0;                                       /* evita colapso de márgenes */
   box-sizing: border-box;                              /* asegurar box-sizing */
+  margin-bottom: 0.1%;
+
 }
 
 /* ==============================
@@ -140,7 +142,7 @@ nav a:hover {
    ============================== */
 .hero {
   text-align: center;                                  /* centra el texto del hero */
-  padding-top: calc(15vh);                             /* espacio extra arriba (visual) */
+  padding-top: 10rem;                             /* espacio extra arriba (visual) */
   max-width: 100vw;                                    /* no exceder ancho de ventana */
   background-size: cover;                              /* si tiene imagen, que cubra */
   background-position: center;                         /* centra la imagen de fondo */
@@ -351,7 +353,7 @@ nav a:hover {
   top: 0;                                              /* empieza arriba */
   width: 100%;                                         /* ocupa todo el ancho */
   height: 100%;                                        /* ocupa todo el alto */
-  background-color: rgba(0,0,0,0.6);                   /* overlay semitransparente (corregido) */
+  background-color: rgba(0,0,0,0.6);                   /* overlay semitransparente */
   justify-content: center;                             /* centra horizontalmente el contenido del modal */
   align-items: center;                                 /* centra verticalmente */
   padding: 1rem;                                       /* padding interno para pantallas pequeñas */
@@ -533,7 +535,6 @@ nav a:hover {
    Main (contenedor principal)
    ============================== */
 main {
-  padding: 1rem;                                       /* padding general */
   max-width: var(--content-max-w);                     /* ancho máximo del contenido */
   margin: 0 auto;                                      /* centrar horizontalmente */
   width: 100%;                                         /* ocupar ancho */
@@ -703,7 +704,7 @@ html { scroll-behavior: smooth; }
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);             /* sombra sutil */
   font-size: 1rem;                                     /* tamaño del contenido */
   box-sizing: border-box;                              /* box-sizing */
-  margin-top: 12%;
+  margin-top: 9%;
 }
 
 /* titulo de sección */
@@ -712,7 +713,7 @@ html { scroll-behavior: smooth; }
   margin-bottom: 0.1rem;                               /* separación inferior */
   margin-top: 0.1rem;                                /* separación superior */  
   text-shadow: 1px 1px 3px rgba(0,0,0,0.15);           /* sombra ligera */
-  font-size: 1rem;                                   /* tamaño para h2 */
+  font-size: 1.5rem;                                   /* tamaño para h2 */
   text-align: center;                                  /* centrado */
 }
 
@@ -779,7 +780,7 @@ html { scroll-behavior: smooth; }
 
   /* Ajuste del main para evitar solapamiento con el header fijo */
   main {
-    padding-top: 10rem !important; /* espacio extra arriba */
+    padding-top: 8rem !important; /* espacio extra arriba */
     min-height: 50vh !important;    /* altura mínima menor */
     margin-bottom: auto !important; /* margen inferior automático */
   }
@@ -841,25 +842,13 @@ html { scroll-behavior: smooth; }
   #search {
     width: 92% !important;
     max-width: 92% !important;
-    font-size: 13rem !important;
+    font-size: 2rem !important;
     padding: 0.45rem !important;
   }
 
   .modal,
   .modal-content { z-index: 1400 !important; }
-  .seccion {
-  background: #fff;                                    /* fondo blanco */
-  border: 1px solid var(--accent);                     /* borde con acento */
-  border-radius: var(--border-radius);                 /* radio */
-  padding: 0.3rem;                                     /* padding */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);             /* sombra sutil */
-  font-size: 1rem;                                     /* tamaño del contenido */
-  box-sizing: border-box;                              /* box-sizing */
-  margin-top: 50%;
 }
-}
-
-
 
 /* <= 360px (pantallas muy pequeñas) */
 @media (max-width: 360px) {
