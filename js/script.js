@@ -37,7 +37,7 @@ if (modal) {
     "Gomitas Bull dog": ["img/bull_dog_frutillaa.jpg","img/bull_dog_sandia.jpg"],
     "Chupetín con polvo ácido Brain(30u)": ["img/chupetinBrain.jpg","img/cajaBrain.jpg"],
     "Chupetín con polvo ácido (30u)": ["img/chupetinConAcido.jpg","img/cajaChupetinAcido.jpg"],
-    "Burbujeros (24u)": ["img/burbujero3.jpg","img/burbujero.jpg", "img/burbujero2.jpg", "img/burbujero4.jpg",],
+    "Burbujeros (24u)": ["img/burbujero3.jpg","img/burbujero.jpg", "img/burbujero2.jpg", "img/burbujero4.jpg"],
     "Autos de carrera con chicles(30u)": ["img/carrera.jpg","img/reversacarrera.jpg"],
     "Brochetas de ojos (x30 brochetas)": ["img/brochetas3.jpg","img/brochetas.jpg"],
     "Remera pimball + chicles(x30)": ["img/pimballremera.jpg","img/reversaremera.jpg"],
@@ -45,8 +45,7 @@ if (modal) {
     "Chupetín Calabaza conpolvo ácido (30u)": ["img/chupetinCalabaza.jpg","img/chupetincalabaza1.jpg", "img/chupetincalabaza2.jpg"],
     "Chupetines con formas (x30)": ["img/chupetinesconformas1.jpg", "img/chupetinesconformas2.jpg",],
     "🎃 Halloween chupetines (30u)": ["img/halloween1.jpg","img/halloween2.jpg","img/halloween3.jpg","img/halloween4.jpg",],
-
-  
+    "Gelatinas con formas (30u)": ["gelatinaDiferentesSabores1.jpg", "img/gelatinaDiferentesSabores2.jpg", "img/gelatinaDiferentesSabores3.jpg", "img/gelatinaDiferentesSabores4.jpg", "img/gelatinaDiferentesSabores5.jpg"],
   };
 
   

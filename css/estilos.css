@@ -363,7 +363,7 @@ nav a:hover {
   flex-direction: column;                              /* direcc vertical */
   align-items: center;                                 /* centra horizontalmente */
   justify-content: center;                             /* centra verticalmente */
-  gap: 1rem;                                           /* espacio entre elementos */
+  gap: 0.1rem;                                           /* espacio entre elementos */
   animation: fadeIn 0.25s ease;                        /* animación de aparición */
   font-size: 2rem;
 }
