@@ -31,7 +31,7 @@ if (modal) {
   // ========================
   const imagenesProducto = {
     "Alcancías con gelatinas": ["img/alcancias.jpg","img/tigre.jpg","img/osito.jpg","img/piguin.jpg","img/rosa.jpg"],
-    "Gomitas blandas Ojos (30u)": ["img/ojos.jpg","img/gomitasblandas1.jpg",,"img/gomitasblandas2.jpg","img/gomitasblandas3.jpg","img/gomitasblandas4.jpg","img/gomitasblandas5.jpg","img/gomitasblandas6.jpg","img/gomitasblandas7.jpg","img/gomitasblandas9.jpg","img/gomitasblandas8fantasma.jpg"],
+    "Gomitas blandas Ojos (30u)": ["img/ojos.jpg","img/gomitasblandas1.jpg","img/gomitasblandas2.jpg","img/gomitasblandas3.jpg","img/gomitasblandas4.jpg","img/gomitasblandas5.jpg","img/gomitasblandas7.jpg","img/gomitasblandas9.jpg","img/gomitasblandas8fantasma.jpg"],
     "Chupetín Merlina": ["img/merlina.jpg","img/merliina.jpg"],
     "Transformers": ["img/tr.jpg","img/transformer.jpg","img/2.jpg","img/3.jpg","img/2ss.jpg","img/ddd.jpg"],
     "Gomitas Bull dog": ["img/bull_dog_frutillaa.jpg","img/bull_dog_sandia.jpg"],
