@@ -84,7 +84,7 @@ header {
 
 /* estilo del h1 dentro del título */
 .titulo-contenedor h1 {
-  font-size: 1.25rem;                                  /* tamaño del título (ajustado para no ser gigante) */
+  font-size: 1.5rem;                                  /* tamaño del título (ajustado para no ser gigante) */
   margin: 0 0 0.5rem 0;                                /* margen inferior pequeño */
   text-shadow: 2px 2px 6px rgba(0,0,0,0.4);            /* ligera sombra de texto para legibilidad */
   white-space: nowrap;                                 /* evita salto de línea en el título */
@@ -141,7 +141,7 @@ nav a:hover {
   position: absolute;                                  /* posición absoluta dentro del hero */
   width: 100%;                                         /* ocupa ancho completo */
   height: 80%;                                         /* altura del overlay */
-  margin-top: 3rem;                                    /* separación superior visual */
+  margin-top: 4rem;                                    /* separación superior visual */
   top: 0;                                              /* arriba del hero */
   left: 0;                                             /* a la izquierda */
   opacity: 1;                                          /* opacidad completa (puedes bajar para más transparencia) */
