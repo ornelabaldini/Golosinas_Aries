@@ -327,6 +327,7 @@ nav a:hover {
   transform: translateY(-2px);                         /* pequeño movimiento hacia arriba */
 }
 
+
 /* ==============================
    Modal (pop-up) de catálogo
    ============================== */
@@ -364,6 +365,7 @@ nav a:hover {
   justify-content: center;                             /* centra verticalmente */
   gap: 1rem;                                           /* espacio entre elementos */
   animation: fadeIn 0.25s ease;                        /* animación de aparición */
+  font-size: 2rem;
 }
 
 /* imagen dentro del modal */
