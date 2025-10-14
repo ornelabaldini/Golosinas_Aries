@@ -17,6 +17,7 @@
   --content-max-w: 1200px;
   /* tamaño base de fuente (puedes ajustar si quieres escalar todo) */
   --base-font: 13px;
+  --border-radius: 10px;
 }
 
 /* ==============================
@@ -141,7 +142,7 @@ nav a:hover {
   position: absolute;                                  /* posición absoluta dentro del hero */
   width: 100%;                                         /* ocupa ancho completo */
   height: 80%;                                         /* altura del overlay */
-  margin-top: 4rem;                                    /* separación superior visual */
+  margin-top: 3rem;                                    /* separación superior visual */
   top: 0;                                              /* arriba del hero */
   left: 0;                                             /* a la izquierda */
   opacity: 1;                                          /* opacidad completa (puedes bajar para más transparencia) */
@@ -197,7 +198,7 @@ nav a:hover {
   text-align: center;                                  /* centra el texto */
   padding: 0.8rem 1rem;                                /* padding interno cómodo */
   background: #fff;                                    /* fondo blanco */
-  border-radius: var(--border-radius);                 /* bordes redondeados */
+  border-radius: 0px;                 /* bordes redondeados */
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);             /* sombra suave */
   font-size: 1rem;                                     /* tamaño de fuente */
   max-width: var(--content-max-w);                     /* ancho máximo del bloque */
@@ -227,6 +228,7 @@ nav a:hover {
   padding: 0.5rem 0.2rem;                              /* padding interno */
   width: 100%;                                         /* ocupa todo el ancho disponible */
   box-sizing: border-box;                              /* box-sizing */
+  border-radius: 0px;
 }
 
 /* alias por si usas .catalogo */
@@ -236,6 +238,7 @@ nav a:hover {
   gap: 1rem;                                           /* gap igual */
   width: 100%;                                         /* ancho completo */
   box-sizing: border-box;                              /* box-sizing */
+  
 }
 
 /* ==============================
@@ -544,7 +547,6 @@ main {
   max-width: var(--content-max-w);                     /* ancho máximo del contenido */
   margin: 0 auto;                                      /* centrar horizontalmente */
   width: 100%;                                         /* ocupar ancho */
-  box-sizing: border-box;                              /* box-sizing */
   min-height: 60vh;                                    /* altura mínima para buena presencia */
   font-size: 1rem;                                     /* tamaño base de fuente */
   background: #fcfbfb;                                 /* fondo blanco para la zona principal */
@@ -553,6 +555,7 @@ main {
   overflow: visible;                                   /* overflow visible por defecto */
   padding-bottom: 0.1rem;                                /* espacio inferior */
   padding-top: 0.1rem;                                 /* espacio superior mínimo (el push principal lo hace .main arriba) */
+  border-radius: 0px 0px;
 }
 
 /* ==============================
@@ -647,11 +650,10 @@ footer p {
 
 /* botón volver arriba (si lo usas) */
 .back-to-top {
-  display: inline-block;                               /* inline-block */
-  margin-top: 0.01rem;                                 /* margen pequeño */
-  padding: 0.6rem 1.2rem;                              /* padding */
-  background: #fafa;                                   /* fondo claro */
-  color: var(--primary);                               /* color del texto */
+  margin-top: 0.2rem;                                 /* margen pequeño */
+  padding: 0.7rem 1.2rem;                              /* padding */
+  background: rgba(3, 2, 3, 0.667);                                   /* fondo claro */
+  color: white;                               /* color del texto */
   font-weight: bold;                                   /* negrita */
   border-radius: var(--border-radius);                 /* radio */
   text-decoration: none;                               /* sin subrayado */
@@ -659,6 +661,12 @@ footer p {
   font-size: 1rem;                                     /* tamaño */
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);              /* sombra */
   box-sizing: border-box;                              /* box-sizing */
+  float: left;
+  border-radius: 50px;
+  position: fixed;      /* se queda visible al hacer scroll */
+  bottom: 30px;         /* separación desde el borde inferior */
+  left: 30px;           /* separación desde el borde izquierdo */
+  
 }
 
 /* hover del botón volver arriba */
