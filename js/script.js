@@ -31,25 +31,23 @@ if (modal) {
   // IMÁGENES POR PRODUCTO
   // ========================
   const imagenesProducto = {
-    "Alcancías con gelatinas": ["img/alcancias.jpg","img/tigre.jpg","img/osito.jpg","img/piguin.jpg","img/rosa.jpg"],
-    "Gomitas blandas Ojos (30u)": ["img/ojos.jpg","img/gomitasblandas1.jpg","img/gomitasblandas2.jpg","img/gomitasblandas3.jpg","img/gomitasblandas4.jpg","img/gomitasblandas5.jpg","img/gomitasblandas7.jpg","img/gomitasblandas9.jpg","img/gomitasblandas8fantasma.jpg"],
+    "Alcancias con gelatinas": ["img/alcancias1.jpg","img/alcancias2.jpg","img/alcancias3.jpg"],
     "Chupetín Merlina": ["img/merlina.jpg","img/merliina.jpg"],
-    "Transformers": ["img/tr.jpg","img/transformer.jpg","img/2.jpg","img/3.jpg","img/2ss.jpg","img/ddd.jpg"],
-    "Gomitas Bull dog": ["img/bull_dog_frutillaa.jpg","img/bull_dog_sandia.jpg"],
-    "Chupetín con polvo ácido Brain(30u)": ["img/chupetinBrain.jpg","img/cajaBrain.jpg"],
-    "Chupetín con polvo ácido (30u)": ["img/chupetinConAcido.jpg","img/cajaChupetinAcido.jpg"],
-    "Burbujeros (24u)": ["img/burbujero3.jpg","img/burbujero.jpg", "img/burbujero2.jpg", "img/burbujero4.jpg"],
+    "Chupetin con polvo acido Brain(30u)": ["img/chupetinBrain.jpg","img/cajaBrain.jpg"],
+    "Chupetin con polvo acido skull (30u)": ["img/chupetinConAcido.jpg","img/cajaChupetinAcido.jpg"],
     "Autos de carrera con chicles(30u)": ["img/carrera.jpg","img/reversacarrera.jpg"],
     "Brochetas de ojos (x30 brochetas)": ["img/brochetas3.jpg","img/brochetas.jpg"],
     "Remera pimball + chicles(x30)": ["img/pimballremera.jpg","img/reversaremera.jpg"],
     "Celu + chicles(x30)": ["img/pimballip.jpg","img/reversaip.jpg"],
-    "Chupetín Calabaza conpolvo ácido (30u)": ["img/chupetinCalabaza.jpg","img/chupetincalabaza1.jpg", "img/chupetincalabaza2.jpg"],
-    "Chupetines con formas (x30)": ["img/chupetinesconformas1.jpg", "img/chupetinesconformas2.jpg",],
+    "Chupetin Calabaza conpolvo ácido (30u)": ["img/chupetinCalabaza.jpg","img/chupetincalabaza1.jpg", "img/chupetincalabaza2.jpg"],
+    "Chupetines con formas (x30) ": ["img/chupetinesconformas1.jpg", "img/chupetinesconformas2.jpg",],
     "🎃 Halloween chupetines (30u)": ["img/halloween1.jpg","img/halloween2.jpg","img/halloween3.jpg","img/halloween4.jpg",],
     "Gelatinas con formas (30u)": ["img/gelatinaDiferentesSabores2.jpg", "img/gelatinaDiferentesSabores3.jpg", "img/gelatinaDiferentesSabores4.jpg", "img/gelatinaDiferentesSabores5.jpg"],
+    "Chupetines de Corona con LED (x30u)": ["img/chupetinesconled1.jpg", "img/corona2.jpg"],
+    "Gomitas (30u": ["img/gomitablandaCara3","img/gomitablandaCara2","img/gomitablandaCara1"],
+    "Gomitas blandas Selección Argentina (30u)": ["img/seleccion.jpg", "img/seleccion1.jpg", "img/seleccion2.jpg",]
   };
 
-  
 
   // Variables de control
   let currentImages = [];
