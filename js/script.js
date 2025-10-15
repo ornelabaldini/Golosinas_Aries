@@ -44,8 +44,11 @@ if (modal) {
     "🎃 Halloween chupetines (30u)": ["img/halloween1.jpg","img/halloween2.jpg","img/halloween3.jpg","img/halloween4.jpg",],
     "Gelatinas con formas (30u)": ["img/gelatinaDiferentesSabores2.jpg", "img/gelatinaDiferentesSabores3.jpg", "img/gelatinaDiferentesSabores4.jpg", "img/gelatinaDiferentesSabores5.jpg"],
     "Chupetines de Corona con LED (x30u)": ["img/chupetinesconled1.jpg", "img/corona2.jpg"],
-    "Gomitas (30u": ["img/gomitablandaCara3","img/gomitablandaCara2","img/gomitablandaCara1"],
-    "Gomitas blandas Selección Argentina (30u)": ["img/seleccion.jpg", "img/seleccion1.jpg", "img/seleccion2.jpg",]
+    "Gomitas (30u)": ["img/gomitablandaCara3.jpg","img/gomitablandaCara2.jpg"],
+    "Gomitas blandas Selección Argentina (30u)": ["img/seleccion.jpg", "img/seleccion1.jpg", "img/seleccion2.jpg",],
+    "Cool Mint sabores frutales (x30u)": ["img/coolmint.jpg","img/coolmint2.jpg"],
+    "Trompetas con chupetin y sonido (30u)": ["img/trompeta1.jpg", "img/trompetas.jpg"],
+
   };
 
 
