@@ -320,21 +320,33 @@ window.addEventListener('click', (e) => {
 // Número de WhatsApp
 const numero = "542236010443";
 
-// Seleccionamos todos los botones de "Pedir por WhatsApp"
 const botones = document.querySelectorAll('.btn-carrito');
 
 botones.forEach(boton => {
-  boton.addEventListener('click', () => {
-    const card = boton.closest('.card');
+  boton.addEventListener('click', (event) => {
+    event.stopPropagation();
 
+    const card = boton.closest('.card');
     const nombre = card.querySelector('h3').innerText;
     const precioFormateado = card.querySelector('p').innerText.trim();
 
-    // Mensaje para WhatsApp, mostrando el precio tal como en tu HTML
-    const mensaje = `Quiero agregar esto: *${nombre}* que cuesta: ${precioFormateado}.`;
+    let mensaje = '';
 
-    // Abrimos WhatsApp en nueva pestaña
-    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
-    window.open(url, '_blank');
+    // Pasamos todo a minúsculas para evitar errores por espacios o mayúsculas
+    const textoBoton = boton.innerText.toLowerCase();
+
+    if (textoBoton.includes('agregar')) {
+      mensaje = `Quiero agregar esto: *${nombre}* que cuesta: ${precioFormateado}.`;
+    } else if (textoBoton.includes('consulta')) {
+      mensaje = `Vengo del catálogo y quiero hacer una consulta sobre este producto: *${nombre}*.`;
+    }
+
+    if (mensaje) { // solo abre si hay mensaje válido
+      const url = `https://api.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(mensaje)}`;
+      window.open(url, '_blank');
+    } else {
+      console.warn('⚠️ No se generó mensaje. Texto del botón:', boton.innerText);
+    }
   });
 });
+
