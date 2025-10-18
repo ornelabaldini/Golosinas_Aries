@@ -32,7 +32,7 @@ if (modal) {
   // ========================
   const imagenesProducto = {
     "Alcancias con gelatinas": ["img/alcancias1.jpg","img/alcancias2.jpg","img/alcancias3.jpg"],
-    "Chupetín Merlina": ["img/merlina.jpg","img/merliina.jpg"],
+    "Chupetines Merlina (x30u)": ["img/merlina1.jpg","img/merlina2.jpg", "img/merlina3.jpg", "img/merlina4.jpg"],
     "Chupetin con polvo acido Brain(30u)": ["img/chupetinBrain.jpg","img/cajaBrain.jpg"],
     "Chupetin con polvo acido skull (30u)": ["img/chupetinConAcido.jpg","img/cajaChupetinAcido.jpg"],
     "Autos de carrera con chicles(30u)": ["img/carrera.jpg","img/reversacarrera.jpg"],
@@ -48,7 +48,15 @@ if (modal) {
     "Gomitas blandas Selección Argentina (30u)": ["img/seleccion.jpg", "img/seleccion1.jpg", "img/seleccion2.jpg",],
     "Cool Mint sabores frutales (x30u)": ["img/coolmint.jpg","img/coolmint2.jpg"],
     "Trompetas con chupetin y sonido (30u)": ["img/trompeta1.jpg", "img/trompetas.jpg"],
+    "Sorpresa capibara + chicles (x30u)": ["img/sorpresacapibara1.jpg", "img/sorpresacapibara2.jpg"],
+    "Sorpresa plantas vs Zombies y chicles (x30u)": ["img/sorpresaplant2.jpg", "img/sorpresaplant.jpg"],
+    "Gomitas blandas Frutillas (30u)": ["img/frutilla1.jpg", "img/frutilla.jpg"],
+    "Gomitas blandas Fantasmita (30u)": ["img/fantasmitas.jpg", "img/fantasmitas2.jpg"],
+    "Monedas de chocolate (x250u)": ["img/monedas1.jpg", "img/monedas2.jpg"],
+    "Gomitas pack (30u)": ["img/gomitasoh.jpg", "img/gomitasoh1.jpg"],
+    "Gomitas blandas .(30u)": ["img/gomitasblandas7.jpg", "img/gomitasblandas71.jpg"],
 
+  
   };
 
 
