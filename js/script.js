@@ -42,7 +42,7 @@ if (modal) {
     "Chupetin Calabaza conpolvo ácido (30u)": ["img/chupetinCalabaza.jpg","img/chupetincalabaza1.jpg", "img/chupetincalabaza2.jpg"],
     "Chupetines con formas (x30) ": ["img/chupetinesconformas1.jpg", "img/chupetinesconformas2.jpg",],
     "🎃 Halloween chupetines (30u)": ["img/halloween1.jpg","img/halloween2.jpg","img/halloween3.jpg","img/halloween4.jpg",],
-    "Gelatinas con formas (30u)": ["img/gelatinaDiferentesSabores2.jpg", "img/gelatinaDiferentesSabores3.jpg", "img/gelatinaDiferentesSabores4.jpg", "img/gelatinaDiferentesSabores5.jpg"],
+    "Gelatinas con formas (30u)": ["img/gelatinaDiferentesSabores4.jpg", "img/gelatinaDiferentesSabores3.jpg", "img/gelatinaDiferentesSabores2.jpg", "img/gelatinaDiferentesSabores5.jpg", "img/gelatinaDiferentesSabores1.jpg"],
     "Chupetines de Corona con LED (x30u)": ["img/chupetinesconled1.jpg", "img/corona2.jpg"],
     "Gomitas (30u)": ["img/gomitablandaCara3.jpg","img/gomitablandaCara2.jpg"],
     "Gomitas blandas Selección Argentina (30u)": ["img/seleccion.jpg", "img/seleccion1.jpg", "img/seleccion2.jpg",],
@@ -53,10 +53,11 @@ if (modal) {
     "Gomitas blandas Frutillas (30u)": ["img/frutilla1.jpg", "img/frutilla.jpg"],
     "Gomitas blandas Fantasmita (30u)": ["img/fantasmitas.jpg", "img/fantasmitas2.jpg"],
     "Monedas de chocolate (x250u)": ["img/monedas1.jpg", "img/monedas2.jpg"],
-    "Gomitas pack (30u)": ["img/gomitasoh.jpg", "img/gomitasoh1.jpg"],
+    "Gomitas 👁️👄👁️ (30u)": ["img/gomitasoh.jpg", "img/gomitasoh1.jpg"],
     "Gomitas blandas .(30u)": ["img/gomitasblandas7.jpg", "img/gomitasblandas71.jpg"],
-
-  
+    "Chupetines Capibara (30u)": ["img/chupetincapibara1.jpg", "img/chupetincapibara2.jpg"],
+    "Chupetines con forma de conejo (x30)": ["img/conejos1.jpg", "img/conejos3.jpg"],
+    "Chupetines con forma de unicornio (x30)":["img/unicornio1.jpg","img/unicornio2.jpg","img/unicornio3.jpg"]
   };
 
 
