@@ -344,19 +344,32 @@ window.addEventListener('click', (e) => {
 // Número de WhatsApp
 const numero = "542236010443";
 
-const botones = document.querySelectorAll('.btn-carrito');
+// Seleccionamos todos los botones tanto de las cards como del modal
+const botones = document.querySelectorAll('.btn-carrito, .btn-consulta, #modal-agregar, #modal-consulta');
 
 botones.forEach(boton => {
   boton.addEventListener('click', (event) => {
     event.stopPropagation();
 
+    let nombre = '';
+    let precioFormateado = '';
+
+    // Si el botón está en una card
     const card = boton.closest('.card');
-    const nombre = card.querySelector('h3').innerText;
-    const precioFormateado = card.querySelector('p').innerText.trim();
+    if (card) {
+      nombre = card.querySelector('h3')?.innerText || '';
+      precioFormateado = card.querySelector('p')?.innerText.trim() || '';
+    } else {
+      // Si el botón está dentro del modal
+      const modalTitle = document.getElementById('modal-title');
+      const modalPrecio = document.getElementById('modal-precio');
+      nombre = modalTitle?.innerText || '';
+      precioFormateado = modalPrecio?.innerText.trim() || '';
+    }
 
     let mensaje = '';
 
-    // Pasamos todo a minúsculas para evitar errores por espacios o mayúsculas
+    // Convertimos el texto del botón a minúsculas para evitar errores
     const textoBoton = boton.innerText.toLowerCase();
 
     if (textoBoton.includes('agregar')) {
@@ -373,4 +386,3 @@ botones.forEach(boton => {
     }
   });
 });
-
