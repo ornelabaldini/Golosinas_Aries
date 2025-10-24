@@ -44,7 +44,7 @@ if (modal) {
     "🎃 Halloween chupetines (30u)": ["img/halloween1.jpg","img/halloween2.jpg","img/halloween3.jpg","img/halloween4.jpg",],
     "Gelatinas con formas (30u)": ["img/gelatinaDiferentesSabores4.jpg", "img/gelatinaDiferentesSabores3.jpg", "img/gelatinaDiferentesSabores2.jpg", "img/gelatinaDiferentesSabores5.jpg", "img/gelatinaDiferentesSabores1.jpg"],
     "Chupetines de Corona con LED (x30u)": ["img/chupetinesconled1.jpg", "img/corona2.jpg"],
-    "Gomitas (30u)": ["img/gomitablandaCara3.jpg","img/gomitablandaCara2.jpg"],
+    "Gomitas cara (30u)": ["img/gomitablandaCara3.jpg","img/gomitablandaCara2.jpg"],
     "Gomitas blandas Selección Argentina (30u)": ["img/seleccion.jpg", "img/seleccion1.jpg", "img/seleccion2.jpg",],
     "Cool Mint sabores frutales (x30u)": ["img/coolmint.jpg","img/coolmint2.jpg"],
     "Trompetas con chupetin y sonido (30u)": ["img/trompeta1.jpg", "img/trompetas.jpg"],
@@ -54,7 +54,7 @@ if (modal) {
     "Gomitas blandas Fantasmita (30u)": ["img/fantasmitas.jpg", "img/fantasmitas2.jpg"],
     "Monedas de chocolate (x250u)": ["img/monedas1.jpg", "img/monedas2.jpg"],
     "Gomitas 👁️👄👁️ (30u)": ["img/gomitasoh.jpg", "img/gomitasoh1.jpg"],
-    "Gomitas blandas .(30u)": ["img/gomitasblandas7.jpg", "img/gomitasblandas71.jpg"],
+    "Gomitas blandas Kuromy (30u)": ["img/gomitasblandas7.jpg", "img/gomitasblandas71.jpg"],
     "Chupetines Capibara (30u)": ["img/chupetincapibara1.jpg", "img/chupetincapibara2.jpg"],
     "Chupetines con forma de conejo (x30)": ["img/conejos1.jpg", "img/conejos3.jpg"],
     "Chupetines con forma de unicornio (x30)":["img/unicornio1.jpg","img/unicornio2.jpg","img/unicornio3.jpg"]
@@ -66,20 +66,34 @@ if (modal) {
   let currentIndex = 0;
   let currentTitle = "";
 
-  // ========================
-  // FUNCIÓN: Abrir modal
-  // ========================
   function abrirModal(card) {
-    const img = card.querySelector('img');
-    const title = card.querySelector('h3');
+  const img = card.querySelector('img');
+  const title = card.querySelector('h3');
+  const price = card.querySelector('p'); // <- tomamos el precio del producto
 
-    currentTitle = title ? title.textContent : "Producto";
-    currentImages = imagenesProducto[currentTitle] || [img.src];
-    currentIndex = 0;
+  currentTitle = title ? title.textContent : "Producto";
+  currentImages = imagenesProducto[currentTitle] || [img.src];
+  currentIndex = 0;
 
-    modal.style.display = 'flex';
-    actualizarModal();
-  }
+  // Mostrar modal
+  modal.style.display = 'flex';
+  actualizarModal();
+
+  // Mostrar título y precio dentro del modal
+  const modalTitle = document.getElementById('modal-title');
+  const modalPrecio = document.getElementById('modal-precio');
+
+  modalTitle.textContent = currentTitle;
+  modalPrecio.textContent = price ? price.textContent : '';
+
+  // Guardar info en los botones (para el envío por WhatsApp)
+  document.getElementById('modal-agregar').dataset.producto = currentTitle;
+  document.getElementById('modal-agregar').dataset.precio = price ? price.textContent : '';
+
+  document.getElementById('modal-consulta').dataset.producto = currentTitle;
+  document.getElementById('modal-consulta').dataset.precio = price ? price.textContent : '';
+}
+
 
   // ========================
   // FUNCIÓN: Actualizar modal
@@ -146,6 +160,7 @@ if (modal) {
   const cards = document.querySelectorAll('.card'); 
   cards.forEach(card => {
   const titulo = card.querySelector('h3').textContent;
+  const modalPrecio = document.getElementById('modal-precio');
   const cantidadImgs = imagenesProducto[titulo]?.length || 1;
 
   if (cantidadImgs > 1) {
