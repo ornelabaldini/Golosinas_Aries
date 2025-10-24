@@ -220,128 +220,12 @@ document.addEventListener("DOMContentLoaded", () => {
   searchInput.addEventListener("keyup", filtrarProductos);
 });
 
-/*
+
+
 // ========================
-// CARRITO DE COMPRAS
+// ENLACE A WHATSAPP (FUNCIONA EN CELULAR Y PC)
 // ========================
 
-// Referencias a elementos del carrito
-
-
-const carritoBtn = document.getElementById('carrito-btn');  // Botón del carrito  
-const carritoDropdown = document.getElementById('carrito-dropdown');    // Dropdown del carrito
-const carritoItems = document.getElementById('carrito-items');  // Lista de items en el carrito                                           
-const carritoCount = document.getElementById('carrito-count');             // Contador de items   
-const carritoTotal = document.getElementById('carrito-total');         // Total del carrito
-const vaciarCarritoBtn = document.getElementById('vaciar-carrito');           // Botón para vaciar carrito  
-
-
-let carrito = []; // Array para almacenar productos
-
-// Mostrar u ocultar dropdown
-carritoBtn.addEventListener('click', () => {
-  carritoDropdown.style.display = carritoDropdown.style.display === 'block' ? 'none' : 'block';
-});                               
-
-// Función para agregar productos
-// Animación cuando se agrega producto
-function agregarAlCarrito(nombre, precio) {
-  const productoExistente = carrito.find(p => p.nombre === nombre);
-  if(productoExistente) {
-    productoExistente.cantidad = (productoExistente.cantidad || 1) + 1;
-  } else {
-    carrito.push({ nombre, precio, cantidad: 1 });
-  }
-  actualizarCarrito();
-
-  // Animación del contador
-  carritoCount.classList.add('animar-carrito');
-  setTimeout(() => carritoCount.classList.remove('animar-carrito'), 300);
-}
-
-// Actualizar carrito con + y -
-function actualizarCarrito() {
-  carritoItems.innerHTML = '';
-  let total = 0;
-
-  carrito.forEach((item, index) => {
-    const li = document.createElement('li');
-    li.classList.add('carrito-item');
-
-    const nombre = document.createElement('span');
-    nombre.textContent = item.nombre;
-    nombre.classList.add('carrito-nombre');
-
-    const precio = document.createElement('span');
-    precio.textContent = `$${item.precio}`;
-    precio.classList.add('carrito-precio');
-
-    const cantidadContainer = document.createElement('div');
-    cantidadContainer.classList.add('cantidad-container');
-
-    const btnMenos = document.createElement('button');
-    btnMenos.textContent = '-';
-    btnMenos.classList.add('cantidad-btn');
-    btnMenos.onclick = () => {
-      if(item.cantidad > 1) {
-        item.cantidad--;
-      } else {
-        carrito.splice(index, 1);
-      }
-      actualizarCarrito();
-    };
-
-    const cantidad = document.createElement('span');
-    cantidad.textContent = item.cantidad || 1;
-    cantidad.classList.add('cantidad');
-
-    const btnMas = document.createElement('button');
-    btnMas.textContent = '+';
-    btnMas.classList.add('cantidad-btn');
-    btnMas.onclick = () => {
-      item.cantidad = (item.cantidad || 1) + 1;
-      actualizarCarrito();
-    };
-
-    cantidadContainer.appendChild(btnMenos);
-    cantidadContainer.appendChild(cantidad);
-    cantidadContainer.appendChild(btnMas);
-
-    const totalProducto = document.createElement('span');
-    totalProducto.textContent = `$${item.precio * (item.cantidad || 1)}`;
-    totalProducto.classList.add('total-producto');
-
-    li.appendChild(nombre);
-    li.appendChild(precio);
-    li.appendChild(cantidadContainer);
-    li.appendChild(totalProducto);
-
-    carritoItems.appendChild(li);
-
-    total += item.precio * (item.cantidad || 1);
-  });
-
-  carritoCount.textContent = carrito.reduce((acc, p) => acc + (p.cantidad || 1), 0);
-  carritoTotal.textContent = `Total: $${total}`;
-}
-
-// Vaciar carrito
-vaciarCarritoBtn.addEventListener('click', () => {
-  carrito = [];
-  actualizarCarrito();
-}); 
-
-// Inicializar carrito
-actualizarCarrito();
-
-// Cerrar dropdown al hacer clic fuera
-window.addEventListener('click', (e) => {
-  if (!carritoBtn.contains(e.target) && !carritoDropdown.contains(e.target)) {
-    carritoDropdown.style.display = 'none';
-  }
-}); */
-
-// Número de WhatsApp
 const numero = "542236010443";
 
 // Seleccionamos todos los botones tanto de las cards como del modal
@@ -368,8 +252,6 @@ botones.forEach(boton => {
     }
 
     let mensaje = '';
-
-    // Convertimos el texto del botón a minúsculas para evitar errores
     const textoBoton = boton.innerText.toLowerCase();
 
     if (textoBoton.includes('agregar')) {
@@ -378,11 +260,23 @@ botones.forEach(boton => {
       mensaje = `Vengo del catálogo y quiero hacer una consulta sobre este producto: *${nombre}*.`;
     }
 
-    if (mensaje) { // solo abre si hay mensaje válido
-      const url = `https://api.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(mensaje)}`;
-      window.open(url, '_blank');
+    if (mensaje) {
+      // 🔹 Link universal de WhatsApp
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+      // 🔹 Detectar móvil o PC
+      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+      if (isMobile) {
+        // En móviles: abrir directamente en la app de WhatsApp
+        window.location.href = url;
+      } else {
+        // En PC: abrir en una nueva pestaña con WhatsApp Web
+        window.open(url, '_blank', 'noopener,noreferrer');
+      }
     } else {
       console.warn('⚠️ No se generó mensaje. Texto del botón:', boton.innerText);
     }
   });
 });
+
