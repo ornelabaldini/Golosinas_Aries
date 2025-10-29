@@ -48,7 +48,8 @@ if (modal) {
     "Gomitas blandas Kuromy (30u)": ["img/gomitasblandas7.jpg","img/gomitasblandas71.jpg"],
     "Chupetines Capibara (30u)": ["img/chupetincapibara1.jpg","img/chupetincapibara2.jpg"],
     "Chupetines con forma de conejo (x30)": ["img/conejos1.jpg","img/conejos3.jpg"],
-    "Chupetines con forma de unicornio (x30)":["img/unicornio1.jpg","img/unicornio2.jpg","img/unicornio3.jpg"]
+    "Chupetines con forma de unicornio (x30)":["img/unicornio1.jpg","img/unicornio2.jpg","img/unicornio3.jpg"],
+    "Mechas magicas (30u)":["img/mechasMario2.jpg", "img/mecha.jpg",]
   };
 
   let currentImages = [];

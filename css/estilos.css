@@ -739,7 +739,7 @@ html { scroll-behavior: smooth; }
 .titulo-animado {
   display: inline-block;
   white-space: nowrap;
-  animation: slide-infinite 12s linear infinite, color-change 6s ease-in-out infinite;
+  animation: slide-infinite 18s linear infinite, color-change 15s ease-in-out infinite;
   font-size: 1.5rem;                                    /* tamaño controlado */
   font-weight: bold;                                   /* negrita */
   text-shadow: 2px 2px 6px rgba(0,0,0,0.4);            /* sombra para legibilidad */
@@ -892,26 +892,29 @@ html { scroll-behavior: smooth; }
   }
 
   .titulo-contenedor h1 {
-    font-size: 0.95rem; /* título header más pequeño */
+    font-size: 1.5rem; /* título header más pequeño */
   }
 
   nav a {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     padding: 0.1rem;
   }
 
   .hero {
-    padding-top: 7rem; /* menos espacio arriba en móvil */
+    padding-top: 8rem; /* menos espacio arriba en móvil */
   }
 
   .hero h2,
   .hero p {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin: 1rem 0;
+    text-align: left;
+    
   }
 
   #search {
     width: 95%; /* input ocupa casi todo el ancho */
+    font-size: 1.5rem;
   }
 
   .contenedor-secciones {
