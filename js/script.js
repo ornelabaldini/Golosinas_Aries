@@ -349,7 +349,7 @@ document.addEventListener("DOMContentLoaded", () => {
       total+=p*i.cantidad;
       msg+=`• *${i.nombre}* — ${i.cantidad} x ${i.precio}\n`;
     });
-    msg+=`\n💰 *Total:* $${total.toLocaleString("es-AR")}\n\n📦 Quiero confirmar este pedido.`;
+    msg+=`\n💰 *Total:* $${total.toLocaleString("es-AR")}\n\n📦 Quiero continuar con este pedido y calcular el envío a mi ciudad.`;
     window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`,"_blank");
   });
 
