@@ -27,27 +27,30 @@
       <p id="no-results" style="display:none; text-align:center; color:#fff; margin-top:1rem;"></p>
     </nav>
   </div>
-     <!-- carrito
-  <div id="carrito-contenedor">
-    <button id="carrito-btn">
-      <i class="fas fa-shopping-cart"></i>
-      <span id="carrito-count">0</span>
-    </button>
-    <div id="carrito-dropdown">
-      <h4>Tu carrito</h4>
-      <ul id="carrito-items"></ul>
-      <p id="carrito-total">Total: $0</p>
-      <button id="vaciar-carrito">Vaciar carrito</button>
-    </div>
+   
+   <!--  Carrito de compras -->
+<div id="carrito-contenedor">
+  <button id="carrito-btn" aria-label="Abrir carrito">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="carrito-count">0</span>
+  </button>
+
+  <div id="carrito-dropdown">
+    <span id="cerrar-carrito" style="cursor:pointer; float:right; font-size:20px; font-weight:bold; margin:5px;">✖</span>
+    <h4>🛒 Tu carrito</h4>
+    <ul id="carrito-items"></ul>
+    <p id="carrito-total">Total: $0</p>
+    <button id="vaciar-carrito" class="btn-vaciar">Vaciar carrito</button>
+    <button id="enviar-carrito" class="btn-enviar">Enviar carrito por WhatsApp</button>
   </div>
-  -->
+</div>
 </header>
 
 
   <!-- Hero -->
   <aside class= "hero" style="background-image: url('img/hero-golosinas.jpg');">
     <div class="hero-overlay"></div>
-    <h2> 🚚 Envíos a todo el país 🇦🇷 — 💁‍♀️ Asistencia en tu pedido — ✅ Garantía de entrega — 💳 Pago seguro y confiable</h2>
+    <h2> 🚚 Envíos a todo el país 🇦🇷 — 💁‍♀️ Asistencia en tu carrito — ✅ Garantía de entrega — 💳 Pago seguro y confiable</h2>
   </aside>
 
   <main>
@@ -62,7 +65,7 @@
           <img src="img/halloween2.jpg" alt="🎃 Halloween" onclick="abrirModal(this)">
           <h3>🎃 Halloween chupetines (30u)</h3>
           <p>$8.900</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
         
@@ -70,7 +73,7 @@
           <img src="img/cajaCalabaza.jpg" alt="Chupetin calabaza" onclick="abrirModal(this)">
           <h3>Chupetin Calabaza con polvo acido (30u)</h3>
           <p>$8.900</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
         -->
@@ -79,7 +82,7 @@
           <img src="img/calabaza.jpg" alt="calabaza" onclick="abrirModal(this)">
           <h3>Gomitas blandas Calabazas (30u)</h3>
           <p>$7.000</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -87,7 +90,7 @@
           <img src="img/merlina1.jpg" alt="Eyeball caramelo duro Merlina" onclick="abrirModal(this)">
           <h3>Chupetines Merlina (x30u)</h3>
           <p>$9.000</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -95,7 +98,7 @@
           <img src="img/chupetinBrain.jpg" alt="Chupetín Brain" onclick="abrirModal(this)">
           <h3>Chupetin con polvo acido Brain(30u)</h3>
           <p>$8.900</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -103,7 +106,7 @@
           <img src="img/chupetinConAcido.jpg" alt="Chupetín con polvo acido" onclick="abrirModal(this)">
           <h3>Chupetin con polvo acido skull (30u)</h3>
           <p>$8.900</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -112,7 +115,7 @@
           <img src="img/gomitablandaCara3.jpg" alt="Gomitas con forma de cara" onclick="abrirModal(this)">
           <h3>Gomitas (30u)</h3>
           <p>$9.500</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -120,7 +123,7 @@
           <img src="img/fantasmita.jpg" alt="Fantasmita" onclick="abrirModal(this)">
           <h3>Fantasmita con chicles y sonido(30u)</h3>
           <p>$8.900👻</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -128,7 +131,7 @@
           <img src="img/fantasmitas.jpg" alt="Fantasmitas" onclick="abrirModal(this)">
           <h3>Gomitas blandas Fantasmita (30u)</h3>
           <p>$7.000👻</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -136,7 +139,7 @@
           <img src="img/ojos.jpg" alt="Ojos" onclick="abrirModal(this)">
           <h3>Gomitas blandas Ojos (30u)</h3>
           <p>$7.000</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -144,7 +147,7 @@
           <img src="img/brochetas3.jpg" alt="Brochetas ojos" onclick="abrirModal(this)">
           <h3>Brochetas de ojos (x30 brochetas)</h3>
           <p>$7.500</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -152,7 +155,7 @@
           <img src="img/sorpresaplant2.jpg" alt="Bolas" onclick="abrirModal(this)">
           <h3>Sorpresa plantas vs Zombies y chicles (x30u)</h3>
           <p>$10.900</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -160,7 +163,7 @@
           <img src="img/gomitasoh.jpg" alt="Gomitas con forma de cara" onclick="abrirModal(this)">
           <h3>Gomitas 👁️👄👁️ (30u)</h3>
           <p>$9.500</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -168,14 +171,22 @@
       </div>
     </section>
 
-     <!-- Modal -->
-    <div id="modal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <img id="modal-img" src="" alt="Producto">
-        <p id="modal-title"></p>
-      </div>
+     <!-- MODAL DE PRODUCTO -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img id="modal-img" src="" alt="Producto">
+    
+    <p id="modal-title" class="modal-title"></p>
+    <p id="modal-precio" class="modal-precio"></p> <!-- 🔹 precio aquí -->
+
+    <div class="modal-botones">
+      <button id="modal-agregar" class="btn-carrito">Agregar al carrito</button>
+      <button id="modal-consulta" class="btn-consulta">Consulta 💬</button>
     </div>
+  </div>
+</div>
+
 
   </main>
 
@@ -196,8 +207,8 @@
 
 </footer>
 
-
-<a href="https://wa.me/542236010443?text=Hola%2C%20vengo%20del%20catálogo%20y%20tengo%20un%20pedido/pregunta%20para%20hacerte%20" target="_blank" style="text-decoration: none;">
+<!-- Botón flotante de WhatsApp
+<a href="https://wa.me/542236010443?text=Hola%2C%20vengo%20del%20catálogo%20y%20tengo%20un%20carrito/pregunta%20para%20hacerte%20" target="_blank" style="text-decoration: none;">
   <div style="position:fixed; bottom:20px; right:20px; z-index:1000; display:flex; align-items:center; background-color:#25D366; padding:10px 15px; border-radius:50px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); color:white; font-family:sans-serif; font-size:14px;">
     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png"
          alt="WhatsApp"
@@ -205,6 +216,7 @@
     <span>Hacer una consulta</span>
   </div>
 </a>
+-->
 
 <script src="js/script.js"></script>
 

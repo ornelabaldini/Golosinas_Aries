@@ -18,38 +18,41 @@
   </aside>
   <div class="titulo-contenedor">
     <h1 class="titulo-animado">
-    Envíos a todo el país<span class="emoji">📦</span> Golosinas Aries<span class="emoji">♈🔥</span>
+    ENVÍOS A TODO EL PAÍS <span class="emoji">🇦🇷</span> Somos de Miramar, Bs As. Golosinas Aries  <span class="emoji">♈ 🔥</span>
     </h1>
     <nav>
       <a href="index.html">🎃👻</a>
       <a href="catalogo.html">Catálogo</a>
       <a href="contacto.html">Contacto</a>
       <input type="text" id="search" placeholder="🔍 Buscá un producto..." style="margin-left:0.1rem; padding:0.3rem; border-radius:5px; border:none;">
-      <p id="no-results" style="display:none; text-align:center; color:#fff; margin-top:1rem;"></p>
+      <p id="no-results" style="display:none; text-align:center; color:#fff; margin-top:0.5rem;"></p>
     </nav>
   </div>
 
-    <!-- carrito
-  <div id="carrito-contenedor">
-    <button id="carrito-btn">
-      <i class="fas fa-shopping-cart"></i>
-      <span id="carrito-count">0</span>
-    </button>
-    <div id="carrito-dropdown">
-      <h4>Tu carrito</h4>
-      <ul id="carrito-items"></ul>
-      <p id="carrito-total">Total: $0</p>
-      <button id="vaciar-carrito">Vaciar carrito</button>
-    </div>
+  <!--  Carrito de compras -->
+<div id="carrito-contenedor">
+  <button id="carrito-btn" aria-label="Abrir carrito">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="carrito-count">0</span>
+  </button>
+
+  <div id="carrito-dropdown">
+    <h4>🛒 Tu pedido</h4>
+    <ul id="carrito-items"></ul>
+    <p id="carrito-total">Total: $0</p>
+    <button id="vaciar-carrito" class="btn-vaciar">Vaciar carrito</button>
+    <button id="enviar-pedido" class="btn-enviar">Enviar pedido por WhatsApp</button>
   </div>
-  -->
+</div>
+
 
 </header>
 
  <!-- Hero -->
   <aside class= "hero" style="background-image: url('img/hero-golosinas.jpg');">
     <div class="hero-overlay"></div>
-    <h2>🛒 El botón "Agregar al pedido" Anota por vos lo que querés pedir por WhatsApp 😉</h2>
+    <h2>Compra mínima 6 productos (pueden variar)</h2>
+    <h2>Se envía por Correo Argentino. Llega de 2 a 5 días hábies</h2>
   </aside>
 
   <main>
@@ -62,7 +65,7 @@
           <img src="img/ojos.jpg" alt="Ojos" onclick="abrirModal(this)">
           <h3>Gomitas blandas Ojos (30u)</h3>
           <p>$7.000</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -70,7 +73,7 @@
           <img src="img/gomitablandaCara3.jpg" alt="Gomitas con forma de cara" onclick="abrirModal(this)">
           <h3>Gomitas cara (30u)</h3>
           <p>$9.500</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -78,7 +81,7 @@
           <img src="img/gomitasoh.jpg" alt="Gomitas con forma de cara" onclick="abrirModal(this)">
           <h3>Gomitas 👁️👄👁️ (30u)</h3>
           <p>$9.500</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -86,7 +89,7 @@
           <img src="img/unicornio1.jpg" alt="Chupetines con formas" onclick="abrirModal(this)">
           <h3>Chupetines con forma de unicornio (x30)</h3>
           <p>$8.900</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -96,7 +99,7 @@
           <img src="img/halloween2.jpg" alt="🎃 Halloween" onclick="abrirModal(this)">
           <h3>🎃 Halloween chupetines (30u)</h3>
           <p>$8.900</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
          -->
@@ -105,7 +108,7 @@
           <img src="img/mechasMario2.jpg" alt="Mechas magicas" onclick="abrirModal(this)">
           <h3>Mechas magicas (30u)</h3>
           <p>$9.900</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -113,7 +116,7 @@
           <img src="img/fantasmita.jpg" alt="Fantasmita" onclick="abrirModal(this)">
           <h3>Fantasmita con chicles y sonido(30u)</h3>
           <p>$8.900👻</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -121,7 +124,7 @@
           <img src="img/gelatinaDiferentesSabores3.jpg" alt="Gelatinas con formas (30u)" onclick="abrirModal(this)">
           <h3>Gelatinas con formas (30u)</h3>
           <p>$6.900</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -129,7 +132,7 @@
           <img src="img/nutello60.jpg" alt="Nutello" onclick="abrirModal(this)">
           <h3>Nutello pequeños (60u)</h3>
           <p>$8.900</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -137,7 +140,7 @@
           <img src="img/latas1.jpg" alt="Latitas con chicles" onclick="abrirModal(this)">
           <h3>Latitas con chicles (30u)</h3>
           <p>$12.500</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -145,7 +148,7 @@
           <img src="img/lataschicas.jpg" alt="Latitas con chicles" onclick="abrirModal(this)">
           <h3>Latitas con chicles (x30)</h3>
           <p>$11.500</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -153,7 +156,7 @@
           <img src="img/botellitas.jpg" alt="Botellitas con chicles" onclick="abrirModal(this)">
           <h3>Botellitas con chicles (30u)</h3>
           <p>$10.900</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -161,7 +164,7 @@
           <img src="img/burbujeros.jpg" alt="Burbujeros" onclick="abrirModal(this)">
           <h3>Burbujeros (24u)</h3>
           <p>$15.000</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -169,7 +172,7 @@
           <img src="img/gomitasblandas3.jpg" alt="Gomitas blandas" onclick="abrirModal(this)">
           <h3>Gomitas blandas de boca(30u)</h3>
           <p>$7.000</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -177,7 +180,7 @@
           <img src="img/gomitasblandas4.jpg" alt="Gomitas blandas" onclick="abrirModal(this)">
           <h3>Gomitas blandas de river(30u)</h3>
           <p>$7.000</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -185,7 +188,7 @@
           <img src="img/gomitasblandas1.jpg" alt="Gomitas blandas" onclick="abrirModal(this)">
           <h3>Gomitas blandas Banfield(30u)</h3>
           <p>$7.000</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -193,7 +196,7 @@
           <img src="img/chupetinBrain.jpg" alt="Chupetín Brain" onclick="abrirModal(this)">
           <h3>Chupetin con polvo acido Brain(30u)</h3>
           <p>$8.900</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -201,7 +204,7 @@
           <img src="img/chupetinConAcido.jpg" alt="Chupetín con polvo acido" onclick="abrirModal(this)">
           <h3>Chupetin con polvo acido skull (30u)</h3>
           <p>$8.900</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
         <!--
@@ -209,7 +212,7 @@
           <img src="img/cajaCalabaza.jpg" alt="Chupetin calabaza" onclick="abrirModal(this)">
           <h3>Chupetin Calabaza con polvo acido (30u)</h3>
           <p>$8.900</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
         -->
@@ -217,7 +220,7 @@
           <img src="img/seleccion.jpg" alt="Seleccion Argentina" onclick="abrirModal(this)">
           <h3>Gomitas blandas Selección Argentina (30u)</h3>
           <p>$7.500🇦🇷</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -225,7 +228,7 @@
           <img src="img/alcancias1.jpg" alt="Alcancías con gelatinas" onclick="abrirModal(this)">
           <h3>Alcancias con gelatinas Oso</h3>
           <p>$4.900 (CADA UNA)</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -233,7 +236,7 @@
           <img src="img/alcancias2.jpg" alt="Alcancias con gelatinas" onclick="abrirModal(this)">
           <h3>Alcancias con gelatinas Pollito</h3>
           <p>$4.900 (CADA UNA)</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -241,7 +244,7 @@
           <img src="img/alcanciapinguino.jpg" alt="Alcancias con gelatinas" onclick="abrirModal(this)">
           <h3>Alcancias con gelatinas Pinguino</h3>
           <p>$4.900 (CADA UNA)</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -249,7 +252,7 @@
           <img src="img/alcanciapinguinorojo.jpg" alt="Alcancias con gelatinas" onclick="abrirModal(this)">
           <h3>Alcancias con gelatinas Pollito rojo</h3>
           <p>$4.900 (CADA UNA)</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -257,7 +260,7 @@
           <img src="img/alcanciapinguinorosa.jpg" alt="Alcancias con gelatinas" onclick="abrirModal(this)">
           <h3>Alcancias con gelatinas Pinguino rosa</h3>
           <p>$4.900 (CADA UNA)</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -265,7 +268,7 @@
           <img src="img/chiclepormetro1.jpg" alt="Chicle por metro" onclick="abrirModal(this)">
           <h3>Chicle por metro (30u)</h3>
           <p>$9.800</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -273,7 +276,7 @@
           <img src="img/chiclepormetro2.jpg" alt="Chicle por metro" onclick="abrirModal(this)">
           <h3>Chicle por metro Barbie (30u)</h3>
           <p>$9.800</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -281,7 +284,7 @@
           <img src="img/brochetas3.jpg" alt="Brochetas ojos" onclick="abrirModal(this)">
           <h3>Brochetas de ojos (x30 brochetas)</h3>
           <p>$7.500</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -289,7 +292,7 @@
           <img src="img/pimballkit.jpg" alt="chicles" onclick="abrirModal(this)">
           <h3>Pimball + chicles Kitty (x30)</h3>
           <p>$8.900</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -297,7 +300,7 @@
           <img src="img/pimballip.jpg" alt="chicles" onclick="abrirModal(this)">
           <h3>Celu + chicles(x30)</h3>
           <p>$8.900</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -305,7 +308,7 @@
           <img src="img/coolmint.jpg" alt="Cool Mint" onclick="abrirModal(this)">
           <h3>Cool Mint sabores frutales (x30u)</h3>
           <p>$8.800</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -313,7 +316,7 @@
           <img src="img/sorpresa2.jpg" alt="Bolas" onclick="abrirModal(this)">
           <h3>Sorpresa de dinosaurios + chicles (x30u)</h3>
           <p>$10.900</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -321,7 +324,7 @@
           <img src="img/bulldog2.jpg" alt="Bull dog" onclick="abrirModal(this)">
           <h3>Gomitas Bull dog Frutilla (500g)</h3>
           <p>$6.500</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -329,7 +332,7 @@
           <img src="img/bulldogacido.jpg" alt="Bull dog" onclick="abrirModal(this)">
           <h3>Gomitas Bull dog acidas (500g)</h3>
           <p>$6.500</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -337,7 +340,7 @@
           <img src="img/gomutcho_acidos.jpg" alt="Gomitas Gomutcho acidos" onclick="abrirModal(this)">
           <h3>Gomitas acidas gomutcho (500g)</h3>
           <p>$6.500</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -345,7 +348,7 @@
           <img src="img/bombones_surtidos.jpg" alt="Bombones Surtidos" onclick="abrirModal(this)">
           <h3>Bocaditos Bel (50 unidades)</h3>
           <p>$7.200</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
       <!--
@@ -353,7 +356,7 @@
           <img src="img/yummyfrutillaconcrema.jpg" alt="Yummy frutilla con crema" onclick="abrirModal(this)">
           <h3>Gomitas Yummy frutilla con crema (500g)</h3>
           <p>$6.300</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
       -->
@@ -361,7 +364,7 @@
           <img src="img/yummybananitas.jpg" alt="Yummy frutilla con crema" onclick="abrirModal(this)">
           <h3>Gomitas Yummy bananitas (500g)</h3>
           <p>$6.300</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -369,7 +372,7 @@
           <img src="img/yummyacidas.jpg" alt="Yummy frutilla con crema" onclick="abrirModal(this)">
           <h3>Gomitas Yummy acidas (500g)</h3>
           <p>$6.300</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -377,7 +380,7 @@
           <img src="img/billikenredonditas.jpg" alt="Yummy frutilla con crema" onclick="abrirModal(this)">
           <h3>Gomitas Billiken redonditas (800g)</h3>
           <p>$6.500</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -385,7 +388,7 @@
           <img src="img/billikentuttifruti.jpg" alt="Yummy frutilla con crema" onclick="abrirModal(this)">
           <h3>Gomitas Billiken tutti frutti (800g)</h3>
           <p>$6.500</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -393,7 +396,7 @@
           <img src="img/fieritamanzana.jpg" alt="Yummy frutilla con crema" onclick="abrirModal(this)">
           <h3>Gomitas Fierita redonditas (500g)</h3>
           <p>$5.500</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -401,7 +404,7 @@
           <img src="img/fieritayogurt.jpg" alt="Yummy frutilla con crema" onclick="abrirModal(this)">
           <h3>Gomitas Fierita yogur (500g)</h3>
           <p>$5.500</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -409,7 +412,7 @@
           <img src="img/fieritafrutilla.jpg" alt="Fierita" onclick="abrirModal(this)">
           <h3>Gomitas Fierita frutilla (500g)</h3>
           <p>$5.500</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -417,7 +420,7 @@
           <img src="img/fieritacangrejos.jpg" alt="caramelos masticables" onclick="abrirModal(this)">
           <h3>Fierita caramelos masticables (100u)</h3>
           <p>$3.500</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -425,7 +428,7 @@
           <img src="img/lheritier.jpg" alt="caramelos masticables" onclick="abrirModal(this)">
           <h3>Lheritier caramelos masticables (300g)</h3>
           <p>$2.800</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -433,7 +436,7 @@
           <img src="img/chupetinespelotitas.jpg" alt="Yummy frutilla con crema" onclick="abrirModal(this)">
           <h3>Chupetines pelotitas (50u)</h3>
           <p>$3.200</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -441,7 +444,7 @@
           <img src="img/lapiniataredonditas.jpg" alt="Yummy frutilla con crema" onclick="abrirModal(this)">
           <h3>Piñata redonditas (700g)</h3>
           <p>$6.500</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -449,7 +452,7 @@
           <img src="img/anillos.jpg" alt="Anillos" onclick="abrirModal(this)">
           <h3>Gomitas Piñata Anillos (700g)</h3>
           <p>$6.500</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -457,7 +460,7 @@
           <img src="img/pete.jpg" alt="Anillos" onclick="abrirModal(this)">
           <h3>Gomitas Piñata pete (700g)</h3>
           <p>$6.500</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -465,7 +468,7 @@
           <img src="img/huesos.jpg" alt="Anillos" onclick="abrirModal(this)">
           <h3>Gomitas Piñata huesos (700g)</h3>
           <p>$6.500</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -476,7 +479,7 @@
           <img src="img/chupetincapibara1.jpg" alt="🎃 Halloween" onclick="abrirModal(this)">
           <h3>Chupetines Capibara (30u)</h3>
           <p>$8.900</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
       </div>
       
@@ -485,7 +488,7 @@
           <img src="img/sorpresacapibara1.jpg" alt="Bolas" onclick="abrirModal(this)">
           <h3>Sorpresa capibara + chicles (x30u)</h3>
           <p>$10.900</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -493,7 +496,7 @@
           <img src="img/calabaza.jpg" alt="calabaza" onclick="abrirModal(this)">
           <h3>Gomitas blandas Calabazas (30u)</h3>
           <p>$7.000</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -501,7 +504,7 @@
           <img src="img/capibara.jpg" alt="Capibaras" onclick="abrirModal(this)">
           <h3>Gomitas blandas Capibaras (30u)</h3>
           <p>$7.000</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -509,7 +512,7 @@
           <img src="img/gomitasblandas7.jpg" alt="Gomitas blandas" onclick="abrirModal(this)">
           <h3>Gomitas blandas Kuromy (30u)</h3>
           <p>$7.000</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
       </div>
 
@@ -517,7 +520,7 @@
           <img src="img/sorpresacandyloka.jpg" alt="Bolas" onclick="abrirModal(this)">
           <h3>Sorpresa candy loka (x30u)</h3>
           <p>$10.900</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -525,7 +528,7 @@
           <img src="img/sorpresalyl.jpg" alt="Bolas" onclick="abrirModal(this)">
           <h3>Sorpresa Lyl (x30u)</h3>
           <p>$10.900</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -533,7 +536,7 @@
           <img src="img/sorpresaplant2.jpg" alt="Bolas" onclick="abrirModal(this)">
           <h3>Sorpresa plantas vs Zombies y chicles (x30u)</h3>
           <p>$10.900</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -541,7 +544,7 @@
           <img src="img/frutilla1.jpg" alt="Frutillas" onclick="abrirModal(this)">
           <h3>Gomitas blandas Frutillas (30u)</h3>
           <p>$7.500</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
       </div>
 
@@ -550,7 +553,7 @@
           <img src="img/merlina1.jpg" alt="Eyeball caramelo duro Merlina" onclick="abrirModal(this)">
           <h3>Chupetines Merlina (x30u)</h3>
           <p>$9.000</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -558,7 +561,7 @@
           <img src="img/fantasmitas.jpg" alt="Fantasmitas" onclick="abrirModal(this)">
           <h3>Gomitas blandas Fantasmita (30u)</h3>
           <p>$7.000👻</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -566,7 +569,7 @@
           <img src="img/donas.jpg" alt="Donas" onclick="abrirModal(this)">
           <h3>Gomitas blandas Donas (30u)</h3>
           <p>$7.000</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -574,7 +577,7 @@
           <img src="img/monedas1.jpg" alt="Monedas de chocolate" onclick="abrirModal(this)">
           <h3>Monedas de chocolate (x250u)</h3>
           <p>$13.000</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -582,7 +585,7 @@
           <img src="img/trompetamaschicle.jpg" alt="chicles" onclick="abrirModal(this)">
           <h3>Trompeta + chicles (x30)</h3>
           <p>$8.900</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -590,7 +593,7 @@
           <img src="img/gomitasblandas5.jpg" alt="Gomitas blandas" onclick="abrirModal(this)">
           <h3>Gomitas blandas Among Us(30u)</h3>
           <p>$7.000</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -598,7 +601,7 @@
           <img src="img/conejos1.jpg" alt="Chupetines con formas" onclick="abrirModal(this)">
           <h3>Chupetines con forma de conejo (x30)</h3>
           <p>$8.900</p>
-          <button class="btn-carrito">Agregar al pedido</button>
+          <button class="btn-carrito">Agregar al carrito</button>
           <button class="btn-carrito">Hacer una consulta</button>
         </div>
 
@@ -618,7 +621,7 @@
     <p id="modal-precio" class="modal-precio"></p> <!-- 🔹 precio aquí -->
 
     <div class="modal-botones">
-      <button id="modal-agregar" class="btn-carrito">Agregar al pedido</button>
+      <button id="modal-agregar" class="btn-carrito">Agregar al carrito</button>
       <button id="modal-consulta" class="btn-consulta">Consulta 💬</button>
     </div>
   </div>
@@ -634,14 +637,16 @@
 
   </footer>
 
-<!-- Botón flotante de WhatsApp -->
-  <a href="https://wa.me/542236010443?text=Hola%2C%20vengo%20del%20catálogo%20y%20tengo%20un%20pedido/pregunta%20para%20hacerte%20" target="_blank" style="text-decoration: none;">
+<!-- Botón flotante de WhatsApp 
+  <a href="https://wa.me/542236010443?text=Hola%2C%20vengo%20del%20catálogo%20y%20tengo%20un%20carrito/pregunta%20para%20hacerte%20" target="_blank" style="text-decoration: none;">
   <div style="position:fixed; bottom:20px; right:20px; z-index:1000; display:flex; align-items:center; background-color:#25D366; padding:10px 15px; border-radius:50px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); color:white; font-family:sans-serif; font-size:14px;">
     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png"
          alt="WhatsApp"
          style="width:25px; height:25px; margin-right:10px;">
     <span>Hacer una consulta</span>
   </div>
+-->
+
 </a>
 
 <script src="js/script.js"></script>
