@@ -869,16 +869,30 @@ html { scroll-behavior: smooth; }
     gap: 0.5rem;
   }
 
+  .modal-precio,
+  .modal-title,
+  .h2,
+  .img {
+    font-size: 1.4rem;
+    margin-bottom: 0.1%;
+    margin-top: 1%;
+  }
+  .modal-botones{
+    margin-bottom: 0.1%;
+    margin-top: 5.2%;
+
+  }
+  
   .card img {
     height: 160px; /* ajustar imagen para móvil */
   }
 
   .card h3 {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
   }
 
   .card p {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 3;
