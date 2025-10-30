@@ -27,8 +27,8 @@ if (modal) {
     "Chupetin con polvo acido Brain(30u)": ["img/chupetinBrain.jpg","img/cajaBrain.jpg"],
     "Chupetin con polvo acido skull (30u)": ["img/chupetinConAcido.jpg","img/cajaChupetinAcido.jpg"],
     "Autos de carrera con chicles(30u)": ["img/carrera.jpg","img/reversacarrera.jpg"],
-    "Brochetas de ojos (x30 brochetas)": ["img/brochetas3.jpg"],
-    "Remera pimball + chicles(x30)": ["img/pimballremera.jpg","img/reversaremera.jpg"],
+    "Brochetas de ojos (x30 brochetas)": ["img/brochetas3.jpg", "img/brochetas2.jpg",],
+    " Camiseta pimball + pastillitas (x30)": ["img/pimballremera.jpg","img/reversaremera.jpg","img/r1.jpg","img/r2.jpg"],
     "Celu + chicles(x30)": ["img/pimballip.jpg","img/reversaip.jpg"],
     "Chupetin Calabaza conpolvo ácido (30u)": ["img/chupetinCalabaza.jpg","img/chupetincalabaza1.jpg","img/chupetincalabaza2.jpg"],
     "Chupetines con formas (x30) ": ["img/chupetinesconformas1.jpg","img/chupetinesconformas2.jpg"],
@@ -43,13 +43,17 @@ if (modal) {
     "Sorpresa plantas vs Zombies y chicles (x30u)": ["img/sorpresaplant2.jpg","img/sorpresaplant.jpg"],
     "Gomitas blandas Frutillas (30u)": ["img/frutilla1.jpg","img/frutilla.jpg"],
     "Gomitas blandas Fantasmita (30u)": ["img/fantasmitas.jpg","img/fantasmitas2.jpg"],
+    "Gomitas blandas Batman (30u)": ["img/batman1.jpg","img/batman2.jpg"],
     "Monedas de chocolate (x250u)": ["img/monedas1.jpg","img/monedas2.jpg"],
     "Gomitas 👁️👄👁️ (30u)": ["img/gomitasoh.jpg","img/gomitasoh1.jpg"],
     "Gomitas blandas Kuromy (30u)": ["img/gomitasblandas7.jpg","img/gomitasblandas71.jpg"],
     "Chupetines Capibara (30u)": ["img/chupetincapibara1.jpg","img/chupetincapibara2.jpg"],
     "Chupetines con forma de conejo (x30)": ["img/conejos1.jpg","img/conejos3.jpg"],
     "Chupetines con forma de unicornio (x30)":["img/unicornio1.jpg","img/unicornio2.jpg","img/unicornio3.jpg"],
-    "Mechas magicas (30u)":["img/mechasMario2.jpg", "img/mecha.jpg",]
+    "Mechas magicas (30u)":["img/mechasMario2.jpg", "img/mecha.jpg",],
+    "Gomitas blandas Super Mario (30u)": ["img/supermario1.jpg","img/supermario2.jpg"],
+    " Saca lenguas (30u)": ["img/sacalenguas1.jpg","img/sacalenguas2.jpg"],
+
   };
 
   let currentImages = [];
