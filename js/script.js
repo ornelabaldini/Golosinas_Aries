@@ -349,12 +349,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if(carrito.length===0){alert("Tu carrito está vacío 🛒");return;}
     let msg="🛍️ *Nuevo pedido desde el catálogo:*\n\n";
     let total=0;
-    
     carrito.forEach((i, index)=>{
-    const p=parsePrecio(i.precio);
-    total += p * i.cantidad;
-    msg += `${index + 1}. *${i.nombre}* — ${i.cantidad} x ${i.precio}\n`;
-  });
+  const p=parsePrecio(i.precio);
+  total += p * i.cantidad;
+  msg += `${index + 1}. *${i.nombre}* — ${i.cantidad} x ${i.precio}\n`;
+});
 
     msg+=`\n💰 *Total:* $${total.toLocaleString("es-AR")}\n\n📦 Quiero continuar con este pedido y calcular el envío a mi ciudad.`;
     window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`,"_blank");
