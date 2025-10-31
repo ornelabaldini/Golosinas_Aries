@@ -349,6 +349,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if(carrito.length===0){alert("Tu carrito está vacío 🛒");return;}
     let msg="🛍️ *Nuevo pedido desde el catálogo:*\n\n";
     let total=0;
+    
     carrito.forEach((i, index)=>{
     const p=parsePrecio(i.precio);
     total += p * i.cantidad;
