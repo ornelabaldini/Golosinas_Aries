@@ -347,16 +347,20 @@ document.addEventListener("DOMContentLoaded", () => {
   // Enviar pedido por WhatsApp
   document.getElementById("enviar-carrito")?.addEventListener("click",()=>{
     if(carrito.length===0){alert("Tu carrito está vacío 🛒");return;}
+
     let msg="🛍️ *Nuevo pedido desde el catálogo:*\n\n";
     let total=0;
-    carrito.forEach((i, index)=>{
-  const p=parsePrecio(i.precio);
-  total += p * i.cantidad;
-  msg += `${index + 1}. *${i.nombre}* — ${i.cantidad} x ${i.precio}\n`;
-});
 
-    msg+=`\n💰 *Total:* $${total.toLocaleString("es-AR")}\n\n📦 Quiero continuar con este pedido y calcular el envío a mi ciudad.`;
-    window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`,"_blank");
+    carrito.forEach((i, index)=>{
+    const p=parsePrecio(i.precio);
+    total += p * i.cantidad;
+    msg += `${index + 1}. *${i.nombre}* — ${i.cantidad} x ${i.precio}\n`;
+  });
+
+    // ✅ Codificar correctamente los emojis y tildes en UTF-8
+  const url = `https://wa.me/${numero}?text=${encodeURIComponent(unescape(encodeURIComponent(msg)))}`;
+
+  window.open(url, "_blank");
   });
 
   actualizarCarrito();
