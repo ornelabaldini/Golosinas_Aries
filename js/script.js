@@ -344,20 +344,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Enviar pedido por WhatsApp
-  document.getElementById("enviar-carrito")?.addEventListener("click",()=>{
-    if(carrito.length===0){alert("Tu carrito está vacío 🛒");return;}
-    let msg="🛍️ *Nuevo pedido desde el catálogo:*\n\n";
-    let total=0;
-    carrito.forEach((i, index)=>{
-  const p=parsePrecio(i.precio);
-  total += p * i.cantidad;
-  msg += `${index + 1}. *${i.nombre}* — ${i.cantidad} x ${i.precio}\n`;
-});
+// Enviar pedido por WhatsApp
+document.getElementById("enviar-carrito")?.addEventListener("click", () => {
+  if (carrito.length === 0) {
+    alert("Tu carrito está vacío 🛒");
+    return;
+  }
 
-    msg+=`\n💰 *Total:* $${total.toLocaleString("es-AR")}\n\n📦 Quiero continuar con este pedido y calcular el envío a mi ciudad.`;
-    window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`,"_blank");
+  let msg = "🛍️ *Nuevo pedido desde el catálogo:*\n\n";
+  let total = 0;
+  let totalProductos = 0;
+
+  carrito.forEach((i, index) => {
+    const p = parsePrecio(i.precio);
+    total += p * i.cantidad;
+    totalProductos += i.cantidad;
+    msg += `${index + 1}. *${i.nombre}* — ${i.cantidad} x ${i.precio}\n`;
   });
 
-  actualizarCarrito();
+  msg += `\n📦 *Total de productos:* ${totalProductos}`;
+  msg += `\n💰 *Total:* $${total.toLocaleString("es-AR")}`;
+  msg += `\n\nQuiero continuar con este pedido y calcular el envío a mi ciudad.`;
+
+  window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`, "_blank");
+});
+
+actualizarCarrito();
+
 });
