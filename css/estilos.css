@@ -885,12 +885,15 @@ html { scroll-behavior: smooth; }
   }
   
   .card img {
-    height: 160px; /* ajustar imagen para móvil */
-    margin-top: 0.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 180px;
   }
 
   .card h3 {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
+    text-align: left;
   }
 
   .card p {
@@ -902,7 +905,7 @@ html { scroll-behavior: smooth; }
     margin-bottom: 0.1rem;
   }
 
-    .card .btn-carrito {
+  .card .btn-carrito {
     display: block;
     width: 100%;
     margin-bottom: 5px; /* separa los botones */
@@ -912,15 +915,16 @@ html { scroll-behavior: smooth; }
     font-size: 1.2rem; /* título header más pequeño */
     font-family: fantasy;
   }
-nav a {
-  font-size: 2rem;
-  padding: 0.1rem;
-  font-style: italic;
-  font-family: fantasy;
-  font-variant-caps: all-petite-caps;
-  font-weight: bold;            /* 🔹 Negrita */
-  text-decoration: underline;   /* 🔹 Subrayado */
-}
+  
+  nav a {
+    font-size: 1.8rem;
+    padding: 0.1rem;
+    font-style: italic;
+    font-family: fantasy;
+    font-variant-caps: all-petite-caps;
+    font-weight: bold;            /* 🔹 Negrita */
+    text-decoration: underline;   /* 🔹 Subrayado */
+  }
 
   .hero {
     padding-top: 8rem; /* menos espacio arriba en móvil */
