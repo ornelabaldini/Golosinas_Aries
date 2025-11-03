@@ -116,6 +116,7 @@ nav a {
   font-size: 2rem;                                  /* tamaño razonable para el nav */
   transition: color 0.3s;                              /* transición suave al hover */
   margin: 0.25rem;                                     /* pequeño margen alrededor */
+  font-style: italic;
 }
 
 /* color al pasar el mouse por encima */
@@ -161,6 +162,7 @@ nav a:hover {
   margin: 0.5rem 0;                                    /* margen vertical */
   padding: 0 1rem;                                     /* padding horizontal */
   margin-top: 0px;
+  font-style: italic;
 }
 
 /* botones del hero */
@@ -868,14 +870,14 @@ html { scroll-behavior: smooth; }
     grid-template-columns: repeat(2, 1fr); /* 2 columnas */
     gap: 0.5rem;
   }
-
+  
   .modal-precio,
   .modal-title,
   .h2,
   .img {
     font-size: 1.4rem;
     margin-bottom: 1%;
-    margin-top: 1%;
+    margin-top: 0.5%;
   }
   .modal-botones{
     margin-bottom: 0.1%;
@@ -884,10 +886,11 @@ html { scroll-behavior: smooth; }
   
   .card img {
     height: 160px; /* ajustar imagen para móvil */
+    margin-top: 0.1rem;
   }
 
   .card h3 {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
 
   .card p {
@@ -896,6 +899,7 @@ html { scroll-behavior: smooth; }
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    margin-bottom: 0.1rem;
   }
 
     .card .btn-carrito {
@@ -906,12 +910,17 @@ html { scroll-behavior: smooth; }
 
   .titulo-contenedor h1 {
     font-size: 1.2rem; /* título header más pequeño */
+    font-family: fantasy;
   }
-
-  nav a {
-    font-size: 1rem;
-    padding: 0.1rem;
-  }
+nav a {
+  font-size: 2rem;
+  padding: 0.1rem;
+  font-style: italic;
+  font-family: fantasy;
+  font-variant-caps: all-petite-caps;
+  font-weight: bold;            /* 🔹 Negrita */
+  text-decoration: underline;   /* 🔹 Subrayado */
+}
 
   .hero {
     padding-top: 8rem; /* menos espacio arriba en móvil */
@@ -922,12 +931,15 @@ html { scroll-behavior: smooth; }
     font-size: 1.3rem;
     margin: 1rem 0;
     text-align: left;
-    
+    font-family: fantasy;
+    text-align: center;
+    margin-top: 1.5rem;
   }
 
   #search {
     width: 95%; /* input ocupa casi todo el ancho */
     font-size: 1.2rem;
+    margin-bottom: 1rem;
   }
 
   .contenedor-secciones {
@@ -958,6 +970,7 @@ html { scroll-behavior: smooth; }
   bottom: 20px;
   right: 20px;
   z-index: 2000;
+  
 }
 
 
@@ -996,8 +1009,8 @@ html { scroll-behavior: smooth; }
   top: 20%;
   left: 50%;
   transform: translateX(-50%);
-  background: #fff;
-  width: 320px; /* un poco más ancho */
+  border: 2px solid #09000a;
+  width: 320px;
   height: 380px;
   max-width: 90%;
   padding: 15px 20px;
@@ -1010,13 +1023,16 @@ html { scroll-behavior: smooth; }
 }
 
 #carrito-dropdown h4 {
-  font-size: 1.1rem;
+  font-size: 1.8rem;
   color: #7b1fa2;
   margin: 0 0 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 6px;
+  /*
+  background: linear-gradient(135deg, #f3e5f5, #ede7f6);
+  border: 2px solid #ba68c8;*/
 }
 
 #cerrar-carrito {
@@ -1042,12 +1058,13 @@ html { scroll-behavior: smooth; }
 .carrito-item {
   padding: 8px 0;
   border-bottom: 1px solid #eee;
+  text-align: left;
 }
 
 .carrito-item-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   gap: 6px;
 }
 
@@ -1099,7 +1116,7 @@ html { scroll-behavior: smooth; }
   background: #25D366;
   color: white;
   border: none;
-  padding: 10px 15px;
+  padding: 8px 15px;
   border-radius: 8px;
   cursor: pointer;
   margin-top: 8px;

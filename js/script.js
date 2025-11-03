@@ -94,7 +94,6 @@ if (modal) {
     if (currentImages.length > 1) {
       prevBtn.style.display = 'flex';
       nextBtn.style.display = 'flex';
-      contador.textContent = `${currentIndex + 1} / ${currentImages.length}`;
     } else {
       prevBtn.style.display = 'none';
       nextBtn.style.display = 'none';
