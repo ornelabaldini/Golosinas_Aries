@@ -844,7 +844,8 @@ html { scroll-behavior: smooth; }
     font-size: 0.9rem;
     line-clamp: 3;
   }
-     .card .btn-carrito {
+
+  .card .btn-carrito {
     display: block;
     width: 100%;
     margin-bottom: 5px; /* separa los botones */
@@ -917,7 +918,7 @@ html { scroll-behavior: smooth; }
   }
   
   nav a {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     padding: 0.1rem;
     font-style: italic;
     font-family: fantasy;
