@@ -22,7 +22,8 @@ if (modal) {
   modalContent.appendChild(contador);
 
   const imagenesProducto = {
-    "Alcancias con gelatinas": ["img/alcancias1.jpg","img/alcancias2.jpg","img/alcancias3.jpg"],
+    "Alcancias con 16 gelatinas": ["img/alcancias1.jpg","img/alcancias2.jpg","img/alcancias3.jpg"],
+    "Alcancias con 16 gelatinas Pinguino": ["img/pinguino2.jpg","img/alcanciapinguino.jpg","img/pinguino5.jpg","img/pinguino3.jpg","img/pinguino4.jpg","img/pinguino6.jpg"],
     "Chupetines Merlina (x30u)": ["img/merlina1.jpg","img/merlina2.jpg","img/merlina3.jpg","img/merlina4.jpg"],
     "Chupetin con polvo acido Brain(30u)": ["img/chupetinBrain.jpg","img/cajaBrain.jpg"],
     "Chupetin con polvo acido skull (30u)": ["img/chupetinConAcido.jpg","img/cajaChupetinAcido.jpg"],
@@ -53,6 +54,7 @@ if (modal) {
     "Mechas magicas (30u)":["img/mechasMario2.jpg", "img/mecha.jpg",],
     "Gomitas blandas Super Mario (30u)": ["img/supermario1.jpg","img/supermario2.jpg"],
     " Saca lenguas (30u)": ["img/sacalenguas1.jpg","img/sacalenguas2.jpg"],
+    //"Gomitas blandas Ojos (30u)": ["img/ojos.jpg","img/videoojos.mp4"],
 
   };
 
