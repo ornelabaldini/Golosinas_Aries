@@ -523,6 +523,7 @@ nav a:hover {
   cursor: pointer;
   font-weight: bold;
   transition: background 0.2s, transform 0.1s;
+  
 }
 .cantidad-btn:hover { background: #8e24aa; transform: scale(1.1); }
 .cantidad { min-width: 20px; display: inline-block; text-align: center; }
@@ -1079,15 +1080,15 @@ html { scroll-behavior: smooth; }
   align-items: center;
   gap: 6px;
 }
-
+/* botones carrito  de cantidad*/
 .cantidad-btn {
   background: #9c27b0;
   border: none;
   color: #fff;
-  padding: 5px 10px;
+  padding: 4px 10px;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 20px;
 }
 .cantidad-btn:hover {
   background: #7b1fa2;

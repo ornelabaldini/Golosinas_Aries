@@ -225,7 +225,6 @@ if (modalImg) {
 // ========================
 document.addEventListener("DOMContentLoaded", () => {
   let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-  let carritoMostrado = false;
 
   const numero = "542236010443"; // tu número de WhatsApp
   const carritoBtn = document.getElementById("carrito-btn");
@@ -323,27 +322,41 @@ document.addEventListener("DOMContentLoaded", () => {
     actualizarCarrito();
   });
 
-  // Agregar al carrito o consulta
-  document.querySelectorAll(".btn-carrito, .btn-consulta, #modal-agregar, #modal-consulta")
-  .forEach(btn=>{
-    btn.addEventListener("click",e=>{
-      e.stopPropagation();
-      const card = btn.closest(".card");
-      let nombre = card?.querySelector("h3")?.innerText || document.getElementById("modal-title")?.innerText;
-      let precio = card?.querySelector("p")?.innerText || document.getElementById("modal-precio")?.innerText;
-      const texto = btn.innerText.toLowerCase();
+// Agregar al carrito o consulta
+document.querySelectorAll(".btn-carrito, .btn-consulta, #modal-agregar, #modal-consulta")
+.forEach(btn => {
+  btn.addEventListener("click", e => {
+    e.stopPropagation();
+    const card = btn.closest(".card");
+    let nombre = card?.querySelector("h3")?.innerText || document.getElementById("modal-title")?.innerText;
+    let precio = card?.querySelector("p")?.innerText || document.getElementById("modal-precio")?.innerText;
+    const texto = btn.innerText.toLowerCase();
 
-      if(texto.includes("agregar")){
-        const ex = carrito.find(p=>p.nombre===nombre);
-        ex?ex.cantidad++:carrito.push({nombre,precio,cantidad:1});
-        actualizarCarrito();
-        if(!carritoMostrado){carritoDropdown.style.display="block";fondoModal.style.display="block";carritoMostrado=true;}
-      }else if(texto.includes("consulta")){
-        const msg=`👋 Hola, quiero consultar sobre *${nombre}*.`;
-        window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`,"_blank");
+    if (texto.includes("agregar")) {
+      const ex = carrito.find(p => p.nombre === nombre);
+      if (ex) {
+        ex.cantidad++;
+      } else {
+        carrito.push({ nombre, precio, cantidad: 1 });
       }
-    });
+      actualizarCarrito();
+
+      // 👇 Cerrar modal si estaba abierto
+      if (modal && modal.style.display === "flex") {
+        modal.style.display = "none";
+      }
+
+      // 👇 Mostrar el carrito inmediatamente
+      carritoDropdown.style.display = "block";
+      fondoModal.style.display = "block";
+    } 
+    else if (texto.includes("consulta")) {
+      const msg = `👋 Hola, quiero consultar sobre *${nombre}*.`;
+      window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`, "_blank");
+    }
   });
+});
+
 
 // Enviar pedido por WhatsApp
 document.getElementById("enviar-carrito")?.addEventListener("click", () => {
