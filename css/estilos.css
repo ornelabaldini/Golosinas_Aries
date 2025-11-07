@@ -975,7 +975,7 @@ html { scroll-behavior: smooth; }
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 2000;
+  z-index: 1000;
   
 }
 
@@ -1022,7 +1022,7 @@ html { scroll-behavior: smooth; }
   padding: 15px 20px;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
+  z-index: 2000;
   display: none;
   text-align: center;
   animation: fadeIn 0.3s ease;
@@ -1059,6 +1059,28 @@ html { scroll-behavior: smooth; }
   max-height: 200px;
   overflow-y: auto;
   margin-bottom: 10px;
+  position: relative;
+  z-index: 1001; /* por encima de todo lo que pueda taparlo */
+  pointer-events: auto; /* permite usar el scroll normalmente */
+}
+
+/* Scroll personalizado para el carrito */
+#carrito-items::-webkit-scrollbar {
+  width: 20px; /* más ancho */
+}
+
+#carrito-items::-webkit-scrollbar-track {
+  background: #f3e5f5;
+  border-radius: 6px;
+}
+
+#carrito-items::-webkit-scrollbar-thumb {
+  background: #9c27b0;
+  border-radius: 6px;
+}
+
+#carrito-items::-webkit-scrollbar-thumb:hover {
+  background: #7b1fa2;
 }
 
 .carrito-item {
@@ -1089,6 +1111,7 @@ html { scroll-behavior: smooth; }
   border-radius: 6px;
   cursor: pointer;
   font-size: 20px;
+  margin-top: 1rem;
 }
 .cantidad-btn:hover {
   background: #7b1fa2;
