@@ -1,7 +1,7 @@
 
 
 // ========================
-// MODAL DE PRODUCTOSs
+// MODAL DE PRODUCTOS
 // ========================
 const modal = document.getElementById('modal'); 
 if (modal) {
