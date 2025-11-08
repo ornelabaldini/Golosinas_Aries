@@ -87,6 +87,17 @@ if (modal) {
       modalConsultaBtn.dataset.producto = currentTitle;
       modalConsultaBtn.dataset.precio = price ? price.textContent : '';
     }
+        //  Si el producto está sin stock, ocultar el botón "Agregar al carrito"
+    if (modalAgregarBtn) {
+      const textoPrecio = price ? price.textContent.toLowerCase() : '';
+      
+      if (textoPrecio.includes('sin stock')) {
+        modalAgregarBtn.style.display = 'none'; // Oculta el botón
+      } else {
+        modalAgregarBtn.style.display = 'inline-block'; // Lo muestra normalmente
+      }
+    }
+
   }
 
   function actualizarModal() {
@@ -153,6 +164,7 @@ if (modal) {
       card.appendChild(overlay);
     }
     card.addEventListener('click', (ev) => {
+      if (card.classList.contains('promo')) return; // NO abrir modal
       if (ev.target.closest('button')) return;
       abrirModal(card);
     });

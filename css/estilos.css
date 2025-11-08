@@ -493,6 +493,11 @@ nav a:hover {
   margin-top:-20px;
 }
 
+#modal-agregar {
+  transition: opacity 0.3s ease;
+}
+
+
 .modal-botones button:hover {
   opacity: 0.85;
 }
@@ -878,11 +883,11 @@ html { scroll-behavior: smooth; }
   .h2,
   .img {
     font-size: 1.4rem;
-    margin-bottom: 1%;
+    margin-bottom: 1rem;
     margin-top: 0.5%;
   }
   .modal-botones{
-    margin-bottom: 0.1%;
+    margin-bottom: 0.2%;
     margin-top: 5.2%;
   }
   
@@ -1162,3 +1167,33 @@ html { scroll-behavior: smooth; }
   color: #080000;
 }
 
+/* Ajustes del modal en pantallas pequeñas */
+  .modal {
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    border-radius: 12px;
+    overflow-y: auto;
+  }
+
+  .modal img {
+    width: 100%;
+    height: auto;
+  }
+
+  .modal h2,
+  .modal p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .modal button,
+  .modal-botones {
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
