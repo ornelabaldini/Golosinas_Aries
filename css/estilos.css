@@ -1,5 +1,5 @@
 /* ==============================
-   Root / variables globalesS
+   Root / variables globales
    ============================== */
 /* Define colores y valores reusables */
 :root {
@@ -348,11 +348,15 @@ nav a:hover {
   transform: translateY(-2px);                         /* pequeño movimiento hacia arriba */
 }
 
-   .card .btn-carrito {
+.card .btn-carrito {
     display: block;
     width: 100%;
     margin-bottom: 5px; /* separa los botones */
   }
+
+.card .btn-carrito:only-of-type {
+  margin-top: auto;
+}
 
 /* ==========================
    Modal principal
@@ -910,6 +914,7 @@ html { scroll-behavior: smooth; }
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     margin-bottom: 0.1rem;
+    text-align: center;
   }
 
   .card .btn-carrito {
