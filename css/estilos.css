@@ -568,6 +568,7 @@ nav a:hover {
   transition: border 0.2s, box-shadow 0.2s;            /* transición suave */
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);             /* sombra sutil */
   box-sizing: border-box;                              /* box-sizing */
+  font-weight: bold;
 }
 
 /* estado focus del input para accesibilidad */
@@ -582,6 +583,8 @@ nav a:hover {
   font-size: 0.95rem;                                  /* tamaño legible */
   text-align: center;                                  /* centrado */
   margin-top: 0.75rem;                                 /* separación superior */
+  font-weight: bold;
+
 }
 
 /* estilo de enlace dentro de #no-results */
