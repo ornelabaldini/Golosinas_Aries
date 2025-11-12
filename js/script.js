@@ -235,7 +235,7 @@ if (modalImg) {
 
 
 // ========================
-// 🛒 CARRITO COMPLETO CON MODAL, CIERRE Y WHATSAPP
+//  CARRITO COMPLETO CON MODAL, CIERRE Y WHATSAPP
 // ========================
 document.addEventListener("DOMContentLoaded", () => {
   let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -336,67 +336,62 @@ document.addEventListener("DOMContentLoaded", () => {
     actualizarCarrito();
   });
 
-// Agregar al carrito o consulta
+// 🛒 Agregar al carrito o hacer consulta
 document.querySelectorAll(".btn-carrito, .btn-consulta, #modal-agregar, #modal-consulta")
-.forEach(btn => {
-  btn.addEventListener("click", e => {
-    e.stopPropagation();
-    const card = btn.closest(".card");
-    let nombre = card?.querySelector("h3")?.innerText || document.getElementById("modal-title")?.innerText;
-    let precio = card?.querySelector("p")?.innerText || document.getElementById("modal-precio")?.innerText;
-    const texto = btn.innerText.toLowerCase();
+    .forEach(btn => {
+      btn.addEventListener("click", e => {
+        e.stopPropagation();
+        const card = btn.closest(".card");
+        let nombre = card?.querySelector("h3")?.innerText || document.getElementById("modal-title")?.innerText;
+        let precio = card?.querySelector("p")?.innerText || document.getElementById("modal-precio")?.innerText;
+        const texto = btn.innerText.toLowerCase();
 
-    if (texto.includes("agregar")) {
-      const ex = carrito.find(p => p.nombre === nombre);
-      if (ex) {
-        ex.cantidad++;
-      } else {
-        carrito.push({ nombre, precio, cantidad: 1 });
-      }
-      actualizarCarrito();
+        if (texto.includes("agregar")) {
+          const ex = carrito.find(p => p.nombre === nombre);
+          if (ex) ex.cantidad++;
+          else carrito.push({ nombre, precio, cantidad: 1 });
+          actualizarCarrito();
+          if (typeof modal !== "undefined" && modal?.style?.display === "flex") modal.style.display = "none";
+          carritoDropdown.style.display = "block";
+          fondoModal.style.display = "block";
+        }
+        else if (texto.includes("consulta")) {
+          const msg = "💬 Hola, quiero consultar sobre *" + nombre + "*.";
+          window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`, "_blank");
+        }
+      });
+    });
 
-      // 👇 Cerrar modal si estaba abierto
-      if (modal && modal.style.display === "flex") {
-        modal.style.display = "none";
-      }
-
-      // 👇 Mostrar el carrito inmediatamente
-      carritoDropdown.style.display = "block";
-      fondoModal.style.display = "block";
-    } 
-    else if (texto.includes("consulta")) {
-      const msg = `👋 Hola, quiero consultar sobre *${nombre}*.`;
-      window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`, "_blank");
+  document.getElementById("enviar-carrito")?.addEventListener("click", () => {
+    if (carrito.length === 0) {
+      alert("Tu carrito está vacío 🛒");
+      return;
     }
+
+    let msg = "🛍️ *Nuevo pedido desde el catálogo:*\n\n";
+    let total = 0;
+    let totalProductos = 0;
+
+    carrito.forEach((i, index) => {
+      const p = parsePrecio(i.precio);
+      total += p * i.cantidad;
+      totalProductos += i.cantidad;
+      msg += `${index + 1}. *${i.nombre}* — ${i.cantidad} x ${i.precio}\n`;
+    });
+
+    const productosTexto =
+      totalProductos >= 2
+        ? `📦 *Total de productos:* *${totalProductos}*`
+        : `📦 *Total de productos:* ${totalProductos}`;
+
+    msg += `\n${productosTexto}`;
+    msg += `\n🚚 *Envío:* (a completar)`;
+    msg += `\n💵 *Total:* $${total.toLocaleString("es-AR")}`;
+    msg += `\n\nQuiero continuar con este pedido y calcular el envío a mi ciudad.`;
+
+    window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`, "_blank");
   });
+
+  actualizarCarrito();
 });
 
-
-// Enviar pedido por WhatsApp
-document.getElementById("enviar-carrito")?.addEventListener("click", () => {
-  if (carrito.length === 0) {
-    alert("Tu carrito está vacío 🛒");
-    return;
-  }
-
-  let msg = "🛍️ *Nuevo pedido desde el catálogo:*\n\n";
-  let total = 0;
-  let totalProductos = 0;
-
-  carrito.forEach((i, index) => {
-    const p = parsePrecio(i.precio);
-    total += p * i.cantidad;
-    totalProductos += i.cantidad;
-    msg += `${index + 1}. *${i.nombre}* — ${i.cantidad} x ${i.precio}\n`;
-  });
-
-  msg += `\n📦 *Total de productos:* ${totalProductos}`;
-  msg += `\n💰 *Total:* $${total.toLocaleString("es-AR")}`;
-  msg += `\n\nQuiero continuar con este pedido y calcular el envío a mi ciudad.`;
-
-  window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`, "_blank");
-});
-
-actualizarCarrito();
-
-});
