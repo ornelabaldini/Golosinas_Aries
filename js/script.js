@@ -280,7 +280,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function actualizarCarrito() {
     carritoItemsContainer.innerHTML = carrito.length === 0
-      ? "<p class='carrito-vacio'>🛍️ Tu carrito está vacío</p>"
+      ? "<p class='carrito-vacio'>🛍️ Tu carrito está vacío - Compra mínima: 7 productos</p>"
       : carrito.map(i=>`
         <div class='carrito-item'>
           <strong>${i.nombre}</strong> - ${i.precio}<br>
@@ -363,35 +363,44 @@ document.querySelectorAll(".btn-carrito, .btn-consulta, #modal-agregar, #modal-c
     });
 
   document.getElementById("enviar-carrito")?.addEventListener("click", () => {
-    if (carrito.length === 0) {
-      alert("Tu carrito está vacío 🛒");
-      return;
+  if (carrito.length === 0) {
+    alert("Tu carrito está vacío 🛒");
+    return;
+  }
+
+  let msg = "🛍️ *Nuevo pedido desde el catálogo:*\n\n";
+  let total = 0;
+  let totalProductos = 0;
+
+  carrito.forEach((i, index) => {
+    const precioUnitario = parsePrecio(i.precio);
+    const subtotal = precioUnitario * i.cantidad;
+    total += subtotal;
+    totalProductos += i.cantidad;
+
+    if (i.cantidad > 1) {
+      // cantidad y subtotal en negrita si hay más de uno
+      msg += `${index + 1}. *${i.nombre}* — *${i.cantidad}* x ${i.precio} → *$${subtotal.toLocaleString("es-AR")}*\n`;
+    } else {
+      msg += `${index + 1}. *${i.nombre}* — ${i.precio}\n`;
     }
-
-    let msg = "🛍️ *Nuevo pedido desde el catálogo:*\n\n";
-    let total = 0;
-    let totalProductos = 0;
-
-    carrito.forEach((i, index) => {
-      const p = parsePrecio(i.precio);
-      total += p * i.cantidad;
-      totalProductos += i.cantidad;
-      msg += `${index + 1}. *${i.nombre}* — ${i.cantidad} x ${i.precio}\n`;
-    });
-
-    const productosTexto =
-      totalProductos >= 2
-        ? `📦 *Total de productos:* *${totalProductos}*`
-        : `📦 *Total de productos:* ${totalProductos}`;
-
-    msg += `\n${productosTexto}`;
-    msg += `\n🚚 *Envío:* (a completar)`;
-    msg += `\n💵 *Total:* $${total.toLocaleString("es-AR")}`;
-    msg += `\n\nQuiero continuar con este pedido y calcular el envío a mi ciudad.`;
-
-    window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`, "_blank");
   });
 
-  actualizarCarrito();
+  const productosTexto =
+    totalProductos >= 2
+      ? `📦 *Total de productos:* *${totalProductos}*`
+      : `📦 *Total de productos:* ${totalProductos}`;
+
+  msg += `\n${productosTexto}`;
+  msg += `\n🚚 *Envío:* (a completar)`;
+  msg += `\n💵 *Total:* *$${total.toLocaleString("es-AR")}*`;
+  msg += `\n\nQuiero continuar con este pedido y calcular el envío a mi ciudad.`;
+
+  window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`, "_blank");
+});
+
+actualizarCarrito();
+
+
 });
 
