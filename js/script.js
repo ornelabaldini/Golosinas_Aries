@@ -25,7 +25,7 @@ if (modal) {
 
   const imagenesProducto = {
     "Alcancias con 12 gelatinas": ["img/alcancias1.jpg","img/alcancias2.jpg","img/alcancias3.jpg"],
-    "Alcancias con 12 gelatinas Pinguino": ["img/pinguino2.jpg","img/alcanciapinguino.jpg","img/pinguino5.jpg","img/pinguino3.jpg","img/pinguino4.jpg","img/pinguino6.jpg"],
+    //"Alcancias con 12 gelatinas Pinguino": ["img/pinguino2.jpg","img/alcanciapinguino.jpg","img/pinguino5.jpg","img/pinguino3.jpg","img/pinguino4.jpg","img/pinguino6.jpg"],
     "Chupetines Merlina (x30u)": ["img/merlina1.jpg","img/merlina2.jpg","img/merlina3.jpg","img/merlina4.jpg"],
     "Chupetin con polvo acido Brain(30u)": ["img/chupetinBrain.jpg","img/cajaBrain.jpg"],
     "Chupetin con polvo acido skull (30u)": ["img/chupetinConAcido.jpg","img/cajaChupetinAcido.jpg"],
@@ -38,7 +38,7 @@ if (modal) {
     "🎃 Halloween chupetines (30u)": ["img/halloween1.jpg","img/halloween2.jpg","img/halloween3.jpg","img/halloween4.jpg"],
     "Gelatinas con formas (30u)": ["img/gelatinaDiferentesSabores4.jpg","img/gelatinaDiferentesSabores3.jpg","img/gelatinaDiferentesSabores2.jpg","img/gelatinaDiferentesSabores5.jpg","img/gelatinaDiferentesSabores1.jpg"],
     "Chupetines de Corona con LED (x30u)": ["img/chupetinesconled1.jpg","img/corona2.jpg"],
-    "Gomitas cara (30u)": ["img/gomitablandaCara3.jpg","img/gomitablandaCara2.jpg"],
+    "Gomitas cara (30u)": ["img/gomitablandaCara2.jpg","img/gomitablandaCara3.jpg"],
     "Gomitas blandas Selección Argentina (30u)": ["img/seleccion.jpg","img/seleccion1.jpg","img/seleccion2.jpg"],
     "Cool Mint sabores frutales (x30u)": ["img/coolmint.jpg","img/coolmint2.jpg"],
     "Trompetas con chupetin y sonido (30u)": ["img/trompeta1.jpg","img/trompetas.jpg"],
@@ -48,7 +48,7 @@ if (modal) {
     "Gomitas blandas Fantasmita (30u)": ["img/fantasmitas.jpg","img/fantasmitas2.jpg"],
     "Gomitas blandas Batman (30u)": ["img/batman1.jpg","img/batman2.jpg"],
     "Monedas de chocolate (x250u)": ["img/monedas1.jpg","img/monedas2.jpg"],
-    "Gomitas 👁️👄👁️ (30u)": ["img/gomitasoh.jpg","img/gomitasoh1.jpg"],
+    "Gomitas 👁️👄👁️ (30u)": ["img/gomitasoh1.jpg","img/gomitasoh.jpg"],
     "Gomitas blandas Kuromy (30u)": ["img/gomitasblandas7.jpg","img/gomitasblandas71.jpg"],
     "Chupetines Capibara (30u)": ["img/chupetincapibara1.jpg","img/chupetincapibara2.jpg"],
     "Chupetines con forma de conejo (x30)": ["img/conejos1.jpg","img/conejos3.jpg"],
